@@ -1,19 +1,36 @@
 import pandas as pd
-import pyreadstat
+import chardet
 
-def read_sps_file(file_path):
+def detect_encoding(file_path):
     """
-    Read an SPSS file and return a DataFrame.
+    Detect the encoding of a file.
 
     Parameters:
-    file_path (str): Path to the SPSS file.
+    file_path (str): Path to the file.
 
     Returns:
-    pd.DataFrame: DataFrame containing the SPSS data.
+    str: Detected encoding.
+    """
+    with open(file_path, 'rb') as file:
+        raw_data = file.read(20000)  # 读取文件的前10000字节
+        result = chardet.detect(raw_data)
+        return result['encoding']
+
+def read_csv_file(file_path):
+    """
+    Read a CSV file using the detected encoding and return a DataFrame.
+
+    Parameters:
+    file_path (str): Path to the CSV file.
+
+    Returns:
+    pd.DataFrame: DataFrame containing the CSV data.
     """
     try:
-        df = pyreadstat.read_sav(file_path)
+        encoding = detect_encoding(file_path)
+        df = pd.read_csv(file_path, encoding=encoding)
         return df
     except Exception as e:
-        print(f"Error reading file2 : {e}")
+        print(f"Error reading CSV file: {e}")
         return None
+
