@@ -68,9 +68,7 @@ def time_to_column_indices(time_array, start_time_str, end_time_str):
     
     return start_index, end_index
 
-import numpy as np
-import pandas as pd
-
+# IMPORTANT: CHANGE THE THRESHOLD HERE!!!
 def create_srb_mask(data, start_index, end_index, pct_threshold=37):
     """
     Create a binary mask for SRB within a specified time range based on a percentile threshold.
@@ -171,3 +169,50 @@ def blur(arr, blur_filter_shape=(61, 11), use_gaussian=True):
     else:
         kernel = np.ones(blur_filter_shape, np.float32) / (blur_filter_shape[0] * blur_filter_shape[1])
         return cv2.filter2D(arr, -1, kernel)
+    
+def apply_rolling_median_filter(mask, window_size=3):
+    """
+    Apply a rolling median filter across time to the SRB mask.
+
+    Args:
+        mask (np.ndarray): Input binary mask to be processed.
+        window_size (int): Size of the rolling window.
+
+    Returns:
+        np.ndarray: Mask after applying the rolling median filter.
+    """
+    # Convert the mask to a DataFrame for easier rolling operation
+    mask_df = pd.DataFrame(mask)
+
+    # Apply the rolling median filter along the time axis (axis=0)
+    filtered_mask_df = mask_df.rolling(window=window_size, axis=0, center=True).median()
+
+    # Fill NaN values that result from the rolling operation
+    filtered_mask_df = filtered_mask_df.fillna(0)
+
+    # Convert back to a NumPy array
+    filtered_mask = filtered_mask_df.to_numpy()
+
+    return filtered_mask.astype(bool)
+
+def intersect_srb_masks(*masks):
+    """
+    Compute the intersection of multiple SRB masks.
+
+    Args:
+        *masks (np.ndarray): Variable number of binary masks to intersect.
+
+    Returns:
+        np.ndarray: A binary mask representing the intersection of all input masks.
+    """
+    if not masks:
+        raise ValueError("At least one mask must be provided.")
+
+    # Initialize the intersection mask with the first mask
+    intersection_mask = masks[0].copy()
+
+    # Perform element-wise logical AND with all subsequent masks
+    for mask in masks[1:]:
+        intersection_mask = np.logical_and(intersection_mask, mask)
+
+    return intersection_mask

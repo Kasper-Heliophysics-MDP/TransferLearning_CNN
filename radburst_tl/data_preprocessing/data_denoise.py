@@ -4,6 +4,7 @@ import numpy as np
 from scipy.ndimage import binary_opening
 from skimage.morphology import binary_opening, rectangle
 
+# Actually horizontal noise in spectrogram!!!!
 def remove_vertical_noise(arr, num_mean=0.5, num_std=0.01, dist=50):
     """
     Remove columns with high variance (vertical noise).
@@ -38,11 +39,12 @@ def remove_vertical_noise(arr, num_mean=0.5, num_std=0.01, dist=50):
     # Replace high variance columns with other columns some distance away
     arr_cleaned = arr.copy()
     for i in low_var_cols:
-        col_to_replace = (i - dist) if (i >= dist) else (i + dist)
+        col_to_replace = (i + dist) if (i <= dist) else (i - dist)
         arr_cleaned[:, i] = arr[:, col_to_replace]
         
     return arr_cleaned
 
+# Actually vertical noise in spectrogram!!!!
 def remove_horizontal_noise(arr, num_std=0.1, dist=120):
     """
     Remove rows with high variance (horizontal noise). Because the data is vertical-to-horizontal reversed, the horizontal noise is actually vertical noise.
