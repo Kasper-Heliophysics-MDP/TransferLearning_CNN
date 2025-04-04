@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 import os
 import pandas as pd
+from datetime import datetime
 
 class SpectrogramSlicer:
     def __init__(self, target_size=(256, 256), overlap_ratio=0.25, random_offset=True):
@@ -41,11 +42,24 @@ class SpectrogramSlicer:
         """
         height, width = spectrogram.shape[:2]
         
-        # Convert time strings to column indices
-        from datetime import datetime
-        
         # Convert time strings to datetime objects
         def time_to_datetime(time_str):
+            # 处理秒数为60的特殊情况
+            import re
+            # 检查是否有"MM:60"模式
+            time_parts = re.split(':', time_str)
+            if len(time_parts) >= 3 and time_parts[2].startswith('60'):
+                # 将秒数改为00，分钟+1
+                minutes = int(time_parts[1]) + 1
+                seconds_part = '00' + time_parts[2][2:] if len(time_parts[2]) > 2 else '00'
+                # 处理分钟进位
+                if minutes >= 60:
+                    hours = int(time_parts[0]) + minutes // 60
+                    minutes = minutes % 60
+                    time_str = f"{hours:02d}:{minutes:02d}:{seconds_part}"
+                else:
+                    time_str = f"{time_parts[0]}:{minutes:02d}:{seconds_part}"
+            
             # Try multiple possible time formats
             formats = ["%H:%M:%S", "%H:%M:%S.%f", "%M:%S.%f", "%M:%S"]
             
