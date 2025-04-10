@@ -5,7 +5,7 @@ from scipy.ndimage import binary_opening
 from skimage.morphology import binary_opening, rectangle
 
 # Actually horizontal noise in spectrogram!!!!
-def remove_vertical_noise(arr, num_mean=0.5, num_std=0.01, dist=50):
+def remove_vertical_noise(arr, num_mean=1, num_std=0.1, dist=50):
     """
     Remove columns with high variance (vertical noise).
 
@@ -33,7 +33,7 @@ def remove_vertical_noise(arr, num_mean=0.5, num_std=0.01, dist=50):
     var_threshold = num_mean * mean_var + num_std * std_var
 
     # Find indices of columns with variance greater than threshold
-    low_var_cols = np.where(vars < var_threshold)[0]
+    low_var_cols = np.where(vars > var_threshold)[0]
     print("Low variance rows:", low_var_cols)
 
     # Replace high variance columns with other columns some distance away
@@ -45,7 +45,7 @@ def remove_vertical_noise(arr, num_mean=0.5, num_std=0.01, dist=50):
     return arr_cleaned
 
 # Actually vertical noise in spectrogram!!!!
-def remove_horizontal_noise(arr, num_std=0.1, dist=120):
+def remove_horizontal_noise(arr, num_std=2, dist=50):
     """
     Remove rows with high variance (horizontal noise). Because the data is vertical-to-horizontal reversed, the horizontal noise is actually vertical noise.
 
@@ -73,7 +73,7 @@ def remove_horizontal_noise(arr, num_std=0.1, dist=120):
     var_threshold = mean_var + num_std * std_var
 
     # Find indices of rows with variance greater than threshold
-    high_var_rows = np.where(vars < var_threshold)[0]
+    high_var_rows = np.where(vars > var_threshold)[0]
     print("High variance columns:", high_var_rows)
 
     # Replace high variance rows with other rows some distance away
