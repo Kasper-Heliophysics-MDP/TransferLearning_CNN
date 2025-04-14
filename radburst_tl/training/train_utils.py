@@ -5,6 +5,8 @@ import torch.nn.functional as F
 from torch import nn, optim
 from sklearn.model_selection import train_test_split
 import pandas as pd
+import segmentation_models_pytorch as smp
+
 
 # def create_dataset(image_dir, mask_dir, img_size=(256, 256), test_size=0.2, random_state=42):
 def create_dataset(dir, img_size=(256, 256), test_size=0.2, random_state=42):
@@ -95,16 +97,12 @@ def build_unet(input_shape=(256, 256, 1), num_classes=1, encoder_weights='imagen
         model: A UNet model instance constructed using the segmentation_models library.
     """
     # Use the Unet model from the segmentation_models library as an example.
-    try:
-        from segmentation_models import Unet
-    except ImportError:
-        raise ImportError("Please install the segmentation_models library: pip install segmentation-models")
-    
-    model = Unet(
-        backbone_name='resnet34', # resnet34, resnet50, resnet101, resnet152
-        input_shape=input_shape,
-        classes=num_classes,
-        encoder_weights=encoder_weights
+    model = smp.Unet(
+        encoder_name='resnet34',  # select backbone architecture
+        encoder_weights=encoder_weights,  # 'imagenet' to load pre-trained weights
+        in_channels=input_shape[-1],  # number of input channels
+        classes=num_classes,          # number of output classes
+        activation='sigmoid'          # final activation function
     )
     return model
 
