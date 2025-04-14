@@ -259,17 +259,23 @@ def adjust_learning_rate(optimizer, new_lr):
     print("Learning rate adjusted to:", new_lr)
 
 
-def save_checkpoint(model, optimizer, epoch, best_metric, checkpoint_path):
+def save_checkpoint(model, optimizer, epoch, best_metric, checkpoint_dir):
     """
     Saves the model checkpoint along with optimizer state.
-    
+    Checkpoints are saved to a specified directory with filenames including epoch and best_metric.
+
     Parameters:
         model (nn.Module): The model to save.
         optimizer (torch.optim.Optimizer): The optimizer whose state to save.
         epoch (int): The current epoch number.
         best_metric: The best metric value achieved (e.g., best validation loss).
-        checkpoint_path (str): Path to save the checkpoint.
+        checkpoint_dir (str): Directory in which to save the checkpoint.
     """
+    # Create the checkpoint directory if it does not exist
+    os.makedirs(checkpoint_dir, exist_ok=True)
+    # Generate a unique filename (e.g., "checkpoint_epoch_{epoch}_metric_{best_metric:.4f}.pth")
+    checkpoint_path = os.path.join(checkpoint_dir, f"checkpoint_epoch_{epoch}_metric_{best_metric:.4f}.pth")
+    
     checkpoint = {
         'epoch': epoch,
         'model_state_dict': model.state_dict(),
@@ -277,39 +283,36 @@ def save_checkpoint(model, optimizer, epoch, best_metric, checkpoint_path):
         'best_metric': best_metric
     }
     torch.save(checkpoint, checkpoint_path)
-    print(f"Checkpoint saved at epoch {epoch} with best metric {best_metric}")
+    print(f"Checkpoint saved at epoch {epoch} with best metric {best_metric} -> {checkpoint_path}")
 
 
 def train_model(model, train_loader, val_loader, initial_lr=1e-3, freeze_epochs=100, total_epochs=150,
-                checkpoint_path='./best_model.pth', patience=10, device=torch.device("cuda" if torch.cuda.is_available() else "cpu")):
+                checkpoint_dir='./checkpoints', patience=10, device=torch.device("cuda" if torch.cuda.is_available() else "cpu")):
     """
-    Manages the entire training process with two phases:
+    Manages the entire training process in two phases.
     
-    Phase 1: The encoder is frozen, and only the remaining part of the model is trained.
-             This phase runs for 'freeze_epochs' iterations.
-             
-    Phase 2: The encoder is unfrozen for fine-tuning the entire model, and the learning rate
-             is reduced. This phase runs from freeze_epochs+1 to total_epochs.
-             
-    Early stopping is applied in both phases if the validation loss does not improve for 'patience' epochs.
+    Phase 1: Freeze the encoder and train the remaining parts.
+    Phase 2: Unfreeze the encoder, reduce the learning rate, and fine-tune the entire model.
+    
+    Early stopping is applied if the validation loss does not improve for 'patience' epochs.
     
     Parameters:
-        model (nn.Module): The segmentation model to be trained.
-        train_loader (DataLoader): DataLoader for the training set.
-        val_loader (DataLoader): DataLoader for the validation set.
+        model (nn.Module): The segmentation model.
+        train_loader (DataLoader): Training DataLoader.
+        val_loader (DataLoader): Validation DataLoader.
         initial_lr (float): Initial learning rate.
-        freeze_epochs (int): Number of epochs to train with frozen encoder.
-        total_epochs (int): Total number of training epochs.
-        checkpoint_path (str): File path for saving checkpoints.
-        patience (int): Number of epochs to wait before early stopping if no improvement.
-        device (torch.device): The device to use for training.
+        freeze_epochs (int): Epochs with frozen encoder.
+        total_epochs (int): Total training epochs.
+        checkpoint_dir (str): Directory where checkpoints will be saved.
+        patience (int): Epochs with no improvement before early stopping.
+        device (torch.device): Training device.
     """
     model.to(device)
     optimizer = optim.Adam(model.parameters(), lr=initial_lr)
     best_val_loss = float('inf')
     no_improve = 0  # Counter for early stopping
     
-    # Phase 1: Freeze encoder and train the remaining layers.
+    # Phase 1: Freeze encoder and train remaining layers.
     print("Phase 1: Freezing encoder and training decoder only.")
     freeze_encoder_weights(model)
     for epoch in range(1, freeze_epochs + 1):
@@ -319,18 +322,18 @@ def train_model(model, train_loader, val_loader, initial_lr=1e-3, freeze_epochs=
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             no_improve = 0
-            save_checkpoint(model, optimizer, epoch, best_val_loss, checkpoint_path)
+            save_checkpoint(model, optimizer, epoch, best_val_loss, checkpoint_dir)
         else:
             no_improve += 1
         if no_improve >= patience:
             print("Early stopping in Phase 1.")
             break
-    
-    # Phase 2: Unfreeze encoder and fine-tune the entire model.
+            
+    # Phase 2: Unfreeze encoder and fine-tune entire model.
     print("Phase 2: Unfreezing encoder and fine-tuning entire model.")
     unfreeze_encoder_weights(model)
     adjust_learning_rate(optimizer, initial_lr / 10)
-    no_improve = 0  # Reset early stopping counter
+    no_improve = 0  # Reset early stopping counter for phase 2
     for epoch in range(freeze_epochs + 1, total_epochs + 1):
         train_loss = train_one_epoch(model, train_loader, optimizer, device)
         val_loss, val_metrics = validate_one_epoch(model, val_loader, device)
@@ -338,9 +341,10 @@ def train_model(model, train_loader, val_loader, initial_lr=1e-3, freeze_epochs=
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             no_improve = 0
-            save_checkpoint(model, optimizer, epoch, best_val_loss, checkpoint_path)
+            save_checkpoint(model, optimizer, epoch, best_val_loss, checkpoint_dir)
         else:
             no_improve += 1
         if no_improve >= patience:
             print("Early stopping in Phase 2.")
             break
+
