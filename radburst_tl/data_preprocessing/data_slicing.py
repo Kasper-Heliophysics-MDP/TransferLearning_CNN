@@ -293,6 +293,37 @@ class SpectrogramSlicer:
         
         print(f"Saved {len(slices)} spectrogram slices to {save_dir}")
         return saved_files
+    
+    def slice_entire_spectrogram(self, spectrogram):
+        """
+        Slices the entire spectrogram into tiles of size (target_height, target_width)
+        with an overlap defined by the overlap_ratio.
+    
+        Parameters:
+            spectrogram: The full spectrogram (shape: [height, width] or [height, width, channels]).
+    
+        Returns:
+            slices: List of spectrogram slices.
+            positions: List of (y, x) positions for the top-left corner of each slice.
+        """
+        height, width = spectrogram.shape[:2]
+        # Compute strides based on overlap ratio.
+        stride_width = int(self.target_width * (1 - self.overlap_ratio))
+        stride_height = int(self.target_height * (1 - self.overlap_ratio))
+        
+        slices = []
+        positions = []
+        # Loop over the height and width dimensions.
+        for y in range(0, height - self.target_height + 1, stride_height):
+            for x in range(0, width - self.target_width + 1, stride_width):
+                if len(spectrogram.shape) == 3:
+                    tile = spectrogram[y:y+self.target_height, x:x+self.target_width, :]
+                else:
+                    tile = spectrogram[y:y+self.target_height, x:x+self.target_width]
+                slices.append(tile)
+                positions.append((y, x))
+        return slices, positions
+
 
 # Data generator (for training)
 class SpectrogramDataGenerator:
