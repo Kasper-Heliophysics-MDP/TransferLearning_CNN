@@ -37,3 +37,34 @@ def reconstruct_mask(tiles, positions, original_shape, tile_size=256):
     # Convert to binary mask using 0.5 threshold
     full_mask = (full_mask > 0.5).astype(np.uint8)
     return full_mask
+
+# 归一化图像块 - 与训练过程保持一致
+def normalize_tiles(tiles):
+    """
+    根据训练过程中的归一化方法处理图像块
+    
+    Parameters:
+        tiles: 图像块列表或numpy数组
+        
+    Returns:
+        归一化后的numpy数组，格式适用于模型输入
+    """
+    # 转换为numpy数组（如果还不是）
+    if not isinstance(tiles, np.ndarray):
+        tiles = np.array(tiles)
+    
+    # 确保数据类型为float32
+    tiles = tiles.astype(np.float32)
+    
+    # 打印原始形状以便调试
+    print(f"原始tiles形状: {tiles.shape}")
+    
+    # 按照训练过程中相同的方式归一化
+    max_val = np.max(tiles)
+    tiles_normalized = tiles / max_val if max_val != 0 else tiles
+    
+    # 打印最终形状以便调试
+    print(f"归一化后tiles形状: {tiles_normalized.shape}")
+    
+    return tiles_normalized
+
