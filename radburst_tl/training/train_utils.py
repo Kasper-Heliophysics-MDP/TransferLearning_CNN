@@ -132,16 +132,168 @@ def unfreeze_encoder_weights(model):
             param.requires_grad = True
             
             
-def combined_loss(y_true, y_pred):
+def focal_loss(y_pred, y_true, alpha=1.0, gamma=2.0, reduction='mean'):
     """
-    Computes the combined loss: binary cross-entropy (BCE) plus Jaccard (IOU) loss.
+    Focal Loss implementation for addressing class imbalance.
+    
+    Args:
+        y_pred (Tensor): Predicted probabilities [N, C, H, W]
+        y_true (Tensor): Ground truth binary masks [N, C, H, W]
+        alpha (float): Weighting factor for rare class (default: 1.0)
+        gamma (float): Focusing parameter (default: 2.0)
+        reduction (str): 'mean', 'sum', or 'none'
+    
+    Returns:
+        Tensor: Focal loss
+    """
+    # Compute binary cross entropy
+    bce = F.binary_cross_entropy(y_pred, y_true, reduction='none')
+    
+    # Compute p_t
+    p_t = y_pred * y_true + (1 - y_pred) * (1 - y_true)
+    
+    # Compute alpha_t
+    alpha_t = alpha * y_true + (1 - alpha) * (1 - y_true)
+    
+    # Compute focal weight
+    focal_weight = alpha_t * (1 - p_t) ** gamma
+    
+    # Apply focal weight
+    focal_loss_val = focal_weight * bce
+    
+    if reduction == 'mean':
+        return focal_loss_val.mean()
+    elif reduction == 'sum':
+        return focal_loss_val.sum()
+    else:
+        return focal_loss_val
+
+
+def boundary_loss(y_pred, y_true, kernel_size=3):
+    """
+    Boundary-aware loss to improve edge prediction accuracy.
+    
+    Args:
+        y_pred (Tensor): Predicted probabilities [N, C, H, W]  
+        y_true (Tensor): Ground truth binary masks [N, C, H, W]
+        kernel_size (int): Kernel size for edge detection
+        
+    Returns:
+        Tensor: Boundary loss
+    """
+    # Create Laplacian kernel for edge detection
+    device = y_pred.device
+    laplacian_kernel = torch.tensor([[[
+        [0, -1, 0],
+        [-1, 4, -1], 
+        [0, -1, 0]
+    ]]], dtype=torch.float32, device=device)
+    
+    # Compute edges in ground truth
+    gt_edges = F.conv2d(y_true, laplacian_kernel, padding=1)
+    gt_edges = (gt_edges.abs() > 0.1).float()
+    
+    # Compute edges in predictions
+    pred_edges = F.conv2d(y_pred, laplacian_kernel, padding=1)
+    pred_edges = torch.sigmoid(pred_edges)
+    
+    # Compute boundary loss (weighted by edge presence)
+    boundary_loss_val = F.binary_cross_entropy(pred_edges, gt_edges, reduction='none')
+    edge_weight = gt_edges + 0.1  # Give higher weight to edge pixels
+    
+    return (boundary_loss_val * edge_weight).mean()
+
+
+def adaptive_iou_loss(y_pred, y_true, smooth=1e-6, power=1):
+    """
+    Adaptive IoU loss with optional power weighting.
+    
+    Args:
+        y_pred (Tensor): Predicted probabilities [N, C, H, W]
+        y_true (Tensor): Ground truth binary masks [N, C, H, W]
+        smooth (float): Smoothing factor to avoid division by zero
+        power (int): Power for weighting rare positive samples
+        
+    Returns:
+        Tensor: Adaptive IoU loss
+    """
+    # Flatten tensors
+    y_pred_flat = y_pred.view(-1)
+    y_true_flat = y_true.view(-1)
+    
+    # Compute intersection and union
+    intersection = (y_pred_flat * y_true_flat).sum()
+    union = y_pred_flat.sum() + y_true_flat.sum() - intersection
+    
+    # Compute IoU
+    iou = (intersection + smooth) / (union + smooth)
+    
+    # Apply power weighting for imbalanced data
+    if power != 1:
+        # Weight by inverse class frequency
+        pos_ratio = y_true_flat.mean()
+        weight = (1 - pos_ratio) ** power if pos_ratio > 0 else 1.0
+        iou_loss = (1 - iou) * weight
+    else:
+        iou_loss = 1 - iou
+        
+    return iou_loss
+
+
+def combined_loss(y_true, y_pred, loss_weights=None, focal_params=None, boundary_weight=0.2):
+    """
+    Enhanced combined loss with multiple components:
+    - Focal Loss (for class imbalance)
+    - Adaptive IoU Loss (for overlap quality)  
+    - Boundary Loss (for edge accuracy)
     
     Parameters:
         y_true (Tensor): Ground truth masks (shape: [N, C, H, W])
         y_pred (Tensor): Predicted masks (shape: [N, C, H, W])
+        loss_weights (dict): Weights for different loss components
+        focal_params (dict): Parameters for focal loss
+        boundary_weight (float): Weight for boundary loss component
         
     Returns:
-        Tensor: Combined loss.
+        Tensor: Combined loss with detailed breakdown.
+    """
+    # Default parameters
+    if loss_weights is None:
+        loss_weights = {'focal': 1.0, 'iou': 1.0, 'boundary': 0.2}
+    
+    if focal_params is None:
+        focal_params = {'alpha': 0.75, 'gamma': 2.0}  # Slightly favor positive class
+    
+    # Compute individual loss components
+    focal_loss_val = focal_loss(y_pred, y_true, 
+                               alpha=focal_params['alpha'], 
+                               gamma=focal_params['gamma'])
+    
+    iou_loss_val = adaptive_iou_loss(y_pred, y_true, power=1.5)  # Slight power weighting
+    
+    boundary_loss_val = boundary_loss(y_pred, y_true)
+    
+    # Combine losses with weights
+    total_loss = (loss_weights['focal'] * focal_loss_val + 
+                  loss_weights['iou'] * iou_loss_val + 
+                  loss_weights['boundary'] * boundary_loss_val)
+    
+    # Store individual components for monitoring (optional)
+    if hasattr(total_loss, '_loss_components'):
+        total_loss._loss_components = {
+            'focal': focal_loss_val.item(),
+            'iou': iou_loss_val.item(), 
+            'boundary': boundary_loss_val.item(),
+            'total': total_loss.item()
+        }
+    
+    return total_loss
+
+
+def simple_combined_loss(y_true, y_pred):
+    """
+    Backward compatible simple combined loss (original version).
+    Use this for quick comparison with the original implementation.
     """
     # Binary cross entropy loss (assumes y_pred contains probabilities)
     bce = F.binary_cross_entropy(y_pred, y_true)
@@ -180,9 +332,9 @@ def compute_metrics(y_true, y_pred):
     return {'iou': iou.item(), 'f1': f1.item()}
 
 
-def train_one_epoch(model, dataloader, optimizer, device):
+def train_one_epoch(model, dataloader, optimizer, device, loss_weights=None, focal_params=None):
     """
-    Performs one training epoch.
+    Performs one training epoch with configurable enhanced loss function.
 
     Iterates over the training dataloader, computes predictions, loss,
     backpropagates gradients, and updates model parameters.
@@ -192,28 +344,57 @@ def train_one_epoch(model, dataloader, optimizer, device):
         dataloader (DataLoader): PyTorch DataLoader for the training set.
         optimizer (torch.optim.Optimizer): Optimizer for updating the model parameters.
         device (torch.device): Device on which to run the model (e.g., 'cuda' or 'cpu').
+        loss_weights (dict): Weights for different loss components. If None, uses default for radio bursts.
+        focal_params (dict): Parameters for focal loss. If None, uses default for radio bursts.
     
     Returns:
-        float: Average training loss for this epoch.
+        tuple: (average training loss, loss components dict)
     """
+    # Set default parameters optimized for radio burst detection
+    if loss_weights is None:
+        loss_weights = {'focal': 1.2, 'iou': 1.5, 'boundary': 0.2}
+    if focal_params is None:
+        focal_params = {'alpha': 0.8, 'gamma': 2.5}
+    
     model.train()
     total_loss = 0.0
+    total_components = {'focal': 0.0, 'iou': 0.0, 'boundary': 0.0}
     num_batches = 0
+    
     for x, y in dataloader:
         x, y = x.to(device), y.to(device)
         optimizer.zero_grad()
         preds = model(x)  # Forward pass
-        loss = combined_loss(y, preds)
+        
+        # Use enhanced loss function
+        loss = combined_loss(y, preds, 
+                           loss_weights=loss_weights,
+                           focal_params=focal_params)
+        
+        # Track individual components for monitoring
+        with torch.no_grad():
+            focal_val = focal_loss(preds, y, **focal_params)
+            iou_val = adaptive_iou_loss(preds, y, power=1.5)
+            boundary_val = boundary_loss(preds, y)
+            
+            total_components['focal'] += focal_val.item()
+            total_components['iou'] += iou_val.item()
+            total_components['boundary'] += boundary_val.item()
+        
         loss.backward()   # Compute gradients
         optimizer.step()  # Update weights
         total_loss += loss.item()
         num_batches += 1
-    return total_loss / num_batches
+    
+    avg_loss = total_loss / num_batches
+    avg_components = {k: v / num_batches for k, v in total_components.items()}
+    
+    return avg_loss, avg_components
 
 
-def validate_one_epoch(model, dataloader, device):
+def validate_one_epoch(model, dataloader, device, loss_weights=None, focal_params=None):
     """
-    Evaluates the model on the validation set for one epoch.
+    Evaluates the model on the validation set for one epoch with enhanced loss.
 
     Computes both the loss and the evaluation metrics (IOU, F1 score) without updating the model.
     
@@ -221,24 +402,39 @@ def validate_one_epoch(model, dataloader, device):
         model (nn.Module): The segmentation model.
         dataloader (DataLoader): PyTorch DataLoader for the validation set.
         device (torch.device): Device on which to run the model.
+        loss_weights (dict): Weights for different loss components. If None, uses default for radio bursts.
+        focal_params (dict): Parameters for focal loss. If None, uses default for radio bursts.
     
     Returns:
         tuple: (average validation loss, dictionary of average metrics)
     """
+    # Set default parameters optimized for radio burst detection
+    if loss_weights is None:
+        loss_weights = {'focal': 1.2, 'iou': 1.5, 'boundary': 0.2}
+    if focal_params is None:
+        focal_params = {'alpha': 0.8, 'gamma': 2.5}
+    
     model.eval()
     total_loss = 0.0
     num_batches = 0
     total_metrics = {'iou': 0.0, 'f1': 0.0}
+    
     with torch.no_grad():
         for x, y in dataloader:
             x, y = x.to(device), y.to(device)
             preds = model(x)
-            loss = combined_loss(y, preds)
+            
+            # Use enhanced loss function with same parameters as training
+            loss = combined_loss(y, preds, 
+                               loss_weights=loss_weights,
+                               focal_params=focal_params)
             total_loss += loss.item()
+            
             metrics_dict = compute_metrics(y, preds)
             total_metrics['iou'] += metrics_dict['iou']
             total_metrics['f1'] += metrics_dict['f1']
             num_batches += 1
+            
     avg_loss = total_loss / num_batches
     avg_metrics = {k: v / num_batches for k, v in total_metrics.items()}
     return avg_loss, avg_metrics
@@ -285,7 +481,8 @@ def save_checkpoint(model, optimizer, epoch, best_metric, checkpoint_dir):
 
 
 def train_model(model, train_loader, val_loader, initial_lr=1e-3, freeze_epochs=100, total_epochs=150,
-                checkpoint_dir='./checkpoints', patience=10, device=torch.device("cuda" if torch.cuda.is_available() else "cpu")):
+                checkpoint_dir='./checkpoints', patience=10, device=torch.device("cuda" if torch.cuda.is_available() else "cpu"),
+                loss_config='imbalanced'):
     """
     Manages the entire training process in two phases.
     
@@ -314,9 +511,10 @@ def train_model(model, train_loader, val_loader, initial_lr=1e-3, freeze_epochs=
     print("Phase 1: Freezing encoder and training decoder only.")
     freeze_encoder_weights(model)
     for epoch in range(1, freeze_epochs + 1):
-        train_loss = train_one_epoch(model, train_loader, optimizer, device)
+        train_loss, train_components = train_one_epoch(model, train_loader, optimizer, device)
         val_loss, val_metrics = validate_one_epoch(model, val_loader, device)
         print(f"Epoch {epoch}/{freeze_epochs} - Train Loss: {train_loss:.4f} - Val Loss: {val_loss:.4f} - IOU: {val_metrics['iou']:.4f} - F1: {val_metrics['f1']:.4f}")
+        print(f"  Loss Components - Focal: {train_components['focal']:.4f}, IoU: {train_components['iou']:.4f}, Boundary: {train_components['boundary']:.4f}")
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             no_improve = 0
@@ -333,9 +531,10 @@ def train_model(model, train_loader, val_loader, initial_lr=1e-3, freeze_epochs=
     adjust_learning_rate(optimizer, initial_lr / 10)
     no_improve = 0  # Reset early stopping counter for phase 2
     for epoch in range(freeze_epochs + 1, total_epochs + 1):
-        train_loss = train_one_epoch(model, train_loader, optimizer, device)
+        train_loss, train_components = train_one_epoch(model, train_loader, optimizer, device)
         val_loss, val_metrics = validate_one_epoch(model, val_loader, device)
         print(f"Epoch {epoch}/{total_epochs} - Train Loss: {train_loss:.4f} - Val Loss: {val_loss:.4f} - IOU: {val_metrics['iou']:.4f} - F1: {val_metrics['f1']:.4f}")
+        print(f"  Loss Components - Focal: {train_components['focal']:.4f}, IoU: {train_components['iou']:.4f}, Boundary: {train_components['boundary']:.4f}")
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             no_improve = 0
