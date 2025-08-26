@@ -106,6 +106,85 @@ def build_unet(input_shape=(256, 256, 1), num_classes=1, encoder_weights='imagen
     )
     return model
 
+def build_deeplabv3(input_shape=(256, 256, 1), num_classes=1, encoder_weights=None, encoder_name='resnet34'):
+    """
+    Constructs a DeepLabV3+ model optimized for radio burst detection.
+    
+    DeepLabV3+ advantages for radio burst detection:
+    - Atrous Spatial Pyramid Pooling (ASPP) captures multi-scale temporal patterns
+    - Better handling of objects at different scales (short vs long bursts)
+    - Improved boundary detection compared to UNet
+    - More robust feature extraction for sparse signals
+    
+    Parameters:
+        input_shape (tuple): Specifies the dimensions of the input images.
+                             For example, (256, 256, 1) represents 256x256 grayscale spectrograms.
+        num_classes (int): The number of output classes (typically 1 for binary segmentation).
+        encoder_weights (str or None): If None, encoder weights will be randomly initialized.
+                                       Recommended to use None for spectrogram data.
+        encoder_name (str): Backbone architecture. Options: 'resnet34', 'resnet18', 'efficientnet-b0'
+    
+    Returns:
+        model: A DeepLabV3+ model instance optimized for radio burst segmentation.
+    """
+    print(f"🚀 Building DeepLabV3+ with {encoder_name} backbone")
+    print(f"   Input: {input_shape}, Classes: {num_classes}")
+    print(f"   Encoder weights: {'None (from scratch)' if encoder_weights is None else encoder_weights}")
+    
+    model = smp.DeepLabV3Plus(
+        encoder_name=encoder_name,           # backbone architecture
+        encoder_weights=encoder_weights,      # None for spectrogram-specific training
+        in_channels=input_shape[-1],         # number of input channels (1 for grayscale spectrogram)
+        classes=num_classes,                 # number of output classes
+        activation='sigmoid',                # final activation function for binary segmentation
+        encoder_depth=5,                     # depth of feature extraction
+        decoder_channels=256,                # decoder feature channels
+    )
+    
+    # Print model info
+    total_params = sum(p.numel() for p in model.parameters())
+    trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    print(f"✅ Model created successfully!")
+    print(f"   Total parameters: {total_params:,}")
+    print(f"   Trainable parameters: {trainable_params:,}")
+    
+    return model
+
+def build_model_by_name(model_name='unet', input_shape=(256, 256, 1), num_classes=1, 
+                       encoder_weights=None, encoder_name='resnet34'):
+    """
+    Factory function to build different model architectures by name.
+    
+    Parameters:
+        model_name (str): Model architecture name. Options: 'unet', 'deeplabv3', 'deeplabv3_light'
+        input_shape (tuple): Input dimensions
+        num_classes (int): Number of output classes
+        encoder_weights (str or None): Pretrained weights ('imagenet' or None)
+        encoder_name (str): Backbone architecture
+    
+    Returns:
+        model: The requested model architecture
+    """
+    print(f"🏗️ Building {model_name} model...")
+    
+    if model_name == 'unet':
+        return build_unet(input_shape, num_classes, encoder_weights)
+    elif model_name == 'deeplabv3':
+        return build_deeplabv3(input_shape, num_classes, encoder_weights, encoder_name)
+    elif model_name == 'deeplabv3_light':
+        return smp.DeepLabV3Plus(
+            encoder_name='efficientnet-b0',
+            encoder_weights=encoder_weights,
+            in_channels=input_shape[-1],
+            classes=num_classes,
+            activation='sigmoid',
+            decoder_channels=128,
+        )
+    else:
+        raise ValueError(f"Unknown model name: {model_name}. Options: 'unet', 'deeplabv3', 'deeplabv3_light'")
+    
+    return model
+
 def freeze_encoder_weights(model):
     """
     Freezes the weights of the encoder (or backbone) part of the model.
