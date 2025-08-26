@@ -482,9 +482,9 @@ def save_checkpoint(model, optimizer, epoch, best_metric, checkpoint_dir):
 
 def train_model(model, train_loader, val_loader, initial_lr=1e-3, freeze_epochs=100, total_epochs=150,
                 checkpoint_dir='./checkpoints', patience=10, device=torch.device("cuda" if torch.cuda.is_available() else "cpu"),
-                loss_config='imbalanced'):
+                loss_weights=None, focal_params=None, loss_config='imbalanced'):
     """
-    Manages the entire training process in two phases.
+    Manages the entire training process in two phases with configurable enhanced loss.
     
     Phase 1: Freeze the encoder and train the remaining parts.
     Phase 2: Unfreeze the encoder, reduce the learning rate, and fine-tune the entire model.
@@ -501,7 +501,40 @@ def train_model(model, train_loader, val_loader, initial_lr=1e-3, freeze_epochs=
         checkpoint_dir (str): Directory where checkpoints will be saved.
         patience (int): Epochs with no improvement before early stopping.
         device (torch.device): Training device.
+        loss_weights (dict): Weights for different loss components. If None, uses default for radio bursts.
+        focal_params (dict): Parameters for focal loss. If None, uses default for radio bursts.
+        loss_config (str): Predefined loss configuration ('balanced', 'imbalanced', 'noisy', 'boundary_critical').
     """
+    # Configure loss function parameters
+    if loss_weights is None and focal_params is None:
+        # Use predefined configuration if no custom parameters provided
+        from loss_config_example import get_loss_config_for_scenario
+        config = get_loss_config_for_scenario(loss_config)
+        if config.get('use_simple_loss', False):
+            print(f"⚠️  Using simple combined loss (backward compatibility)")
+            loss_weights = None
+            focal_params = None
+        else:
+            loss_weights = config['loss_weights']
+            focal_params = config['focal_params']
+            print(f"🎯 Using '{loss_config}' loss configuration:")
+            print(f"   Description: {config['description']}")
+            print(f"   Loss weights: {loss_weights}")
+            print(f"   Focal params: {focal_params}")
+    elif loss_weights is None or focal_params is None:
+        # Use radio burst optimized defaults if partially specified
+        if loss_weights is None:
+            loss_weights = {'focal': 1.2, 'iou': 1.5, 'boundary': 0.2}
+        if focal_params is None:
+            focal_params = {'alpha': 0.8, 'gamma': 2.5}
+        print(f"🔧 Using custom/default loss configuration:")
+        print(f"   Loss weights: {loss_weights}")
+        print(f"   Focal params: {focal_params}")
+    else:
+        print(f"🎛️ Using fully custom loss configuration:")
+        print(f"   Loss weights: {loss_weights}")
+        print(f"   Focal params: {focal_params}")
+    
     model.to(device)
     optimizer = optim.Adam(model.parameters(), lr=initial_lr)
     best_val_loss = float('inf')
@@ -511,8 +544,8 @@ def train_model(model, train_loader, val_loader, initial_lr=1e-3, freeze_epochs=
     print("Phase 1: Freezing encoder and training decoder only.")
     freeze_encoder_weights(model)
     for epoch in range(1, freeze_epochs + 1):
-        train_loss, train_components = train_one_epoch(model, train_loader, optimizer, device)
-        val_loss, val_metrics = validate_one_epoch(model, val_loader, device)
+        train_loss, train_components = train_one_epoch(model, train_loader, optimizer, device, loss_weights, focal_params)
+        val_loss, val_metrics = validate_one_epoch(model, val_loader, device, loss_weights, focal_params)
         print(f"Epoch {epoch}/{freeze_epochs} - Train Loss: {train_loss:.4f} - Val Loss: {val_loss:.4f} - IOU: {val_metrics['iou']:.4f} - F1: {val_metrics['f1']:.4f}")
         print(f"  Loss Components - Focal: {train_components['focal']:.4f}, IoU: {train_components['iou']:.4f}, Boundary: {train_components['boundary']:.4f}")
         if val_loss < best_val_loss:
@@ -531,8 +564,8 @@ def train_model(model, train_loader, val_loader, initial_lr=1e-3, freeze_epochs=
     adjust_learning_rate(optimizer, initial_lr / 10)
     no_improve = 0  # Reset early stopping counter for phase 2
     for epoch in range(freeze_epochs + 1, total_epochs + 1):
-        train_loss, train_components = train_one_epoch(model, train_loader, optimizer, device)
-        val_loss, val_metrics = validate_one_epoch(model, val_loader, device)
+        train_loss, train_components = train_one_epoch(model, train_loader, optimizer, device, loss_weights, focal_params)
+        val_loss, val_metrics = validate_one_epoch(model, val_loader, device, loss_weights, focal_params)
         print(f"Epoch {epoch}/{total_epochs} - Train Loss: {train_loss:.4f} - Val Loss: {val_loss:.4f} - IOU: {val_metrics['iou']:.4f} - F1: {val_metrics['f1']:.4f}")
         print(f"  Loss Components - Focal: {train_components['focal']:.4f}, IoU: {train_components['iou']:.4f}, Boundary: {train_components['boundary']:.4f}")
         if val_loss < best_val_loss:
