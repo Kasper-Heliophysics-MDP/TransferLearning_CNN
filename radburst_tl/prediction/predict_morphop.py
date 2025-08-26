@@ -286,7 +286,8 @@ class ConnectedComponentAnalyzer:
                 'too_large': 0,
                 'bad_aspect_ratio': 0,
                 'low_solidity': 0,
-                'low_confidence': 0
+                'low_confidence': 0,
+                'suspicious_noise': 0
             },
             'component_info': []
         }
@@ -334,6 +335,9 @@ class ConnectedComponentAnalyzer:
             elif confidence_map is not None and avg_confidence < 0.3:
                 keep_component = False
                 removal_reason = 'low_confidence'
+            elif confidence_map is not None and self._is_suspicious_high_confidence_noise(region, confidence_map, area):
+                keep_component = False
+                removal_reason = 'suspicious_noise'
                 
             # Update statistics and mask
             if keep_component:
@@ -515,6 +519,71 @@ Filtering efficiency: {analysis_stats['kept_components']}/{analysis_stats['origi
             print(f"Component analysis visualization saved to {save_path}")
             
         plt.show()
+    
+    def _is_suspicious_high_confidence_noise(self, region, confidence_map, area):
+        """
+        Detect suspicious high-confidence noise regions.
+        
+        This method identifies small, isolated regions with unusually high confidence
+        that are likely to be noise rather than real radio bursts.
+        
+        Args:
+            region: Region properties from skimage.measure.regionprops
+            confidence_map: Full confidence map
+            area: Area of the region
+            
+        Returns:
+            bool: True if the region is suspected to be high-confidence noise
+        """
+        
+        avg_confidence = region.mean_intensity if hasattr(region, 'mean_intensity') else 0
+        
+        # Criteria for suspicious high-confidence noise:
+        
+        # 1. Small but high confidence (classic noise pattern)
+        if area < 200 and avg_confidence > 0.7:  # Lowered threshold since we're more aggressive
+            return True
+            
+        # 2. Very small with any high confidence  
+        if area < 50 and avg_confidence > 0.5:   # Lowered threshold for tiny regions
+            return True
+            
+        # 3. Check isolation (surrounded mostly by low confidence)
+        if avg_confidence > 0.6 and area < 1000:
+            # Get bounding box and check neighborhood
+            bbox = region.bbox
+            y_min, x_min, y_max, x_max = bbox
+            
+            # Expand bounding box to check surroundings
+            pad = 20
+            y_min_exp = max(0, y_min - pad)
+            x_min_exp = max(0, x_min - pad)
+            y_max_exp = min(confidence_map.shape[0], y_max + pad)
+            x_max_exp = min(confidence_map.shape[1], x_max + pad)
+            
+            # Get neighborhood confidence
+            neighborhood = confidence_map[y_min_exp:y_max_exp, x_min_exp:x_max_exp]
+            neighborhood_mean = np.mean(neighborhood)
+            
+            # If this region is much higher confidence than neighborhood, it's suspicious
+            if avg_confidence > neighborhood_mean + 0.4:  # 40% higher than surroundings
+                return True
+        
+        # 4. Check for unrealistic aspect ratios combined with high confidence
+        bbox = region.bbox
+        height = bbox[2] - bbox[0]
+        width = bbox[3] - bbox[1]
+        aspect_ratio = width / max(height, 1)
+        
+        # Very thin or very wide regions with high confidence are often noise
+        if avg_confidence > 0.6 and (aspect_ratio > 15 or aspect_ratio < 0.07):
+            return True
+            
+        # 5. Check solidity - noisy regions often have irregular shapes
+        if avg_confidence > 0.7 and region.solidity < 0.4 and area < 500:
+            return True
+            
+        return False
 
 
 class SmartPostProcessor:

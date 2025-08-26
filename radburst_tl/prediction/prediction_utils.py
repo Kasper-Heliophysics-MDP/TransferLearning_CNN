@@ -5,7 +5,7 @@ import torch.nn.functional as F
 import cv2  # Optional: for visualization
 from torch.utils.data import DataLoader, TensorDataset
 
-def reconstruct_mask(tiles, positions, original_shape, tile_size=256):
+def reconstruct_mask(tiles, positions, original_shape, tile_size=256, preserve_probabilities=False):
     """
     Reconstructs the full mask from predicted tiles.
     
@@ -13,13 +13,15 @@ def reconstruct_mask(tiles, positions, original_shape, tile_size=256):
     For overlapping regions, it averages the predictions.
     
     Parameters:
-        tiles (numpy array): Predicted binary masks for each tile (shape: [N, 1, tile_size, tile_size]).
+        tiles (numpy array): Predicted masks for each tile (shape: [N, 1, tile_size, tile_size]).
         positions (list): A list of (row, col) positions for the top-left corner of each tile.
         original_shape (tuple): The original shape of the spectrogram (H, W).
         tile_size (int): Size of each tile.
+        preserve_probabilities (bool): If True, preserve probability values (0-1); 
+                                     If False, convert to binary mask.
         
     Returns:
-        numpy array: The reconstructed full binary mask.
+        numpy array: The reconstructed full mask (probabilities or binary).
     """
     H, W = original_shape
     full_mask = np.zeros((H, W), dtype=np.float32)
@@ -34,9 +36,14 @@ def reconstruct_mask(tiles, positions, original_shape, tile_size=256):
     # For overlapping tiles, average the predictions
     count[count == 0] = 1
     full_mask = full_mask / count
-    # Convert to binary mask using 0.5 threshold
-    full_mask = (full_mask > 0.5).astype(np.uint8)
-    return full_mask
+    
+    if preserve_probabilities:
+        # Keep probability values (0-1) for confidence analysis
+        return full_mask.astype(np.float32)
+    else:
+        # Convert to binary mask using 0.5 threshold (backward compatibility)
+        full_mask = (full_mask > 0.5).astype(np.uint8)
+        return full_mask
 
 # 归一化图像块 - 与训练过程保持一致
 def normalize_tiles(tiles):
