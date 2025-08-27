@@ -148,6 +148,148 @@ def build_deeplabv3(input_shape=(256, 256, 1), num_classes=1, encoder_weights=No
     return model
 
 
+def build_deeplabv3_rgb_to_mono(input_shape=(256, 256, 1), num_classes=1, 
+                               conversion_method='average', encoder_name='resnet34'):
+    """
+    Constructs a DeepLabV3+ model with RGB-to-mono weight conversion for radio burst detection.
+    
+    This function performs transfer learning by:
+    1. Loading ImageNet pretrained RGB DeepLabV3+ model
+    2. Converting RGB first layer weights to single channel
+    3. Transferring all other weights to single channel model
+    
+    Conversion methods:
+    - 'average': Simple average of RGB channels (W_mono = (W_R + W_G + W_B) / 3)
+    - 'luminance': Weighted average based on human perception (0.299*R + 0.587*G + 0.114*B)
+    
+    Parameters:
+        input_shape (tuple): Input dimensions for single channel spectrograms
+        num_classes (int): Number of output classes (typically 1 for binary segmentation)
+        conversion_method (str): Method for RGB to mono conversion ('average' or 'luminance')
+        encoder_name (str): Backbone architecture name
+    
+    Returns:
+        model: DeepLabV3+ model with converted weights from ImageNet RGB pretraining
+    """
+    import torch
+    import torch.nn.functional as F
+    
+    print(f"🚀 Building DeepLabV3+ with RGB-to-mono conversion")
+    print(f"   Conversion method: {conversion_method}")
+    print(f"   Encoder: {encoder_name}")
+    
+    # Step 1: Build RGB model with ImageNet pretraining
+    print("📥 Loading ImageNet pretrained RGB model...")
+    model_rgb = smp.DeepLabV3Plus(
+        encoder_name=encoder_name,
+        encoder_weights='imagenet',     # Load ImageNet pretrained weights
+        in_channels=3,                  # RGB input channels
+        classes=num_classes,
+        activation='sigmoid',
+        encoder_depth=5,
+        decoder_channels=256
+    )
+    
+    # Step 2: Build target single channel model
+    print("🎯 Creating target single channel model...")
+    model_mono = smp.DeepLabV3Plus(
+        encoder_name=encoder_name,
+        encoder_weights=None,           # No pretraining, will load converted weights
+        in_channels=input_shape[-1],    # Single channel input
+        classes=num_classes,
+        activation='sigmoid',
+        encoder_depth=5,
+        decoder_channels=256
+    )
+    
+    # Step 3: Convert RGB weights to single channel
+    print(f"🔄 Converting RGB first layer weights using '{conversion_method}' method...")
+    
+    # Get RGB first layer weights: shape [64, 3, 7, 7]
+    rgb_conv1_weight = model_rgb.encoder.conv1.weight.data
+    print(f"   RGB weights shape: {rgb_conv1_weight.shape}")
+    
+    if conversion_method == 'average':
+        # Simple average across RGB channels
+        mono_conv1_weight = rgb_conv1_weight.mean(dim=1, keepdim=True)
+        print("   Applied simple average conversion")
+        
+    elif conversion_method == 'luminance':
+        # Weighted average based on luminance perception
+        # Y = 0.299*R + 0.587*G + 0.114*B (ITU-R BT.601 standard)
+        rgb_weights = torch.tensor([0.299, 0.587, 0.114], 
+                                 dtype=rgb_conv1_weight.dtype,
+                                 device=rgb_conv1_weight.device)
+        
+        # Apply weighted combination: [64, 3, 7, 7] -> [64, 1, 7, 7]
+        mono_conv1_weight = (rgb_conv1_weight * rgb_weights.view(1, 3, 1, 1)).sum(dim=1, keepdim=True)
+        print("   Applied luminance-weighted conversion")
+        
+    else:
+        raise ValueError(f"Unsupported conversion method: {conversion_method}. Use 'average' or 'luminance'")
+    
+    print(f"   Converted weights shape: {mono_conv1_weight.shape}")
+    
+    # Step 4: Transfer weights from RGB model to mono model
+    print("🔗 Transferring weights...")
+    
+    rgb_state_dict = model_rgb.state_dict()
+    mono_state_dict = model_mono.state_dict()
+    
+    transferred_count = 0
+    converted_count = 0
+    skipped_count = 0
+    
+    for key in mono_state_dict.keys():
+        if key == 'encoder.conv1.weight':
+            # Special handling for first convolution layer
+            mono_state_dict[key] = mono_conv1_weight
+            converted_count += 1
+            print(f"   ✅ Converted: {key}")
+            
+        elif key in rgb_state_dict and rgb_state_dict[key].shape == mono_state_dict[key].shape:
+            # Direct transfer for matching shapes
+            mono_state_dict[key] = rgb_state_dict[key]
+            transferred_count += 1
+            
+        else:
+            # Skip incompatible weights
+            skipped_count += 1
+            if skipped_count <= 3:  # Only print first few skipped items
+                print(f"   ⚠️ Skipped: {key} (shape mismatch)")
+    
+    # Load converted state dict
+    model_mono.load_state_dict(mono_state_dict)
+    
+    print(f"📊 Weight transfer summary:")
+    print(f"   ✅ Converted layers: {converted_count}")
+    print(f"   ✅ Transferred layers: {transferred_count}")
+    print(f"   ⚠️ Skipped layers: {skipped_count}")
+    
+    # Step 5: Validation
+    print("🔍 Validating converted model...")
+    
+    # Test forward pass
+    test_input = torch.randn(1, input_shape[-1], *input_shape[:2])
+    model_mono.eval()
+    
+    with torch.no_grad():
+        test_output = model_mono(test_input)
+    
+    total_params = sum(p.numel() for p in model_mono.parameters())
+    
+    print(f"✅ Validation successful:")
+    print(f"   Input shape: {test_input.shape}")
+    print(f"   Output shape: {test_output.shape}")
+    print(f"   Output range: [{test_output.min():.4f}, {test_output.max():.4f}]")
+    print(f"   Total parameters: {total_params:,}")
+    
+    print("🎉 RGB-to-mono conversion completed successfully!")
+    print("   Model ready for training on radio burst data")
+    
+    return model_mono
+
+
 def freeze_encoder_weights(model):
     """
     Freezes the weights of the encoder (or backbone) part of the model.
@@ -456,6 +598,43 @@ def train_model_simple(model, train_loader, val_loader, initial_lr=1e-3, freeze_
         print(f"   Best F1 score: {best_f1:.4f}")
     
     return model, history
+
+
+# Model factory function for easy switching between architectures
+def build_model_by_name(model_name='unet', input_shape=(256, 256, 1), num_classes=1, 
+                       encoder_weights=None, encoder_name='resnet34', conversion_method='average'):
+    """
+    Factory function to build different model architectures by name.
+    
+    Parameters:
+        model_name (str): Model architecture name. Options:
+                         - 'unet': Standard UNet model
+                         - 'deeplabv3': DeepLabV3+ model from scratch
+                         - 'deeplabv3_rgb_convert': DeepLabV3+ with RGB-to-mono conversion
+        input_shape (tuple): Input dimensions for single channel spectrograms
+        num_classes (int): Number of output classes
+        encoder_weights (str or None): Pretrained weights ('imagenet' or None)
+        encoder_name (str): Backbone architecture name
+        conversion_method (str): RGB conversion method for 'deeplabv3_rgb_convert'
+    
+    Returns:
+        model: The requested model architecture
+    """
+    print(f"🏗️ Building {model_name} model...")
+    
+    if model_name == 'unet':
+        return build_unet(input_shape, num_classes, encoder_weights)
+        
+    elif model_name == 'deeplabv3':
+        return build_deeplabv3(input_shape, num_classes, encoder_weights, encoder_name)
+        
+    elif model_name == 'deeplabv3_rgb_convert':
+        # Always use RGB conversion for this option (ignore encoder_weights parameter)
+        return build_deeplabv3_rgb_to_mono(input_shape, num_classes, conversion_method, encoder_name)
+        
+    else:
+        raise ValueError(f"Unknown model name: {model_name}. "
+                        f"Options: 'unet', 'deeplabv3', 'deeplabv3_rgb_convert'")
 
 
 # Backward compatibility aliases
