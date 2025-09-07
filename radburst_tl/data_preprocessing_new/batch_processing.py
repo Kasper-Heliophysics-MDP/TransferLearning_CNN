@@ -101,6 +101,7 @@ def convert_catalog_to_burst_list(burst_df, original_csv_dir):
             'csv_file': csv_file_path,
             'start_time': row['start_time'],
             'end_time': row['end_time'],
+            'burst_type': burst_type,  # Add burst type at top level
             'metadata': {
                 'date': row['date'],
                 'location': row['location'], 
@@ -120,7 +121,8 @@ def convert_catalog_to_burst_list(burst_df, original_csv_dir):
 
 
 def process_all_bursts_by_type(catalog_path, original_csv_dir, output_base_dir, 
-                             window_duration=4*60, overlap_ratio=0.5, apply_denoising=True):
+                             window_duration=4*60, overlap_ratio=0.5, apply_denoising=True,
+                             cleaning_method="fast"):
     """
     Main function to process all bursts and separate by type
     
@@ -131,6 +133,7 @@ def process_all_bursts_by_type(catalog_path, original_csv_dir, output_base_dir,
         window_duration (int): Window duration in seconds
         overlap_ratio (float): Overlap ratio for windows
         apply_denoising (bool): Whether to apply denoising
+        cleaning_method (str): RFI cleaning method ('fast', 'comprehensive', 'conservative')
         
     Returns:
         dict: Processing results by type
@@ -176,7 +179,9 @@ def process_all_bursts_by_type(catalog_path, original_csv_dir, output_base_dir,
                     burst_start_time=burst_info['start_time'],
                     burst_end_time=burst_info['end_time'],
                     save_dir=type_dirs[burst_type],
-                    apply_denoising=apply_denoising
+                    apply_denoising=apply_denoising,
+                    burst_type=burst_info['burst_type'],  # Pass burst type for advanced RFI cleaning
+                    cleaning_method=cleaning_method  # Use specified cleaning method
                 )
                 
                 # Add metadata to result

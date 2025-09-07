@@ -24,6 +24,9 @@ sys.path.append('../data_preprocessing')
 from data_label import time_to_column_indices
 from data_denoise import remove_horizontal_noise, remove_vertical_noise
 
+# Import new advanced RFI cleaning
+from denoise_new import advanced_rfi_cleaning_wrapper
+
 
 class BurstFixedWindowSlicer:
     """
@@ -58,13 +61,19 @@ class BurstFixedWindowSlicer:
         print(f"  Buffer zone: 2min ({self.buffer_samples} samples)")
         print(f"  Target size: {target_size}")
     
-    def load_and_preprocess_csv(self, csv_file_path, apply_denoising=True):
+    def load_and_preprocess_csv(self, csv_file_path, apply_denoising=True, 
+                               burst_start_time=None, burst_end_time=None, burst_type=None,
+                               cleaning_method="fast"):
         """
-        Load CSV file and apply preprocessing
+        Load CSV file and apply preprocessing with burst-aware RFI cleaning
         
         Args:
             csv_file_path (str): Path to the raw CSV file
             apply_denoising (bool): Whether to apply noise removal
+            burst_start_time (str): Burst start time for protection (optional)
+            burst_end_time (str): Burst end time for protection (optional) 
+            burst_type (int): Burst type for parameter adaptation (optional)
+            cleaning_method (str): RFI cleaning method ('fast', 'comprehensive', 'conservative')
             
         Returns:
             tuple: (processed_data, times, raw_data)
@@ -83,15 +92,49 @@ class BurstFixedWindowSlicer:
         print(f"  Time range: {times.iloc[0]} to {times.iloc[-1]}")
         print(f"  Frequency channels: {len(spectral_data.columns)}")
         
-        # Apply denoising if requested
+        # Apply advanced RFI cleaning if requested
         if apply_denoising:
-            print("  Applying noise removal...")
-            denoised_data = remove_horizontal_noise(spectral_data, num_std=15)
-            processed_data = remove_vertical_noise(denoised_data)
+            # Calculate burst indices for protection if burst times provided
+            burst_start_idx, burst_end_idx = None, None
+            if burst_start_time and burst_end_time:
+                try:
+                    burst_start_idx, burst_end_idx = time_to_column_indices(
+                        times, burst_start_time, burst_end_time
+                    )
+                    print(f"  Burst protection enabled: [{burst_start_idx}, {burst_end_idx}]")
+                except Exception as e:
+                    print(f"  Warning: Could not calculate burst indices: {e}")
+            
+            # Infer burst type from filename if not provided
+            if burst_type is None:
+                burst_type = self._infer_burst_type_from_filename(csv_file_path)
+            
+            print(f"  Applying advanced RFI cleaning (Type {burst_type}, Method: {cleaning_method})...")
+            processed_data = advanced_rfi_cleaning_wrapper(
+                spectral_data,
+                burst_start_idx=burst_start_idx,
+                burst_end_idx=burst_end_idx, 
+                burst_type=burst_type,
+                method=cleaning_method
+            )
         else:
             processed_data = spectral_data
         
         return processed_data, times, raw_data
+    
+    def _infer_burst_type_from_filename(self, csv_file_path):
+        """
+        Infer burst type from filename or use default
+        
+        Args:
+            csv_file_path (str): Path to CSV file
+            
+        Returns:
+            int: Inferred burst type (default: 3)
+        """
+        # This is a placeholder - you can enhance this based on your filename patterns
+        # For now, return Type 3 as it's the most common in your dataset (85%)
+        return 3
     
     def transpose_data(self, spectral_data):
         """
@@ -105,7 +148,15 @@ class BurstFixedWindowSlicer:
         """
         # CRITICAL: Apply the transpose operation as required
         # Original CSV: (time_points, frequency_channels) -> (frequency_channels, time_points)
-        transposed_data = spectral_data.T[::-1]
+        
+        # Convert to numpy array if DataFrame
+        if isinstance(spectral_data, pd.DataFrame):
+            data_array = spectral_data.values
+        else:
+            data_array = spectral_data
+        
+        # Apply transpose and flip
+        transposed_data = data_array.T[::-1]
         
         print(f"  Data transposed: {spectral_data.shape} -> {transposed_data.shape}")
         return transposed_data
@@ -222,15 +273,16 @@ class BurstFixedWindowSlicer:
         
         return resized
     
-    def generate_filenames(self, positions, burst_start_time, burst_end_time, source_file):
+    def generate_filenames(self, positions, burst_start_time, burst_end_time, source_file, burst_type=None):
         """
-        Generate filenames following the existing naming convention
+        Generate filenames following the existing naming convention with type information
         
         Args:
             positions: List of x positions
             burst_start_time (str): Burst start time string
             burst_end_time (str): Burst end time string
             source_file (str): Source CSV file path
+            burst_type (int): Burst type (2, 3, 5) to include in filename
             
         Returns:
             list: List of generated filenames
@@ -244,8 +296,12 @@ class BurstFixedWindowSlicer:
         
         filenames = []
         for i, x_pos in enumerate(positions):
-            # Format: window_YYYYMMDD_x{position}_{location}_burst_{start}to{end}
-            filename = f"window_{base_name}_x{x_pos}_burst_{clean_start}to{clean_end}"
+            # Format: window_type{type}_{base_name}_x{position}_burst_{start}to{end}
+            if burst_type is not None:
+                filename = f"window_type{burst_type}_{base_name}_x{x_pos}_burst_{clean_start}to{clean_end}"
+            else:
+                # Fallback to old format if type not provided
+                filename = f"window_{base_name}_x{x_pos}_burst_{clean_start}to{clean_end}"
             filenames.append(filename)
         
         return filenames
@@ -279,7 +335,8 @@ class BurstFixedWindowSlicer:
         return saved_files
     
     def slice_burst_with_fixed_windows(self, csv_file_path, burst_start_time, burst_end_time, 
-                                     save_dir=None, apply_denoising=True):
+                                     save_dir=None, apply_denoising=True, burst_type=None,
+                                     cleaning_method="fast"):
         """
         Complete pipeline: load data, slice burst region with fixed windows
         
@@ -289,6 +346,8 @@ class BurstFixedWindowSlicer:
             burst_end_time (str): Burst end time in 'HH:MM:SS' format
             save_dir (str): Directory to save windows (optional)
             apply_denoising (bool): Whether to apply noise removal
+            burst_type (int): Burst type (2, 3, 5) for advanced RFI cleaning (optional)
+            cleaning_method (str): RFI cleaning method ('fast', 'comprehensive', 'conservative')
             
         Returns:
             dict: Results containing windows, positions, filenames, and metadata
@@ -298,8 +357,15 @@ class BurstFixedWindowSlicer:
         print(f"Source: {os.path.basename(csv_file_path)}")
         print(f"{'='*60}")
         
-        # Step 1: Load and preprocess data
-        processed_data, times, raw_data = self.load_and_preprocess_csv(csv_file_path, apply_denoising)
+        # Step 1: Load and preprocess data with burst-aware cleaning
+        processed_data, times, raw_data = self.load_and_preprocess_csv(
+            csv_file_path, 
+            apply_denoising=apply_denoising,
+            burst_start_time=burst_start_time,
+            burst_end_time=burst_end_time,
+            burst_type=burst_type,
+            cleaning_method=cleaning_method
+        )
         
         # Step 2: Apply transpose operation
         transposed_data = self.transpose_data(processed_data)
@@ -315,8 +381,8 @@ class BurstFixedWindowSlicer:
         # Step 5: Extract fixed windows
         windows, positions = self.extract_fixed_windows(transposed_data, actual_start, actual_end)
         
-        # Step 6: Generate filenames
-        filenames = self.generate_filenames(positions, burst_start_time, burst_end_time, csv_file_path)
+        # Step 6: Generate filenames with type information
+        filenames = self.generate_filenames(positions, burst_start_time, burst_end_time, csv_file_path, burst_type)
         
         # Step 7: Save windows if save_dir provided
         saved_files = []
@@ -360,6 +426,7 @@ def process_multiple_bursts(burst_list, save_dir, apply_denoising=True):
                    'csv_file': path to CSV file
                    'start_time': burst start time
                    'end_time': burst end time
+                   'burst_type': burst type (optional)
         save_dir (str): Directory to save all windows
         apply_denoising (bool): Whether to apply noise removal
         
@@ -375,12 +442,16 @@ def process_multiple_bursts(burst_list, save_dir, apply_denoising=True):
         print(f"\n--- Processing burst {i+1}/{len(burst_list)} ---")
         
         try:
+            # Get burst type if available
+            burst_type = burst_info.get('burst_type', None)
+            
             result = slicer.slice_burst_with_fixed_windows(
                 csv_file_path=burst_info['csv_file'],
                 burst_start_time=burst_info['start_time'],
                 burst_end_time=burst_info['end_time'],
                 save_dir=save_dir,
-                apply_denoising=apply_denoising
+                apply_denoising=apply_denoising,
+                burst_type=burst_type
             )
             all_results.append(result)
             
