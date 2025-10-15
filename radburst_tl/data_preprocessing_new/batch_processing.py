@@ -156,7 +156,7 @@ def process_all_bursts_by_type(catalog_path, original_csv_dir, output_base_dir,
     slicer = BurstFixedWindowSlicer(
         window_duration=window_duration,
         overlap_ratio=overlap_ratio,
-        target_size=(128, 128)
+        target_size=(128, 128) # 128×128 for GAN training !!!!!!!!!!!!s
     )
     
     # Process each type separately
