@@ -2,7 +2,9 @@
 Custom PyTorch Dataset for Loading CSV Spectrogram Data for GAN Training
 
 This module provides a custom Dataset class to load 128x128 CSV spectrogram windows
-for training DCGAN on solar radio burst data.
+for training GAN on solar radio burst data.
+
+Supports both DCGAN (global normalization) and SpecGAN (per-frequency normalization).
 """
 
 import os
@@ -22,22 +24,32 @@ class CSVSpectrogramDataset(Dataset):
     """
     
     def __init__(self, root_dir, transform=None, normalize_method='minmax', 
-                 grayscale=True, subsample_ratio=1.0):
+                 grayscale=True, subsample_ratio=1.0,
+                 normalizer=None, moments_path=None, augment=False):
         """
         Initialize the CSV Spectrogram Dataset
         
         Args:
             root_dir (str): Root directory containing CSV files (can have subdirectories)
             transform (callable, optional): Optional transform to apply to spectrograms
-            normalize_method (str): Normalization method - 'minmax', 'standardize', or 'global'
+            normalize_method (str): Normalization method:
+                - 'minmax': Global min-max normalization (DCGAN)
+                - 'standardize': Global z-score normalization
+                - 'global': Global log-scale normalization
+                - 'per_frequency': Per-frequency bin normalization (SpecGAN) - requires normalizer
             grayscale (bool): If True, output 1 channel; if False, duplicate to 3 channels (RGB)
             subsample_ratio (float): Ratio of data to use (for quick testing, 0-1)
+            normalizer (PerFrequencyNormalizer, optional): For 'per_frequency' normalization
+            moments_path (str, optional): Path to pre-computed moments file (.npz)
+            augment (bool): If True, apply temporal shift augmentation (SpecGAN-inspired)
         """
         self.root_dir = os.path.abspath(root_dir)  # Convert to absolute path
         self.transform = transform
         self.normalize_method = normalize_method
         self.grayscale = grayscale
         self.subsample_ratio = subsample_ratio
+        self.normalizer = normalizer
+        self.augment = augment
         
         # Check if directory exists
         if not os.path.exists(self.root_dir):
@@ -63,11 +75,30 @@ class CSVSpectrogramDataset(Dataset):
                            f"Directory exists: {os.path.exists(self.root_dir)}\n"
                            f"Directory contents: {os.listdir(self.root_dir) if os.path.exists(self.root_dir) else 'N/A'}")
         
+        # Auto-load moments if path provided
+        if moments_path:
+            if self.normalizer is None:
+                # Lazy import to avoid circular dependency
+                try:
+                    from specgan_utils import PerFrequencyNormalizer
+                    self.normalizer = PerFrequencyNormalizer()
+                except ImportError:
+                    raise ImportError(
+                        "Per-frequency normalization requires specgan_utils.py. "
+                        "Please create specgan_utils.py with PerFrequencyNormalizer class."
+                    )
+            self.normalizer.load_moments(moments_path)
+            print(f"   ✅ Loaded per-frequency moments from: {moments_path}")
+        
         print(f"📊 CSVSpectrogramDataset initialized:")
         print(f"   Root directory: {root_dir}")
         print(f"   Total CSV files found: {len(self.csv_files)}")
         print(f"   Normalization method: {normalize_method}")
         print(f"   Output channels: {1 if grayscale else 3}")
+        print(f"   Data augmentation: {'Enabled' if augment else 'Disabled'}")
+        if normalize_method == 'per_frequency':
+            status = 'Ready' if self.normalizer else 'Missing (provide normalizer or moments_path)'
+            print(f"   Per-frequency normalizer: {status}")
         
         # Analyze burst type distribution
         self._analyze_dataset()
@@ -109,6 +140,10 @@ class CSVSpectrogramDataset(Dataset):
             # Convert to float32
             spectrogram = spectrogram.astype(np.float32)
             
+            # Apply augmentation BEFORE normalization (SpecGAN-inspired)
+            if self.augment:
+                spectrogram = self._augment(spectrogram)
+            
             # Normalize
             spectrogram = self._normalize(spectrogram)
             
@@ -133,17 +168,51 @@ class CSVSpectrogramDataset(Dataset):
             else:
                 return torch.zeros(3, 128, 128)
     
+    def _augment(self, spectrogram):
+        """
+        Apply data augmentation to spectrogram (SpecGAN-inspired)
+        
+        Args:
+            spectrogram (np.array): Raw spectrogram data [H, W]
+            
+        Returns:
+            np.array: Augmented spectrogram
+        """
+        # Temporal shift augmentation (shifts burst along time axis)
+        # This addresses the "left-side concentration" issue
+        max_shift = 30  # Maximum shift in time bins (~3 seconds at 0.1s sampling)
+        shift = np.random.randint(-max_shift, max_shift + 1)
+        spectrogram = np.roll(spectrogram, shift, axis=1)  # Shift along time axis (axis=1)
+        
+        # Optional: Add small noise for robustness (uncomment if needed)
+        # noise_std = 0.02
+        # noise = np.random.randn(*spectrogram.shape) * noise_std
+        # spectrogram = spectrogram + noise
+        
+        return spectrogram
+    
     def _normalize(self, spectrogram):
         """
         Normalize the spectrogram data
         
         Args:
-            spectrogram (np.array): Raw spectrogram data
+            spectrogram (np.array): Raw spectrogram data [H, W]
             
         Returns:
             np.array: Normalized spectrogram in range [-1, 1] (for tanh activation)
         """
-        if self.normalize_method == 'minmax':
+        if self.normalize_method == 'per_frequency':
+            # SpecGAN-style per-frequency bin normalization
+            # Each frequency bin is normalized independently using pre-computed statistics
+            if self.normalizer is None:
+                raise ValueError(
+                    "Per-frequency normalization requires a normalizer. "
+                    "Please provide 'normalizer' or 'moments_path' in __init__. "
+                    "Run compute_moments.py first to generate moments file."
+                )
+            return self.normalizer.normalize(spectrogram)
+            
+        elif self.normalize_method == 'minmax':
             # Min-max normalization to [-1, 1]
             min_val = spectrogram.min()
             max_val = spectrogram.max()
