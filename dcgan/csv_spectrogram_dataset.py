@@ -1,10 +1,13 @@
 """
-Custom PyTorch Dataset for Loading CSV Spectrogram Data for GAN Training
+Custom PyTorch Dataset for Loading Spectrogram Data for GAN Training
 
-This module provides a custom Dataset class to load 128x128 CSV spectrogram windows
+This module provides a custom Dataset class to load 128x128 spectrogram windows
 for training GAN on solar radio burst data.
 
-Supports both DCGAN (global normalization) and SpecGAN (per-frequency normalization).
+Supports:
+- CSV files (window_*.csv format)
+- NumPy files (burst-*.npy format, e.g., eCallisto processed data)
+- DCGAN (global normalization) and SpecGAN (per-frequency normalization)
 """
 
 import os
@@ -17,9 +20,12 @@ from glob import glob
 
 class CSVSpectrogramDataset(Dataset):
     """
-    Custom Dataset for loading CSV spectrogram files for GAN training
+    Custom Dataset for loading spectrogram files for GAN training
     
-    Each CSV file contains a 128x128 matrix of spectral intensity values.
+    Supports both CSV and NumPy (.npy) formats:
+    - CSV: 128x128 matrix with no headers (window_*.csv)
+    - NPY: 128x128 numpy array (burst-*.npy, e.g., eCallisto processed data)
+    
     This dataset loads, normalizes, and converts them to PyTorch tensors.
     """
     
@@ -57,11 +63,15 @@ class CSVSpectrogramDataset(Dataset):
                            f"Current working directory: {os.getcwd()}\n"
                            f"Please check your path or use absolute path.")
         
-        # Find all CSV files recursively
-        self.csv_files = []
+        # Find all spectrogram files recursively (CSV or NPY)
+        self.csv_files = []  # Name kept for backward compatibility
         for root, dirs, files in os.walk(self.root_dir):
             for file in files:
+                # Support CSV files (window_*.csv format)
                 if file.endswith('.csv') and file.startswith('window_'):
+                    self.csv_files.append(os.path.join(root, file))
+                # Support NPY files (burst-*.npy format, e.g., eCallisto)
+                elif file.endswith('.npy') and file.startswith('burst-'):
                     self.csv_files.append(os.path.join(root, file))
         
         # Subsample if needed (for quick testing)
@@ -70,8 +80,8 @@ class CSVSpectrogramDataset(Dataset):
             self.csv_files = self.csv_files[:n_samples]
         
         if len(self.csv_files) == 0:
-            raise ValueError(f"No CSV files found in {self.root_dir}\n"
-                           f"Searched for files matching pattern: 'window_*.csv'\n"
+            raise ValueError(f"No spectrogram files found in {self.root_dir}\n"
+                           f"Searched for patterns: 'window_*.csv' or 'burst-*.npy'\n"
                            f"Directory exists: {os.path.exists(self.root_dir)}\n"
                            f"Directory contents: {os.listdir(self.root_dir) if os.path.exists(self.root_dir) else 'N/A'}")
         
@@ -90,9 +100,13 @@ class CSVSpectrogramDataset(Dataset):
             self.normalizer.load_moments(moments_path)
             print(f"   ✅ Loaded per-frequency moments from: {moments_path}")
         
-        print(f"📊 CSVSpectrogramDataset initialized:")
+        # Count file types
+        csv_count = sum(1 for f in self.csv_files if f.endswith('.csv'))
+        npy_count = sum(1 for f in self.csv_files if f.endswith('.npy'))
+        
+        print(f"📊 SpectrogramDataset initialized:")
         print(f"   Root directory: {root_dir}")
-        print(f"   Total CSV files found: {len(self.csv_files)}")
+        print(f"   Total files found: {len(self.csv_files)} (CSV: {csv_count}, NPY: {npy_count})")
         print(f"   Normalization method: {normalize_method}")
         print(f"   Output channels: {1 if grayscale else 3}")
         print(f"   Data augmentation: {'Enabled' if augment else 'Disabled'}")
@@ -106,16 +120,34 @@ class CSVSpectrogramDataset(Dataset):
     def _analyze_dataset(self):
         """Analyze and display dataset composition"""
         type_counts = {}
-        for csv_file in self.csv_files:
-            # Extract type from filename: window_type3_...csv
-            basename = os.path.basename(csv_file)
-            if 'type' in basename.lower():
+        location_counts = {}
+        
+        for file_path in self.csv_files:
+            basename = os.path.basename(file_path)
+            
+            # Extract type from CSV filename: window_type3_...csv
+            if 'type' in basename.lower() and basename.endswith('.csv'):
                 burst_type = basename.split('type')[1].split('_')[0]
                 type_counts[f"Type {burst_type}"] = type_counts.get(f"Type {burst_type}", 0) + 1
+            
+            # Extract location from NPY filename: burst-LOCATION-...npy
+            elif basename.startswith('burst-') and basename.endswith('.npy'):
+                parts = basename.split('-')
+                if len(parts) >= 2:
+                    location = parts[1]
+                    location_counts[location] = location_counts.get(location, 0) + 1
         
-        print(f"   Burst type distribution:")
-        for burst_type, count in sorted(type_counts.items()):
-            print(f"     {burst_type}: {count} windows ({count/len(self.csv_files)*100:.1f}%)")
+        # Print type distribution (for CSV files)
+        if type_counts:
+            print(f"   Burst type distribution (CSV):")
+            for burst_type, count in sorted(type_counts.items()):
+                print(f"     {burst_type}: {count} windows ({count/len(self.csv_files)*100:.1f}%)")
+        
+        # Print location distribution (for NPY files)
+        if location_counts:
+            print(f"   Location distribution (NPY):")
+            for location, count in sorted(location_counts.items(), key=lambda x: x[1], reverse=True):
+                print(f"     {location}: {count} files ({count/len(self.csv_files)*100:.1f}%)")
     
     def __len__(self):
         """Return the total number of samples"""
@@ -123,7 +155,7 @@ class CSVSpectrogramDataset(Dataset):
     
     def __getitem__(self, idx):
         """
-        Load and process a single CSV spectrogram
+        Load and process a single spectrogram (CSV or NPY)
         
         Args:
             idx (int): Index of the sample to load
@@ -131,11 +163,20 @@ class CSVSpectrogramDataset(Dataset):
         Returns:
             torch.Tensor: Processed spectrogram tensor [C, H, W]
         """
-        csv_path = self.csv_files[idx]
+        file_path = self.csv_files[idx]
         
         try:
-            # Load CSV file (pure numerical data, no headers)
-            spectrogram = pd.read_csv(csv_path, header=None).values
+            # Load file based on extension
+            if file_path.endswith('.npy'):
+                # Load NumPy file (already 128×128 array)
+                spectrogram = np.load(file_path)
+                
+            elif file_path.endswith('.csv'):
+                # Load CSV file (pure numerical data, no headers)
+                spectrogram = pd.read_csv(file_path, header=None).values
+                
+            else:
+                raise ValueError(f"Unsupported file format: {file_path}")
             
             # Convert to float32
             spectrogram = spectrogram.astype(np.float32)
@@ -161,7 +202,7 @@ class CSVSpectrogramDataset(Dataset):
             return spectrogram
             
         except Exception as e:
-            print(f"❌ Error loading {csv_path}: {e}")
+            print(f"❌ Error loading {file_path}: {e}")
             # Return a zero tensor as fallback
             if self.grayscale:
                 return torch.zeros(1, 128, 128)

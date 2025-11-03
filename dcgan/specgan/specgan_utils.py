@@ -70,8 +70,13 @@ class PerFrequencyNormalizer:
             if verbose and (i % 50 == 0):
                 print(f"   Progress: {i}/{len(csv_files)}")
             
-            # Load CSV spectrogram
-            spec = pd.read_csv(fp, header=None).values  # [128, 128] (freq, time)
+            # Load spectrogram (CSV or NPY)
+            if fp.endswith('.npy'):
+                spec = np.load(fp)  # [128, 128]
+            elif fp.endswith('.csv'):
+                spec = pd.read_csv(fp, header=None).values  # [128, 128]
+            else:
+                continue
             
             # Optional: Apply log transform (SpecGAN uses log magnitude)
             # For radio bursts, may or may not be needed - test both
@@ -690,12 +695,13 @@ def get_specgan_optimizer(netG, netD, loss_type='wgan-gp'):
 
 def compute_csv_moments(csv_dir, output_path='moments.npz', pattern='window_*.csv', verbose=True):
     """
-    Convenience function to compute moments from a directory of CSV files
+    Convenience function to compute moments from a directory of spectrogram files
     
     Wrapper around PerFrequencyNormalizer.compute_moments()
+    Supports both CSV and NPY files.
     
     Args:
-        csv_dir: Directory containing CSV files
+        csv_dir: Directory containing spectrogram files (CSV or NPY)
         output_path: Where to save computed moments
         pattern: File pattern to match (default: 'window_*.csv')
         verbose: Print progress
@@ -703,18 +709,24 @@ def compute_csv_moments(csv_dir, output_path='moments.npz', pattern='window_*.cs
     Returns:
         normalizer: PerFrequencyNormalizer instance with computed moments
     """
-    # Find all CSV files
+    # Find all spectrogram files (CSV or NPY)
     csv_files = []
     for root, dirs, files in os.walk(csv_dir):
         for file in files:
+            # Support CSV files
             if file.startswith('window_') and file.endswith('.csv'):
+                csv_files.append(os.path.join(root, file))
+            # Support NPY files (e.g., eCallisto processed data)
+            elif file.startswith('burst-') and file.endswith('.npy'):
                 csv_files.append(os.path.join(root, file))
     
     if len(csv_files) == 0:
-        raise ValueError(f"No CSV files found in {csv_dir} matching pattern '{pattern}'")
+        raise ValueError(f"No spectrogram files found in {csv_dir}. Searched for 'window_*.csv' or 'burst-*.npy'")
     
     if verbose:
-        print(f"Found {len(csv_files)} CSV files")
+        csv_count = sum(1 for f in csv_files if f.endswith('.csv'))
+        npy_count = sum(1 for f in csv_files if f.endswith('.npy'))
+        print(f"Found {len(csv_files)} files (CSV: {csv_count}, NPY: {npy_count})")
     
     # Compute moments
     normalizer = PerFrequencyNormalizer()
