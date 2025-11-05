@@ -501,7 +501,8 @@ def load_gan_checkpoint(checkpoint_path, netG, netD, optimizerG=None, optimizerD
         raise FileNotFoundError(f"Checkpoint not found: {checkpoint_path}")
     
     # Load checkpoint
-    checkpoint = torch.load(checkpoint_path, map_location=device)
+    # PyTorch 2.6+ requires weights_only=False for full checkpoints
+    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
     
     # Load model states
     netG.load_state_dict(checkpoint['generator_state_dict'])
@@ -537,7 +538,7 @@ def load_generator_only(checkpoint_path, netG, device='cpu'):
     Returns:
         epoch: Epoch number of loaded checkpoint
     """
-    checkpoint = torch.load(checkpoint_path, map_location=device)
+    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
     netG.load_state_dict(checkpoint['generator_state_dict'])
     
     epoch = checkpoint.get('epoch', 0)
