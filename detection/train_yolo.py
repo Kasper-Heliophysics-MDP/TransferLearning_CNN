@@ -41,6 +41,12 @@ def main():
     ap.add_argument("--imgsz", type=int, default=640)
     ap.add_argument("--batch", type=int, default=16)
     ap.add_argument("--device", default="0")
+    ap.add_argument("--seed", type=int, default=0,
+                    help="training seed. Needed to measure run-to-run variance: with only "
+                         "169 val boxes, an eval flag that should be neutral already moved "
+                         "AP50 by 15%, which is the same size as the gaps between the four "
+                         "Phase 1 arms -- so the noise floor has to be measured before any "
+                         "further comparison means anything.")
     ap.add_argument("--rect", action="store_true",
                     help="rectangular batches: keep the images' own aspect ratio instead of "
                          "letterboxing to a square. Needed for the 640x1280 wide dataset, "
@@ -64,7 +70,7 @@ def main():
     # the time axis. All off, deliberately.
     common = dict(data=args.data, imgsz=args.imgsz, batch=args.batch,
                   device=args.device, project=args.project, exist_ok=True,
-                  patience=args.patience, rect=args.rect,
+                  patience=args.patience, rect=args.rect, seed=args.seed,
                   fliplr=0.0, flipud=0.0, mosaic=0.0, degrees=0.0,
                   shear=0.0, perspective=0.0, scale=0.0, translate=0.0)
 

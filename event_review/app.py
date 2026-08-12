@@ -43,6 +43,7 @@ import streamlit as st
 import data_access as da
 import review_store as rs
 from plotting import render_pair, cleaned_scale
+from range_select import range_selector
 
 st.set_page_config(page_title="Burst Review", layout="wide")
 
@@ -236,7 +237,23 @@ if auto_indices is not None:
     default_end_s = manual_saved.get("end_s", auto_indices[1] * sample_interval_s)
     max_s = event["raw"].shape[1] * sample_interval_s
 
-    st.subheader("Burst 实际时间段(可修正)")
+    st.subheader("Burst 实际时间段(在图上横向拖一段即可)")
+
+    # The selector has to run BEFORE the number_inputs below: writing a widget's
+    # session_state key after that widget has been created in the same run
+    # raises, so a drag stores the new values and reruns instead.
+    picked = range_selector(
+        event["raw"], sample_interval_s, event["freq_mhz"], key=f"rsel_{file_name}",
+        start_s=float(st.session_state.get(f"mstart_{file_name}", default_start_s)),
+        end_s=float(st.session_state.get(f"mend_{file_name}", default_end_s)),
+    )
+    if picked is not None:
+        cur = (st.session_state.get(f"mstart_{file_name}"), st.session_state.get(f"mend_{file_name}"))
+        if cur != picked:
+            st.session_state[f"mstart_{file_name}"] = picked[0]
+            st.session_state[f"mend_{file_name}"] = picked[1]
+            st.rerun()
+
     mc1, mc2, mc3 = st.columns([1, 1, 2])
     manual_start_s = mc1.number_input("开始(秒)", min_value=0.0, max_value=max_s,
                                        value=float(default_start_s), step=1.0, key=f"mstart_{file_name}")
