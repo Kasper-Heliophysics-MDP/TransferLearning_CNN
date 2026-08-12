@@ -1,6 +1,56 @@
-# Data (too large for git; lives locally / on Dropbox)
-data/
+# ---------------------------------------------------------------------------
+# data/ holds ~4.5 GB of .npy spectrograms and generated YOLO datasets -- none
+# of that belongs in git. But a handful of small CSVs in there are the exact
+# opposite: hand-made, irreproducible, and text.
+#
+# The review_status.csv files in particular are hundreds of hours of human
+# judgement (624 reviews / 343 manual burst-time corrections as of 2026-08-12)
+# and existed on exactly one disk with no version control until now. They are
+# also the only place that history lives at all: review_store.py overwrites a
+# record in place when an event is re-reviewed and keeps no audit trail, so a
+# git commit is what makes "when did this label change, and from what" a
+# question that can be answered.
+#
+# Note the ignore/re-include ladder below: git will not descend into an
+# excluded DIRECTORY, so `!data/x/y.csv` alone silently does nothing. Each
+# level has to exclude its *contents* (`dir/*`) while leaving the directory
+# itself includable.
+# ---------------------------------------------------------------------------
+data/*
+!data/ecallisto/
+!data/burst_data/
+
+data/ecallisto/*
+!data/ecallisto/raw_events/
+!data/ecallisto/windows/
+
+data/ecallisto/raw_events/*
+!data/ecallisto/raw_events/review_status.csv
+!data/ecallisto/raw_events/metadata.csv
+
+# windows.csv / boxes.csv are regenerable (detection/refresh_boxes.py, no
+# download needed) but are tracked anyway: they pin which dataset a given
+# result was produced from. The .bak-* copies refresh_boxes writes are not.
+data/ecallisto/windows/*
+!data/ecallisto/windows/windows.csv
+!data/ecallisto/windows/boxes.csv
+
+data/burst_data/*
+!data/burst_data/rough_events/
+data/burst_data/rough_events/*
+!data/burst_data/rough_events/review_status.csv
+!data/burst_data/rough_events/metadata.csv
+
 burst_data.zip
+
+# Training runs: weights + plots, 1.1 GB and fully reproducible from the
+# scripts + the tracked CSVs above.
+detection/runs/
+*.log
+
+# Redundant now that the CSVs themselves are versioned -- git history is the
+# backup. Kept on disk, just not committed.
+event_review/backups/
 
 # Python
 __pycache__/
