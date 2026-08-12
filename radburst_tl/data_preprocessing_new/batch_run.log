@@ -1,0 +1,3014 @@
+Starting batch: 74 burst rows, method=fast, Sat Aug  8 03:49:30 UTC 2026
+--- index 0 / 73 : 03:49:30 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 18:31:17 to 18:32:40
+Source: 240330182002-PeachMountian.csv
+============================================================
+Loading CSV file: 240330182002-PeachMountian.csv
+  Data shape: (8642, 411)
+  Time range: 18:20:02.345 to 18:34:25.915
+  Frequency channels: 411
+  Burst protection enabled: [6751, 7582]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (8642, 411) -> (411, 8642)
+  Converting time strings to indices...
+    Burst indices: [6751, 7582]
+  Calculating slicing range...
+    Burst: [6751, 7582] (duration: 831 samples)
+    Total length: 8642 samples
+    Ideal range: [5551, 8782]
+    End boundary detected: need space for windows beyond 8782
+    Final range: [5551, 6242]
+    Coverage: 691 samples (1.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 1 windows
+    Positions: [np.int64(5551)]
+  Saving 1 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/1 [00:00<?, ?it/s]Saving windows: 100%|██████████| 1/1 [00:00<00:00, 37.27it/s]
+  Saved 1 files
+
+✅ Processing completed!
+   Generated 1 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=0 status=OK file=240330182002-PeachMountian.csv type=3 windows=1 seconds=1.6
+--- index 1 / 73 : 03:49:32 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 20:03:28 to 20:05:01
+Source: 240417180250-Skyline High School.csv
+============================================================
+Loading CSV file: 240417180250-Skyline High School.csv
+  Data shape: (274367, 411)
+  Time range: 18:02:50.224 to 01:41:02.378
+  Frequency channels: 411
+  Burst protection enabled: [72232, 73160]
+  Applying advanced RFI cleaning (Type 5, Method: fast)...
+  Data transposed: (274367, 411) -> (411, 274367)
+  Converting time strings to indices...
+    Burst indices: [72232, 73160]
+  Calculating slicing range...
+    Burst: [72232, 73160] (duration: 928 samples)
+    Total length: 274367 samples
+    Ideal range: [71032, 74360]
+    Final range: [71032, 74360]
+    Coverage: 3328 samples (5.5 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(71032), np.int64(72232), np.int64(73432)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_5
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.62it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_5
+RESULT index=1 status=OK file=240417180250-Skyline High School.csv type=5 windows=3 seconds=73.6
+--- index 2 / 73 : 03:50:47 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:05:43 to 16:06:10
+Source: 240419152923-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240419152923-Marquette Senior Hig.csv
+  Data shape: (143369, 411)
+  Time range: 15:29:22.680 to 19:28:18.987
+  Frequency channels: 411
+  Burst protection enabled: [21804, 22074]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (143369, 411) -> (411, 143369)
+  Converting time strings to indices...
+    Burst indices: [21804, 22074]
+  Calculating slicing range...
+    Burst: [21804, 22074] (duration: 270 samples)
+    Total length: 143369 samples
+    Ideal range: [20604, 23274]
+    Final range: [20604, 23274]
+    Coverage: 2670 samples (4.5 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(20604), np.int64(21804), np.int64(23004)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.80it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=2 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=37.8
+--- index 3 / 73 : 03:51:25 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:13:53 to 16:15:49
+Source: 240419152923-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240419152923-Marquette Senior Hig.csv
+  Data shape: (143369, 411)
+  Time range: 15:29:22.680 to 19:28:18.987
+  Frequency channels: 411
+  Burst protection enabled: [26705, 27865]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (143369, 411) -> (411, 143369)
+  Converting time strings to indices...
+    Burst indices: [26705, 27865]
+  Calculating slicing range...
+    Burst: [26705, 27865] (duration: 1160 samples)
+    Total length: 143369 samples
+    Ideal range: [25505, 29065]
+    Final range: [25505, 29065]
+    Coverage: 3560 samples (5.9 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(25505), np.int64(26705), np.int64(27905)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.33it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=3 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=37.7
+--- index 4 / 73 : 03:52:04 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:27:03 to 16:29:29
+Source: 240419152923-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240419152923-Marquette Senior Hig.csv
+  Data shape: (143369, 411)
+  Time range: 15:29:22.680 to 19:28:18.987
+  Frequency channels: 411
+  Burst protection enabled: [34605, 36065]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (143369, 411) -> (411, 143369)
+  Converting time strings to indices...
+    Burst indices: [34605, 36065]
+  Calculating slicing range...
+    Burst: [34605, 36065] (duration: 1460 samples)
+    Total length: 143369 samples
+    Ideal range: [33405, 37265]
+    Final range: [33405, 37265]
+    Coverage: 3860 samples (6.4 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 4 windows
+    Positions: [np.int64(33405), np.int64(34605), np.int64(35805), np.int64(37005)]
+  Saving 4 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/4 [00:00<?, ?it/s]Saving windows: 100%|██████████| 4/4 [00:00<00:00, 38.52it/s]Saving windows: 100%|██████████| 4/4 [00:00<00:00, 38.44it/s]
+  Saved 4 files
+
+✅ Processing completed!
+   Generated 4 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=4 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=4 seconds=37.9
+--- index 5 / 73 : 03:52:43 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:32:15 to 16:40:47
+Source: 240419152923-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240419152923-Marquette Senior Hig.csv
+  Data shape: (143369, 411)
+  Time range: 15:29:22.680 to 19:28:18.987
+  Frequency channels: 411
+  Burst protection enabled: [37725, 42845]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (143369, 411) -> (411, 143369)
+  Converting time strings to indices...
+    Burst indices: [37725, 42845]
+  Calculating slicing range...
+    Burst: [37725, 42845] (duration: 5120 samples)
+    Total length: 143369 samples
+    Ideal range: [36525, 44045]
+    Final range: [36525, 44045]
+    Coverage: 7520 samples (12.5 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 7 windows
+    Positions: [np.int64(36525), np.int64(37725), np.int64(38925), np.int64(40125), np.int64(41325), np.int64(42525), np.int64(43725)]
+  Saving 7 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/7 [00:00<?, ?it/s]Saving windows:  57%|█████▋    | 4/7 [00:00<00:00, 38.33it/s]Saving windows: 100%|██████████| 7/7 [00:00<00:00, 38.59it/s]
+  Saved 7 files
+
+✅ Processing completed!
+   Generated 7 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=5 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=7 seconds=39.8
+--- index 6 / 73 : 03:53:23 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:48:32 to 16:53:32
+Source: 240419152923-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240419152923-Marquette Senior Hig.csv
+  Data shape: (143369, 411)
+  Time range: 15:29:22.680 to 19:28:18.987
+  Frequency channels: 411
+  Burst protection enabled: [47495, 50495]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (143369, 411) -> (411, 143369)
+  Converting time strings to indices...
+    Burst indices: [47495, 50495]
+  Calculating slicing range...
+    Burst: [47495, 50495] (duration: 3000 samples)
+    Total length: 143369 samples
+    Ideal range: [46295, 51695]
+    Final range: [46295, 51695]
+    Coverage: 5400 samples (9.0 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 5 windows
+    Positions: [np.int64(46295), np.int64(47495), np.int64(48695), np.int64(49895), np.int64(51095)]
+  Saving 5 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/5 [00:00<?, ?it/s]Saving windows:  80%|████████  | 4/5 [00:00<00:00, 38.16it/s]Saving windows: 100%|██████████| 5/5 [00:00<00:00, 38.22it/s]
+  Saved 5 files
+
+✅ Processing completed!
+   Generated 5 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=6 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=5 seconds=37.6
+--- index 7 / 73 : 03:54:02 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:59:28 to 16:59:59
+Source: 240419152923-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240419152923-Marquette Senior Hig.csv
+  Data shape: (143369, 411)
+  Time range: 15:29:22.680 to 19:28:18.987
+  Frequency channels: 411
+  Burst protection enabled: [54056, 54366]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (143369, 411) -> (411, 143369)
+  Converting time strings to indices...
+    Burst indices: [54056, 54366]
+  Calculating slicing range...
+    Burst: [54056, 54366] (duration: 310 samples)
+    Total length: 143369 samples
+    Ideal range: [52856, 55566]
+    Final range: [52856, 55566]
+    Coverage: 2710 samples (4.5 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(52856), np.int64(54056), np.int64(55256)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 36.70it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=7 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=38.1
+--- index 8 / 73 : 03:54:41 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:10:22 to 17:24:37
+Source: 240419152923-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240419152923-Marquette Senior Hig.csv
+  Data shape: (143369, 411)
+  Time range: 15:29:22.680 to 19:28:18.987
+  Frequency channels: 411
+  Burst protection enabled: [60596, 69146]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (143369, 411) -> (411, 143369)
+  Converting time strings to indices...
+    Burst indices: [60596, 69146]
+  Calculating slicing range...
+    Burst: [60596, 69146] (duration: 8550 samples)
+    Total length: 143369 samples
+    Ideal range: [59396, 70346]
+    Final range: [59396, 70346]
+    Coverage: 10950 samples (18.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 10 windows
+    Positions: [np.int64(59396), np.int64(60596), np.int64(61796), np.int64(62996), np.int64(64196), np.int64(65396), np.int64(66596), np.int64(67796), np.int64(68996), np.int64(70196)]
+  Saving 10 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/10 [00:00<?, ?it/s]Saving windows:  40%|████      | 4/10 [00:00<00:00, 34.84it/s]Saving windows:  80%|████████  | 8/10 [00:00<00:00, 36.30it/s]Saving windows: 100%|██████████| 10/10 [00:00<00:00, 37.03it/s]
+  Saved 10 files
+
+✅ Processing completed!
+   Generated 10 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=8 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=10 seconds=38.3
+--- index 9 / 73 : 03:55:20 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:27:28 to 17:42:13
+Source: 240419152923-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240419152923-Marquette Senior Hig.csv
+  Data shape: (143369, 411)
+  Time range: 15:29:22.680 to 19:28:18.987
+  Frequency channels: 411
+  Burst protection enabled: [70856, 79706]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (143369, 411) -> (411, 143369)
+  Converting time strings to indices...
+    Burst indices: [70856, 79706]
+  Calculating slicing range...
+    Burst: [70856, 79706] (duration: 8850 samples)
+    Total length: 143369 samples
+    Ideal range: [69656, 80906]
+    Final range: [69656, 80906]
+    Coverage: 11250 samples (18.8 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 10 windows
+    Positions: [np.int64(69656), np.int64(70856), np.int64(72056), np.int64(73256), np.int64(74456), np.int64(75656), np.int64(76856), np.int64(78056), np.int64(79256), np.int64(80456)]
+  Saving 10 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/10 [00:00<?, ?it/s]Saving windows:  40%|████      | 4/10 [00:00<00:00, 35.97it/s]Saving windows:  80%|████████  | 8/10 [00:00<00:00, 35.87it/s]Saving windows: 100%|██████████| 10/10 [00:00<00:00, 35.19it/s]
+  Saved 10 files
+
+✅ Processing completed!
+   Generated 10 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=9 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=10 seconds=38.3
+--- index 10 / 73 : 03:55:59 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 18:01:57 to 18:07:18
+Source: 240419152923-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240419152923-Marquette Senior Hig.csv
+  Data shape: (143369, 411)
+  Time range: 15:29:22.680 to 19:28:18.987
+  Frequency channels: 411
+  Burst protection enabled: [91547, 94757]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (143369, 411) -> (411, 143369)
+  Converting time strings to indices...
+    Burst indices: [91547, 94757]
+  Calculating slicing range...
+    Burst: [91547, 94757] (duration: 3210 samples)
+    Total length: 143369 samples
+    Ideal range: [90347, 95957]
+    Final range: [90347, 95957]
+    Coverage: 5610 samples (9.3 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 5 windows
+    Positions: [np.int64(90347), np.int64(91547), np.int64(92747), np.int64(93947), np.int64(95147)]
+  Saving 5 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/5 [00:00<?, ?it/s]Saving windows:  80%|████████  | 4/5 [00:00<00:00, 37.99it/s]Saving windows: 100%|██████████| 5/5 [00:00<00:00, 38.02it/s]
+  Saved 5 files
+
+✅ Processing completed!
+   Generated 5 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=10 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=5 seconds=38.0
+--- index 11 / 73 : 03:56:38 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 18:46:47 to 18:51:19
+Source: 240419152923-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240419152923-Marquette Senior Hig.csv
+  Data shape: (143369, 411)
+  Time range: 15:29:22.680 to 19:28:18.987
+  Frequency channels: 411
+  Burst protection enabled: [118448, 121168]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (143369, 411) -> (411, 143369)
+  Converting time strings to indices...
+    Burst indices: [118448, 121168]
+  Calculating slicing range...
+    Burst: [118448, 121168] (duration: 2720 samples)
+    Total length: 143369 samples
+    Ideal range: [117248, 122368]
+    Final range: [117248, 122368]
+    Coverage: 5120 samples (8.5 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 5 windows
+    Positions: [np.int64(117248), np.int64(118448), np.int64(119648), np.int64(120848), np.int64(122048)]
+  Saving 5 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/5 [00:00<?, ?it/s]Saving windows:  80%|████████  | 4/5 [00:00<00:00, 37.58it/s]Saving windows: 100%|██████████| 5/5 [00:00<00:00, 37.58it/s]
+  Saved 5 files
+
+✅ Processing completed!
+   Generated 5 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=11 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=5 seconds=37.8
+--- index 12 / 73 : 03:57:17 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 19:09:30 to 19:09:56
+Source: 240419152923-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240419152923-Marquette Senior Hig.csv
+  Data shape: (143369, 411)
+  Time range: 15:29:22.680 to 19:28:18.987
+  Frequency channels: 411
+  Burst protection enabled: [132078, 132338]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (143369, 411) -> (411, 143369)
+  Converting time strings to indices...
+    Burst indices: [132078, 132338]
+  Calculating slicing range...
+    Burst: [132078, 132338] (duration: 260 samples)
+    Total length: 143369 samples
+    Ideal range: [130878, 133538]
+    Final range: [130878, 133538]
+    Coverage: 2660 samples (4.4 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(130878), np.int64(132078), np.int64(133278)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.30it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=12 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=37.8
+--- index 13 / 73 : 03:57:55 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 19:22:08 to 19:25:48
+Source: 240419152923-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240419152923-Marquette Senior Hig.csv
+  Data shape: (143369, 411)
+  Time range: 15:29:22.680 to 19:28:18.987
+  Frequency channels: 411
+  Burst protection enabled: [139658, 141859]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (143369, 411) -> (411, 143369)
+  Converting time strings to indices...
+    Burst indices: [139658, 141859]
+  Calculating slicing range...
+    Burst: [139658, 141859] (duration: 2201 samples)
+    Total length: 143369 samples
+    Ideal range: [138458, 143059]
+    End boundary detected: need space for windows beyond 143059
+    Final range: [138458, 140969]
+    Coverage: 2511 samples (4.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(138458), np.int64(139658), np.int64(140858)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 36.88it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=13 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=37.7
+--- index 14 / 73 : 03:58:34 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 15:44:15 to 15:47:42
+Source: 240420131240-Skyline High School.csv
+============================================================
+Loading CSV file: 240420131240-Skyline High School.csv
+  Data shape: (416546, 411)
+  Time range: 13:12:40.056 to 00:48:32.043
+  Frequency channels: 411
+  Burst protection enabled: [90738, 92803]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (416546, 411) -> (411, 416546)
+  Converting time strings to indices...
+    Burst indices: [90738, 92803]
+  Calculating slicing range...
+    Burst: [90738, 92803] (duration: 2065 samples)
+    Total length: 416546 samples
+    Ideal range: [89538, 94003]
+    Final range: [89538, 94003]
+    Coverage: 4465 samples (7.4 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 4 windows
+    Positions: [np.int64(89538), np.int64(90738), np.int64(91938), np.int64(93138)]
+  Saving 4 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/4 [00:00<?, ?it/s]Saving windows: 100%|██████████| 4/4 [00:00<00:00, 167.35it/s]
+  Saved 4 files
+
+✅ Processing completed!
+   Generated 4 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=14 status=OK file=240420131240-Skyline High School.csv type=3 windows=4 seconds=101.8
+--- index 15 / 73 : 04:00:17 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:20:57 to 16:21:12
+Source: 240420131240-Skyline High School.csv
+============================================================
+Loading CSV file: 240420131240-Skyline High School.csv
+  Data shape: (416546, 411)
+  Time range: 13:12:40.056 to 00:48:32.043
+  Frequency channels: 411
+  Burst protection enabled: [112706, 112856]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (416546, 411) -> (411, 416546)
+  Converting time strings to indices...
+    Burst indices: [112706, 112856]
+  Calculating slicing range...
+    Burst: [112706, 112856] (duration: 150 samples)
+    Total length: 416546 samples
+    Ideal range: [111506, 114056]
+    Final range: [111506, 114056]
+    Coverage: 2550 samples (4.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(111506), np.int64(112706), np.int64(113906)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 164.10it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=15 status=OK file=240420131240-Skyline High School.csv type=3 windows=3 seconds=101.2
+--- index 16 / 73 : 04:01:59 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 15:43:36 to 15:47:19
+Source: 240420154027-Peach Mountain.csv
+============================================================
+Loading CSV file: 240420154027-Peach Mountain.csv
+  Data shape: (11623, 411)
+  Time range: 15:40:26.516 to 15:59:50.668
+  Frequency channels: 411
+  Burst protection enabled: [1892, 4118]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (11623, 411) -> (411, 11623)
+  Converting time strings to indices...
+    Burst indices: [1892, 4118]
+  Calculating slicing range...
+    Burst: [1892, 4118] (duration: 2226 samples)
+    Total length: 11623 samples
+    Ideal range: [692, 5318]
+    Final range: [692, 5318]
+    Coverage: 4626 samples (7.7 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 4 windows
+    Positions: [np.int64(692), np.int64(1892), np.int64(3092), np.int64(4292)]
+  Saving 4 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/4 [00:00<?, ?it/s]Saving windows: 100%|██████████| 4/4 [00:00<00:00, 38.62it/s]Saving windows: 100%|██████████| 4/4 [00:00<00:00, 38.54it/s]
+  Saved 4 files
+
+✅ Processing completed!
+   Generated 4 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=16 status=OK file=240420154027-Peach Mountain.csv type=3 windows=4 seconds=2.4
+--- index 17 / 73 : 04:02:02 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:15:14 to 16:18:46
+Source: 240420160001-Peach Mountain.csv
+============================================================
+Loading CSV file: 240420160001-Peach Mountain.csv
+  Data shape: (11887, 411)
+  Time range: 16:00:00.936 to 16:19:51.333
+  Frequency channels: 411
+  Burst protection enabled: [9117, 11234]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (11887, 411) -> (411, 11887)
+  Converting time strings to indices...
+    Burst indices: [9117, 11234]
+  Calculating slicing range...
+    Burst: [9117, 11234] (duration: 2117 samples)
+    Total length: 11887 samples
+    Ideal range: [7917, 12434]
+    End boundary detected: need space for windows beyond 12434
+    Final range: [7917, 9487]
+    Coverage: 1570 samples (2.6 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 2 windows
+    Positions: [np.int64(7917), np.int64(9117)]
+  Saving 2 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/2 [00:00<?, ?it/s]Saving windows: 100%|██████████| 2/2 [00:00<00:00, 37.74it/s]
+  Saved 2 files
+
+✅ Processing completed!
+   Generated 2 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=17 status=OK file=240420160001-Peach Mountain.csv type=3 windows=2 seconds=2.4
+--- index 18 / 73 : 04:02:05 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:20:20 to 16:20:56
+Source: 240420162002-Peach Mountain.csv
+============================================================
+Loading CSV file: 240420162002-Peach Mountain.csv
+  Data shape: (11906, 411)
+  Time range: 16:20:01.728 to 16:39:51.590
+  Frequency channels: 411
+  Burst protection enabled: [183, 544]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (11906, 411) -> (411, 11906)
+  Converting time strings to indices...
+    Burst indices: [183, 544]
+  Calculating slicing range...
+    Burst: [183, 544] (duration: 361 samples)
+    Total length: 11906 samples
+    Ideal range: [-1017, 1744]
+    Start boundary detected: ideal_start (-1017) < 0
+    Final range: [183, 1744]
+    Coverage: 1561 samples (2.6 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 2 windows
+    Positions: [np.int64(183), np.int64(1383)]
+  Saving 2 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/2 [00:00<?, ?it/s]Saving windows: 100%|██████████| 2/2 [00:00<00:00, 39.10it/s]
+  Saved 2 files
+
+✅ Processing completed!
+   Generated 2 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=18 status=OK file=240420162002-Peach Mountain.csv type=3 windows=2 seconds=2.3
+--- index 19 / 73 : 04:02:08 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:23:21 to 16:26:05
+Source: 240420162002-Peach Mountain.csv
+============================================================
+Loading CSV file: 240420162002-Peach Mountain.csv
+  Data shape: (11906, 411)
+  Time range: 16:20:01.728 to 16:39:51.590
+  Frequency channels: 411
+  Burst protection enabled: [1994, 3635]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (11906, 411) -> (411, 11906)
+  Converting time strings to indices...
+    Burst indices: [1994, 3635]
+  Calculating slicing range...
+    Burst: [1994, 3635] (duration: 1641 samples)
+    Total length: 11906 samples
+    Ideal range: [794, 4835]
+    Final range: [794, 4835]
+    Coverage: 4041 samples (6.7 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 4 windows
+    Positions: [np.int64(794), np.int64(1994), np.int64(3194), np.int64(4394)]
+  Saving 4 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/4 [00:00<?, ?it/s]Saving windows: 100%|██████████| 4/4 [00:00<00:00, 37.78it/s]Saving windows: 100%|██████████| 4/4 [00:00<00:00, 37.70it/s]
+  Saved 4 files
+
+✅ Processing completed!
+   Generated 4 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=19 status=OK file=240420162002-Peach Mountain.csv type=3 windows=4 seconds=2.4
+--- index 20 / 73 : 04:02:11 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:36:23 to 16:39:12
+Source: 240420162002-Peach Mountain.csv
+============================================================
+Loading CSV file: 240420162002-Peach Mountain.csv
+  Data shape: (11906, 411)
+  Time range: 16:20:01.728 to 16:39:51.590
+  Frequency channels: 411
+  Burst protection enabled: [9818, 11509]
+  Applying advanced RFI cleaning (Type 5, Method: fast)...
+  Data transposed: (11906, 411) -> (411, 11906)
+  Converting time strings to indices...
+    Burst indices: [9818, 11509]
+  Calculating slicing range...
+    Burst: [9818, 11509] (duration: 1691 samples)
+    Total length: 11906 samples
+    Ideal range: [8618, 12709]
+    End boundary detected: need space for windows beyond 12709
+    Final range: [8618, 9506]
+    Coverage: 888 samples (1.5 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 1 windows
+    Positions: [np.int64(8618)]
+  Saving 1 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_5
+Saving windows:   0%|          | 0/1 [00:00<?, ?it/s]Saving windows: 100%|██████████| 1/1 [00:00<00:00, 36.41it/s]
+  Saved 1 files
+
+✅ Processing completed!
+   Generated 1 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_5
+RESULT index=20 status=OK file=240420162002-Peach Mountain.csv type=5 windows=1 seconds=2.3
+--- index 21 / 73 : 04:02:15 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:37:37 to 17:38:37
+Source: 240420172001-Peach Mountain.csv
+============================================================
+Loading CSV file: 240420172001-Peach Mountain.csv
+  Data shape: (11899, 411)
+  Time range: 17:20:01.287 to 17:39:50.368
+  Frequency channels: 411
+  Burst protection enabled: [10564, 11164]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (11899, 411) -> (411, 11899)
+  Converting time strings to indices...
+    Burst indices: [10564, 11164]
+  Calculating slicing range...
+    Burst: [10564, 11164] (duration: 600 samples)
+    Total length: 11899 samples
+    Ideal range: [9364, 12364]
+    End boundary detected: need space for windows beyond 12364
+    Final range: [9364, 9499]
+    Coverage: 135 samples (0.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 1 windows
+    Positions: [np.int64(9364)]
+  Saving 1 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/1 [00:00<?, ?it/s]Saving windows: 100%|██████████| 1/1 [00:00<00:00, 39.16it/s]
+  Saved 1 files
+
+✅ Processing completed!
+   Generated 1 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=21 status=OK file=240420172001-Peach Mountain.csv type=3 windows=1 seconds=2.3
+--- index 22 / 73 : 04:02:18 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:53:21 to 17:53:26
+Source: 240420174001-Peach Mountain.csv
+============================================================
+Loading CSV file: 240420174001-Peach Mountain.csv
+  Data shape: (11913, 411)
+  Time range: 17:40:01.018 to 17:59:51.601
+  Frequency channels: 411
+  Burst protection enabled: [8004, 8054]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (11913, 411) -> (411, 11913)
+  Converting time strings to indices...
+    Burst indices: [8004, 8054]
+  Calculating slicing range...
+    Burst: [8004, 8054] (duration: 50 samples)
+    Total length: 11913 samples
+    Ideal range: [6804, 9254]
+    Final range: [6804, 9254]
+    Coverage: 2450 samples (4.1 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(6804), np.int64(8004), np.int64(9204)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.54it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=22 status=OK file=240420174001-Peach Mountain.csv type=3 windows=3 seconds=2.5
+--- index 23 / 73 : 04:02:21 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 18:21:28 to 18:21:50
+Source: 240420182002-Peach Mountain.csv
+============================================================
+Loading CSV file: 240420182002-Peach Mountain.csv
+  Data shape: (11890, 411)
+  Time range: 18:20:01.857 to 18:39:50.031
+  Frequency channels: 411
+  Burst protection enabled: [862, 1083]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (11890, 411) -> (411, 11890)
+  Converting time strings to indices...
+    Burst indices: [862, 1083]
+  Calculating slicing range...
+    Burst: [862, 1083] (duration: 221 samples)
+    Total length: 11890 samples
+    Ideal range: [-338, 2283]
+    Start boundary detected: ideal_start (-338) < 0
+    Final range: [862, 2283]
+    Coverage: 1421 samples (2.4 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 2 windows
+    Positions: [np.int64(862), np.int64(2062)]
+  Saving 2 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/2 [00:00<?, ?it/s]Saving windows: 100%|██████████| 2/2 [00:00<00:00, 38.75it/s]
+  Saved 2 files
+
+✅ Processing completed!
+   Generated 2 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=23 status=OK file=240420182002-Peach Mountain.csv type=3 windows=2 seconds=2.4
+--- index 24 / 73 : 04:02:24 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 19:07:53 to 19:09:18
+Source: 240420190001-Peach Mountain.csv
+============================================================
+Loading CSV file: 240420190001-Peach Mountain.csv
+  Data shape: (11912, 411)
+  Time range: 19:00:00.955 to 19:19:51.372
+  Frequency channels: 411
+  Burst protection enabled: [4724, 5574]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (11912, 411) -> (411, 11912)
+  Converting time strings to indices...
+    Burst indices: [4724, 5574]
+  Calculating slicing range...
+    Burst: [4724, 5574] (duration: 850 samples)
+    Total length: 11912 samples
+    Ideal range: [3524, 6774]
+    Final range: [3524, 6774]
+    Coverage: 3250 samples (5.4 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(3524), np.int64(4724), np.int64(5924)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.72it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=24 status=OK file=240420190001-Peach Mountain.csv type=3 windows=3 seconds=2.4
+--- index 25 / 73 : 04:02:28 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 19:13:57 to 19:16:11
+Source: 240420190001-Peach Mountain.csv
+============================================================
+Loading CSV file: 240420190001-Peach Mountain.csv
+  Data shape: (11912, 411)
+  Time range: 19:00:00.955 to 19:19:51.372
+  Frequency channels: 411
+  Burst protection enabled: [8366, 9707]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (11912, 411) -> (411, 11912)
+  Converting time strings to indices...
+    Burst indices: [8366, 9707]
+  Calculating slicing range...
+    Burst: [8366, 9707] (duration: 1341 samples)
+    Total length: 11912 samples
+    Ideal range: [7166, 10907]
+    End boundary detected: need space for windows beyond 10907
+    Final range: [7166, 9512]
+    Coverage: 2346 samples (3.9 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 2 windows
+    Positions: [np.int64(7166), np.int64(8366)]
+  Saving 2 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/2 [00:00<?, ?it/s]Saving windows: 100%|██████████| 2/2 [00:00<00:00, 37.71it/s]
+  Saved 2 files
+
+✅ Processing completed!
+   Generated 2 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=25 status=OK file=240420190001-Peach Mountain.csv type=3 windows=2 seconds=2.4
+--- index 26 / 73 : 04:02:31 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 15:43:51 to 15:46:02
+Source: 240422122420-Skyline High School.csv
+============================================================
+Loading CSV file: 240422122420-Skyline High School.csv
+  Data shape: (421704, 411)
+  Time range: 12:24:19.501 to 00:16:58.853
+  Frequency channels: 411
+  Burst protection enabled: [118066, 119358]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (421704, 411) -> (411, 421704)
+  Converting time strings to indices...
+    Burst indices: [118066, 119358]
+  Calculating slicing range...
+    Burst: [118066, 119358] (duration: 1292 samples)
+    Total length: 421704 samples
+    Ideal range: [116866, 120558]
+    Final range: [116866, 120558]
+    Coverage: 3692 samples (6.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 4 windows
+    Positions: [np.int64(116866), np.int64(118066), np.int64(119266), np.int64(120466)]
+  Saving 4 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/4 [00:00<?, ?it/s]Saving windows: 100%|██████████| 4/4 [00:00<00:00, 38.10it/s]Saving windows: 100%|██████████| 4/4 [00:00<00:00, 38.03it/s]
+  Saved 4 files
+
+✅ Processing completed!
+   Generated 4 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=26 status=OK file=240422122420-Skyline High School.csv type=3 windows=4 seconds=110.3
+--- index 27 / 73 : 04:04:22 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:24:40 to 16:26:12
+Source: 240422122420-Skyline High School.csv
+============================================================
+Loading CSV file: 240422122420-Skyline High School.csv
+  Data shape: (421704, 411)
+  Time range: 12:24:19.501 to 00:16:58.853
+  Frequency channels: 411
+  Burst protection enabled: [142219, 143126]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (421704, 411) -> (411, 421704)
+  Converting time strings to indices...
+    Burst indices: [142219, 143126]
+  Calculating slicing range...
+    Burst: [142219, 143126] (duration: 907 samples)
+    Total length: 421704 samples
+    Ideal range: [141019, 144326]
+    Final range: [141019, 144326]
+    Coverage: 3307 samples (5.5 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(141019), np.int64(142219), np.int64(143419)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.09it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=27 status=OK file=240422122420-Skyline High School.csv type=3 windows=3 seconds=110.0
+--- index 28 / 73 : 04:06:13 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:28:20 to 17:29:34
+Source: 240422122420-Skyline High School.csv
+============================================================
+Loading CSV file: 240422122420-Skyline High School.csv
+  Data shape: (421704, 411)
+  Time range: 12:24:19.501 to 00:16:58.853
+  Frequency channels: 411
+  Burst protection enabled: [179893, 180622]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (421704, 411) -> (411, 421704)
+  Converting time strings to indices...
+    Burst indices: [179893, 180622]
+  Calculating slicing range...
+    Burst: [179893, 180622] (duration: 729 samples)
+    Total length: 421704 samples
+    Ideal range: [178693, 181822]
+    Final range: [178693, 181822]
+    Coverage: 3129 samples (5.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(178693), np.int64(179893), np.int64(181093)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.53it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=28 status=OK file=240422122420-Skyline High School.csv type=3 windows=3 seconds=110.0
+--- index 29 / 73 : 04:08:04 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 15:45:10 to 15:47:05
+Source: 240422130332-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240422130332-Marquette Senior Hig.csv
+  Data shape: (213032, 411)
+  Time range: 13:03:31.873 to 18:59:18.575
+  Frequency channels: 411
+  Burst protection enabled: [96784, 97931]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (213032, 411) -> (411, 213032)
+  Converting time strings to indices...
+    Burst indices: [96784, 97931]
+  Calculating slicing range...
+    Burst: [96784, 97931] (duration: 1147 samples)
+    Total length: 213032 samples
+    Ideal range: [95584, 99131]
+    Final range: [95584, 99131]
+    Coverage: 3547 samples (5.9 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(95584), np.int64(96784), np.int64(97984)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.37it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=29 status=OK file=240422130332-Marquette Senior Hig.csv type=3 windows=3 seconds=55.5
+--- index 30 / 73 : 04:09:00 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:27:12 to 16:28:37
+Source: 240422130332-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240422130332-Marquette Senior Hig.csv
+  Data shape: (213032, 411)
+  Time range: 13:03:31.873 to 18:59:18.575
+  Frequency channels: 411
+  Burst protection enabled: [121952, 122800]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (213032, 411) -> (411, 213032)
+  Converting time strings to indices...
+    Burst indices: [121952, 122800]
+  Calculating slicing range...
+    Burst: [121952, 122800] (duration: 848 samples)
+    Total length: 213032 samples
+    Ideal range: [120752, 124000]
+    Final range: [120752, 124000]
+    Coverage: 3248 samples (5.4 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(120752), np.int64(121952), np.int64(123152)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.12it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=30 status=OK file=240422130332-Marquette Senior Hig.csv type=3 windows=3 seconds=55.0
+--- index 31 / 73 : 04:09:56 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:32:43 to 17:34:00
+Source: 240422130332-Marquette Senior Hig.csv
+============================================================
+Loading CSV file: 240422130332-Marquette Senior Hig.csv
+  Data shape: (213032, 411)
+  Time range: 13:03:31.873 to 18:59:18.575
+  Frequency channels: 411
+  Burst protection enabled: [161182, 161950]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (213032, 411) -> (411, 213032)
+  Converting time strings to indices...
+    Burst indices: [161182, 161950]
+  Calculating slicing range...
+    Burst: [161182, 161950] (duration: 768 samples)
+    Total length: 213032 samples
+    Ideal range: [159982, 163150]
+    Final range: [159982, 163150]
+    Coverage: 3168 samples (5.3 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(159982), np.int64(161182), np.int64(162382)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.77it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=31 status=OK file=240422130332-Marquette Senior Hig.csv type=3 windows=3 seconds=54.9
+--- index 32 / 73 : 04:10:51 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:52:09 to 17:57:29
+Source: 240423174411-Skyline High School.csv
+============================================================
+Loading CSV file: 240423174411-Skyline High School.csv
+  Data shape: (137962, 411)
+  Time range: 17:44:11.069 to 21:34:16.295
+  Frequency channels: 411
+  Burst protection enabled: [4777, 7975]
+  Applying advanced RFI cleaning (Type 2, Method: fast)...
+  Data transposed: (137962, 411) -> (411, 137962)
+  Converting time strings to indices...
+    Burst indices: [4777, 7975]
+  Calculating slicing range...
+    Burst: [4777, 7975] (duration: 3198 samples)
+    Total length: 137962 samples
+    Ideal range: [3577, 9175]
+    Final range: [3577, 9175]
+    Coverage: 5598 samples (9.3 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 5 windows
+    Positions: [np.int64(3577), np.int64(4777), np.int64(5977), np.int64(7177), np.int64(8377)]
+  Saving 5 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+Saving windows:   0%|          | 0/5 [00:00<?, ?it/s]Saving windows:  80%|████████  | 4/5 [00:00<00:00, 38.53it/s]Saving windows: 100%|██████████| 5/5 [00:00<00:00, 38.51it/s]
+  Saved 5 files
+
+✅ Processing completed!
+   Generated 5 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+RESULT index=32 status=OK file=240423174411-Skyline High School.csv type=2 windows=5 seconds=35.9
+--- index 33 / 73 : 04:11:28 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:11:33 to 17:13:46
+Source: 240425114645-Skyline High School.csv
+============================================================
+Loading CSV file: 240425114645-Skyline High School.csv
+  Data shape: (357394, 411)
+  Time range: 11:46:45.227 to 21:43:43.520
+  Frequency channels: 411
+  Burst protection enabled: [194448, 195776]
+  Applying advanced RFI cleaning (Type 2, Method: fast)...
+  Data transposed: (357394, 411) -> (411, 357394)
+  Converting time strings to indices...
+    Burst indices: [194448, 195776]
+  Calculating slicing range...
+    Burst: [194448, 195776] (duration: 1328 samples)
+    Total length: 357394 samples
+    Ideal range: [193248, 196976]
+    Final range: [193248, 196976]
+    Coverage: 3728 samples (6.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 4 windows
+    Positions: [np.int64(193248), np.int64(194448), np.int64(195648), np.int64(196848)]
+  Saving 4 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+Saving windows:   0%|          | 0/4 [00:00<?, ?it/s]Saving windows: 100%|██████████| 4/4 [00:00<00:00, 38.39it/s]Saving windows: 100%|██████████| 4/4 [00:00<00:00, 38.33it/s]
+  Saved 4 files
+
+✅ Processing completed!
+   Generated 4 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+RESULT index=33 status=OK file=240425114645-Skyline High School.csv type=2 windows=4 seconds=92.3
+--- index 34 / 73 : 04:13:01 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:58:15 to 17:03:38
+Source: 240501114805-Skyline High School.csv
+============================================================
+Loading CSV file: 240501114805-Skyline High School.csv
+  Data shape: (396178, 411)
+  Time range: 11:48:05.316 to 22:50:17.633
+  Frequency channels: 411
+  Burst protection enabled: [185560, 188781]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (396178, 411) -> (411, 396178)
+  Converting time strings to indices...
+    Burst indices: [185560, 188781]
+  Calculating slicing range...
+    Burst: [185560, 188781] (duration: 3221 samples)
+    Total length: 396178 samples
+    Ideal range: [184360, 189981]
+    Final range: [184360, 189981]
+    Coverage: 5621 samples (9.4 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 5 windows
+    Positions: [np.int64(184360), np.int64(185560), np.int64(186760), np.int64(187960), np.int64(189160)]
+  Saving 5 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/5 [00:00<?, ?it/s]Saving windows:  80%|████████  | 4/5 [00:00<00:00, 36.50it/s]Saving windows: 100%|██████████| 5/5 [00:00<00:00, 36.47it/s]
+  Saved 5 files
+
+✅ Processing completed!
+   Generated 5 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=34 status=OK file=240501114805-Skyline High School.csv type=3 windows=5 seconds=105.4
+--- index 35 / 73 : 04:14:48 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 18:13:10 to 18:17:58
+Source: 240501114805-Skyline High School.csv
+============================================================
+Loading CSV file: 240501114805-Skyline High School.csv
+  Data shape: (396178, 411)
+  Time range: 11:48:05.316 to 22:50:17.633
+  Frequency channels: 411
+  Burst protection enabled: [230381, 233253]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (396178, 411) -> (411, 396178)
+  Converting time strings to indices...
+    Burst indices: [230381, 233253]
+  Calculating slicing range...
+    Burst: [230381, 233253] (duration: 2872 samples)
+    Total length: 396178 samples
+    Ideal range: [229181, 234453]
+    Final range: [229181, 234453]
+    Coverage: 5272 samples (8.8 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 5 windows
+    Positions: [np.int64(229181), np.int64(230381), np.int64(231581), np.int64(232781), np.int64(233981)]
+  Saving 5 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/5 [00:00<?, ?it/s]Saving windows:  80%|████████  | 4/5 [00:00<00:00, 38.25it/s]Saving windows: 100%|██████████| 5/5 [00:00<00:00, 38.26it/s]
+  Saved 5 files
+
+✅ Processing completed!
+   Generated 5 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=35 status=OK file=240501114805-Skyline High School.csv type=3 windows=5 seconds=108.5
+--- index 36 / 73 : 04:16:37 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 18:53:10 to 18:53:58
+Source: 240503122451-Skyline High School.csv
+============================================================
+Loading CSV file: 240503122451-Skyline High School.csv
+  Data shape: (308948, 411)
+  Time range: 12:24:51.056 to 21:00:32.385
+  Frequency channels: 411
+  Burst protection enabled: [232639, 233118]
+  Applying advanced RFI cleaning (Type 2, Method: fast)...
+  Data transposed: (308948, 411) -> (411, 308948)
+  Converting time strings to indices...
+    Burst indices: [232639, 233118]
+  Calculating slicing range...
+    Burst: [232639, 233118] (duration: 479 samples)
+    Total length: 308948 samples
+    Ideal range: [231439, 234318]
+    Final range: [231439, 234318]
+    Coverage: 2879 samples (4.8 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(231439), np.int64(232639), np.int64(233839)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 36.61it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+RESULT index=36 status=OK file=240503122451-Skyline High School.csv type=2 windows=3 seconds=84.6
+--- index 37 / 73 : 04:18:03 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 20:39:45 to 20:41:41
+Source: 240503122451-Skyline High School.csv
+============================================================
+Loading CSV file: 240503122451-Skyline High School.csv
+  Data shape: (308948, 411)
+  Time range: 12:24:51.056 to 21:00:32.385
+  Frequency channels: 411
+  Burst protection enabled: [296492, 297651]
+  Applying advanced RFI cleaning (Type 2, Method: fast)...
+  Data transposed: (308948, 411) -> (411, 308948)
+  Converting time strings to indices...
+    Burst indices: [296492, 297651]
+  Calculating slicing range...
+    Burst: [296492, 297651] (duration: 1159 samples)
+    Total length: 308948 samples
+    Ideal range: [295292, 298851]
+    Final range: [295292, 298851]
+    Coverage: 3559 samples (5.9 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(295292), np.int64(296492), np.int64(297692)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 36.72it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+RESULT index=37 status=OK file=240503122451-Skyline High School.csv type=2 windows=3 seconds=83.6
+--- index 38 / 73 : 04:19:27 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:02:24 to 16:02:34
+Source: 240504112151-Skyline High School.csv
+============================================================
+Loading CSV file: 240504112151-Skyline High School.csv
+  Data shape: (530639, 411)
+  Time range: 11:21:50.992 to 02:06:34.447
+  Frequency channels: 411
+  Burst protection enabled: [168268, 168368]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (530639, 411) -> (411, 530639)
+  Converting time strings to indices...
+    Burst indices: [168268, 168368]
+  Calculating slicing range...
+    Burst: [168268, 168368] (duration: 100 samples)
+    Total length: 530639 samples
+    Ideal range: [167068, 169568]
+    Final range: [167068, 169568]
+    Coverage: 2500 samples (4.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(167068), np.int64(168268), np.int64(169468)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 35.91it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=38 status=OK file=240504112151-Skyline High School.csv type=3 windows=3 seconds=147.2
+--- index 39 / 73 : 04:21:55 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:55:23 to 16:55:42
+Source: 240508114916-Skyline High School.csv
+============================================================
+Loading CSV file: 240508114916-Skyline High School.csv
+  Data shape: (417206, 411)
+  Time range: 11:49:16.420 to 23:27:27.760
+  Frequency channels: 411
+  Burst protection enabled: [182917, 183107]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (417206, 411) -> (411, 417206)
+  Converting time strings to indices...
+    Burst indices: [182917, 183107]
+  Calculating slicing range...
+    Burst: [182917, 183107] (duration: 190 samples)
+    Total length: 417206 samples
+    Ideal range: [181717, 184307]
+    Final range: [181717, 184307]
+    Coverage: 2590 samples (4.3 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(181717), np.int64(182917), np.int64(184117)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 36.80it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=39 status=OK file=240508114916-Skyline High School.csv type=3 windows=3 seconds=114.1
+--- index 40 / 73 : 04:23:50 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 18:10:14 to 18:10:21
+Source: 240508114916-Skyline High School.csv
+============================================================
+Loading CSV file: 240508114916-Skyline High School.csv
+  Data shape: (417206, 411)
+  Time range: 11:49:16.420 to 23:27:27.760
+  Frequency channels: 411
+  Burst protection enabled: [227644, 227714]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (417206, 411) -> (411, 417206)
+  Converting time strings to indices...
+    Burst indices: [227644, 227714]
+  Calculating slicing range...
+    Burst: [227644, 227714] (duration: 70 samples)
+    Total length: 417206 samples
+    Ideal range: [226444, 228914]
+    Final range: [226444, 228914]
+    Coverage: 2470 samples (4.1 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(226444), np.int64(227644), np.int64(228844)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.25it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=40 status=OK file=240508114916-Skyline High School.csv type=3 windows=3 seconds=113.7
+--- index 41 / 73 : 04:25:45 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 18:33:24 to 18:33:51
+Source: 240508114916-Skyline High School.csv
+============================================================
+Loading CSV file: 240508114916-Skyline High School.csv
+  Data shape: (417206, 411)
+  Time range: 11:49:16.420 to 23:27:27.760
+  Frequency channels: 411
+  Burst protection enabled: [241487, 241756]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (417206, 411) -> (411, 417206)
+  Converting time strings to indices...
+    Burst indices: [241487, 241756]
+  Calculating slicing range...
+    Burst: [241487, 241756] (duration: 269 samples)
+    Total length: 417206 samples
+    Ideal range: [240287, 242956]
+    Final range: [240287, 242956]
+    Coverage: 2669 samples (4.4 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(240287), np.int64(241487), np.int64(242687)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.98it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=41 status=OK file=240508114916-Skyline High School.csv type=3 windows=3 seconds=113.3
+--- index 42 / 73 : 04:27:39 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:33:28 to 17:34:34
+Source: 240509120239-Skyline High School.csv
+============================================================
+Loading CSV file: 240509120239-Skyline High School.csv
+  Data shape: (254515, 411)
+  Time range: 12:02:39.120 to 19:09:02.440
+  Frequency channels: 411
+  Burst protection enabled: [197466, 198122]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (254515, 411) -> (411, 254515)
+  Converting time strings to indices...
+    Burst indices: [197466, 198122]
+  Calculating slicing range...
+    Burst: [197466, 198122] (duration: 656 samples)
+    Total length: 254515 samples
+    Ideal range: [196266, 199322]
+    Final range: [196266, 199322]
+    Coverage: 3056 samples (5.1 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(196266), np.int64(197466), np.int64(198666)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 36.67it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=42 status=OK file=240509120239-Skyline High School.csv type=3 windows=3 seconds=69.0
+--- index 43 / 73 : 04:28:49 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 12:45:39 to 12:46:42
+Source: 240514120913-Skyline High School.csv
+============================================================
+Loading CSV file: 240514120913-Skyline High School.csv
+  Data shape: (242697, 411)
+  Time range: 12:09:12.898 to 18:53:44.662
+  Frequency channels: 411
+  Burst protection enabled: [21860, 22490]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (242697, 411) -> (411, 242697)
+  Converting time strings to indices...
+    Burst indices: [21860, 22490]
+  Calculating slicing range...
+    Burst: [21860, 22490] (duration: 630 samples)
+    Total length: 242697 samples
+    Ideal range: [20660, 23690]
+    Final range: [20660, 23690]
+    Coverage: 3030 samples (5.0 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(20660), np.int64(21860), np.int64(23060)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.45it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=43 status=OK file=240514120913-Skyline High School.csv type=3 windows=3 seconds=67.9
+--- index 44 / 73 : 04:29:58 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:46:50 to 16:48:02
+Source: 240514120913-Skyline High School.csv
+============================================================
+Loading CSV file: 240514120913-Skyline High School.csv
+  Data shape: (242697, 411)
+  Time range: 12:09:12.898 to 18:53:44.662
+  Frequency channels: 411
+  Burst protection enabled: [166557, 167277]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (242697, 411) -> (411, 242697)
+  Converting time strings to indices...
+    Burst indices: [166557, 167277]
+  Calculating slicing range...
+    Burst: [166557, 167277] (duration: 720 samples)
+    Total length: 242697 samples
+    Ideal range: [165357, 168477]
+    Final range: [165357, 168477]
+    Coverage: 3120 samples (5.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(165357), np.int64(166557), np.int64(167757)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.10it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=44 status=OK file=240514120913-Skyline High School.csv type=3 windows=3 seconds=67.8
+--- index 45 / 73 : 04:31:07 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:49:53 to 16:53:00
+Source: 240514120913-Skyline High School.csv
+============================================================
+Loading CSV file: 240514120913-Skyline High School.csv
+  Data shape: (242697, 411)
+  Time range: 12:09:12.898 to 18:53:44.662
+  Frequency channels: 411
+  Burst protection enabled: [168387, 170256]
+  Applying advanced RFI cleaning (Type 2, Method: fast)...
+  Data transposed: (242697, 411) -> (411, 242697)
+  Converting time strings to indices...
+    Burst indices: [168387, 170256]
+  Calculating slicing range...
+    Burst: [168387, 170256] (duration: 1869 samples)
+    Total length: 242697 samples
+    Ideal range: [167187, 171456]
+    Final range: [167187, 171456]
+    Coverage: 4269 samples (7.1 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 4 windows
+    Positions: [np.int64(167187), np.int64(168387), np.int64(169587), np.int64(170787)]
+  Saving 4 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+Saving windows:   0%|          | 0/4 [00:00<?, ?it/s]Saving windows: 100%|██████████| 4/4 [00:00<00:00, 37.46it/s]Saving windows: 100%|██████████| 4/4 [00:00<00:00, 37.38it/s]
+  Saved 4 files
+
+✅ Processing completed!
+   Generated 4 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+RESULT index=45 status=OK file=240514120913-Skyline High School.csv type=2 windows=4 seconds=67.5
+--- index 46 / 73 : 04:32:15 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:07:01 to 17:08:40
+Source: 240514120913-Skyline High School.csv
+============================================================
+Loading CSV file: 240514120913-Skyline High School.csv
+  Data shape: (242697, 411)
+  Time range: 12:09:12.898 to 18:53:44.662
+  Frequency channels: 411
+  Burst protection enabled: [178666, 179655]
+  Applying advanced RFI cleaning (Type 2, Method: fast)...
+  Data transposed: (242697, 411) -> (411, 242697)
+  Converting time strings to indices...
+    Burst indices: [178666, 179655]
+  Calculating slicing range...
+    Burst: [178666, 179655] (duration: 989 samples)
+    Total length: 242697 samples
+    Ideal range: [177466, 180855]
+    Final range: [177466, 180855]
+    Coverage: 3389 samples (5.6 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(177466), np.int64(178666), np.int64(179866)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 31.43it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+RESULT index=46 status=OK file=240514120913-Skyline High School.csv type=2 windows=3 seconds=66.3
+--- index 47 / 73 : 04:33:22 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 12:46:52 to 12:47:50
+Source: 240514115739-Huron.csv
+============================================================
+Loading CSV file: 240514115739-Huron.csv
+  Data shape: (74853, 411)
+  Time range: 11:57:38.780 to 14:02:22.999
+  Frequency channels: 411
+  Burst protection enabled: [29537, 30117]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (74853, 411) -> (411, 74853)
+  Converting time strings to indices...
+    Burst indices: [29537, 30117]
+  Calculating slicing range...
+    Burst: [29537, 30117] (duration: 580 samples)
+    Total length: 74853 samples
+    Ideal range: [28337, 31317]
+    Final range: [28337, 31317]
+    Coverage: 2980 samples (5.0 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(28337), np.int64(29537), np.int64(30737)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 39.08it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=47 status=OK file=240514115739-Huron.csv type=3 windows=3 seconds=20.2
+--- index 48 / 73 : 04:33:43 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:18:35 to 17:19:42
+Source: 240519161711-Skyline High School.csv
+============================================================
+Loading CSV file: 240519161711-Skyline High School.csv
+  Data shape: (280634, 411)
+  Time range: 16:17:11.074 to 00:07:45.669
+  Frequency channels: 411
+  Burst protection enabled: [36616, 37282]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (280634, 411) -> (411, 280634)
+  Converting time strings to indices...
+    Burst indices: [36616, 37282]
+  Calculating slicing range...
+    Burst: [36616, 37282] (duration: 666 samples)
+    Total length: 280634 samples
+    Ideal range: [35416, 38482]
+    Final range: [35416, 38482]
+    Coverage: 3066 samples (5.1 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(35416), np.int64(36616), np.int64(37816)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.34it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=48 status=OK file=240519161711-Skyline High School.csv type=3 windows=3 seconds=73.6
+--- index 49 / 73 : 04:34:58 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:55:05 to 17:56:50
+Source: 240519161711-Skyline High School.csv
+============================================================
+Loading CSV file: 240519161711-Skyline High School.csv
+  Data shape: (280634, 411)
+  Time range: 16:17:11.074 to 00:07:45.669
+  Frequency channels: 411
+  Burst protection enabled: [58383, 59427]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (280634, 411) -> (411, 280634)
+  Converting time strings to indices...
+    Burst indices: [58383, 59427]
+  Calculating slicing range...
+    Burst: [58383, 59427] (duration: 1044 samples)
+    Total length: 280634 samples
+    Ideal range: [57183, 60627]
+    Final range: [57183, 60627]
+    Coverage: 3444 samples (5.7 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(57183), np.int64(58383), np.int64(59583)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.89it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=49 status=OK file=240519161711-Skyline High School.csv type=3 windows=3 seconds=73.1
+--- index 50 / 73 : 04:36:12 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:23:35 to 16:23:46
+Source: 240607103942-Skyline High School.csv
+============================================================
+Loading CSV file: 240607103942-Skyline High School.csv
+  Data shape: (334482, 411)
+  Time range: 10:39:41.623 to 20:01:11.715
+  Frequency channels: 411
+  Burst protection enabled: [204852, 204961]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (334482, 411) -> (411, 334482)
+  Converting time strings to indices...
+    Burst indices: [204852, 204961]
+  Calculating slicing range...
+    Burst: [204852, 204961] (duration: 109 samples)
+    Total length: 334482 samples
+    Ideal range: [203652, 206161]
+    Final range: [203652, 206161]
+    Coverage: 2509 samples (4.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(203652), np.int64(204852), np.int64(206052)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.29it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=50 status=OK file=240607103942-Skyline High School.csv type=3 windows=3 seconds=86.9
+--- index 51 / 73 : 04:37:39 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 18:55:03 to 18:55:33
+Source: 240607103942-Skyline High School.csv
+============================================================
+Loading CSV file: 240607103942-Skyline High School.csv
+  Data shape: (334482, 411)
+  Time range: 10:39:41.623 to 20:01:11.715
+  Frequency channels: 411
+  Burst protection enabled: [295079, 295377]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (334482, 411) -> (411, 334482)
+  Converting time strings to indices...
+    Burst indices: [295079, 295377]
+  Calculating slicing range...
+    Burst: [295079, 295377] (duration: 298 samples)
+    Total length: 334482 samples
+    Ideal range: [293879, 296577]
+    Final range: [293879, 296577]
+    Coverage: 2698 samples (4.5 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(293879), np.int64(295079), np.int64(296279)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.14it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=51 status=OK file=240607103942-Skyline High School.csv type=3 windows=3 seconds=86.6
+--- index 52 / 73 : 04:39:07 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 21:00:24 to 21:02:16
+Source: 240608132947-Skyline High School.csv
+============================================================
+Loading CSV file: 240608132947-Skyline High School.csv
+  Data shape: (442510, 411)
+  Time range: 13:29:47.409 to 01:48:35.626
+  Frequency channels: 411
+  Burst protection enabled: [269895, 271013]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (442510, 411) -> (411, 442510)
+  Converting time strings to indices...
+    Burst indices: [269895, 271013]
+  Calculating slicing range...
+    Burst: [269895, 271013] (duration: 1118 samples)
+    Total length: 442510 samples
+    Ideal range: [268695, 272213]
+    Final range: [268695, 272213]
+    Coverage: 3518 samples (5.9 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(268695), np.int64(269895), np.int64(271095)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.51it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=52 status=OK file=240608132947-Skyline High School.csv type=3 windows=3 seconds=118.0
+--- index 53 / 73 : 04:41:06 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:39:59 to 16:40:15
+Source: 240611115032-Skyline High School.csv
+============================================================
+Loading CSV file: 240611115032-Skyline High School.csv
+  Data shape: (373715, 411)
+  Time range: 11:50:32.043 to 22:18:07.041
+  Frequency channels: 411
+  Burst protection enabled: [172362, 172521]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (373715, 411) -> (411, 373715)
+  Converting time strings to indices...
+    Burst indices: [172362, 172521]
+  Calculating slicing range...
+    Burst: [172362, 172521] (duration: 159 samples)
+    Total length: 373715 samples
+    Ideal range: [171162, 173721]
+    Final range: [171162, 173721]
+    Coverage: 2559 samples (4.3 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(171162), np.int64(172362), np.int64(173562)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.85it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=53 status=OK file=240611115032-Skyline High School.csv type=3 windows=3 seconds=99.7
+--- index 54 / 73 : 04:42:46 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 15:38:26 to 15:38:51
+Source: 240619114432-Skyline High School.csv
+============================================================
+Loading CSV file: 240619114432-Skyline High School.csv
+  Data shape: (469195, 411)
+  Time range: 11:44:31.502 to 00:50:27.492
+  Frequency channels: 411
+  Burst protection enabled: [139641, 139890]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (469195, 411) -> (411, 469195)
+  Converting time strings to indices...
+    Burst indices: [139641, 139890]
+  Calculating slicing range...
+    Burst: [139641, 139890] (duration: 249 samples)
+    Total length: 469195 samples
+    Ideal range: [138441, 141090]
+    Final range: [138441, 141090]
+    Coverage: 2649 samples (4.4 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(138441), np.int64(139641), np.int64(140841)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.75it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=54 status=OK file=240619114432-Skyline High School.csv type=3 windows=3 seconds=124.4
+--- index 55 / 73 : 04:44:52 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:19:38 to 16:19:56
+Source: 240619114432-Skyline High School.csv
+============================================================
+Loading CSV file: 240619114432-Skyline High School.csv
+  Data shape: (469195, 411)
+  Time range: 11:44:31.502 to 00:50:27.492
+  Frequency channels: 411
+  Burst protection enabled: [164237, 164416]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (469195, 411) -> (411, 469195)
+  Converting time strings to indices...
+    Burst indices: [164237, 164416]
+  Calculating slicing range...
+    Burst: [164237, 164416] (duration: 179 samples)
+    Total length: 469195 samples
+    Ideal range: [163037, 165616]
+    Final range: [163037, 165616]
+    Coverage: 2579 samples (4.3 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(163037), np.int64(164237), np.int64(165437)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.66it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=55 status=OK file=240619114432-Skyline High School.csv type=3 windows=3 seconds=123.6
+--- index 56 / 73 : 04:46:56 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:30:09 to 17:30:25
+Source: 240620124045-Skyline High School.csv
+============================================================
+Loading CSV file: 240620124045-Skyline High School.csv
+  Data shape: (458269, 411)
+  Time range: 12:40:44.539 to 01:27:08.885
+  Frequency channels: 411
+  Burst protection enabled: [173050, 173210]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (458269, 411) -> (411, 458269)
+  Converting time strings to indices...
+    Burst indices: [173050, 173210]
+  Calculating slicing range...
+    Burst: [173050, 173210] (duration: 160 samples)
+    Total length: 458269 samples
+    Ideal range: [171850, 174410]
+    Final range: [171850, 174410]
+    Coverage: 2560 samples (4.3 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(171850), np.int64(173050), np.int64(174250)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.52it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=56 status=OK file=240620124045-Skyline High School.csv type=3 windows=3 seconds=121.7
+--- index 57 / 73 : 04:48:59 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 23:54:50 to 23:56:20
+Source: 240621161136-Skyline High School.csv
+============================================================
+Loading CSV file: 240621161136-Skyline High School.csv
+  Data shape: (326341, 411)
+  Time range: 16:11:35.585 to 01:18:56.369
+  Frequency channels: 411
+  Burst protection enabled: [276195, 277089]
+  Applying advanced RFI cleaning (Type 2, Method: fast)...
+  Data transposed: (326341, 411) -> (411, 326341)
+  Converting time strings to indices...
+    Burst indices: [276195, 277089]
+  Calculating slicing range...
+    Burst: [276195, 277089] (duration: 894 samples)
+    Total length: 326341 samples
+    Ideal range: [274995, 278289]
+    Final range: [274995, 278289]
+    Coverage: 3294 samples (5.5 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(274995), np.int64(276195), np.int64(277395)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.23it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+RESULT index=57 status=OK file=240621161136-Skyline High School.csv type=2 windows=3 seconds=86.5
+--- index 58 / 73 : 04:50:26 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 21:25:17 to 21:25:29
+Source: 240623132330-Skyline High School.csv
+============================================================
+Loading CSV file: 240623132330-Skyline High School.csv
+  Data shape: (358200, 411)
+  Time range: 13:23:30.181 to 23:21:44.787
+  Frequency channels: 411
+  Burst protection enabled: [288467, 288587]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (358200, 411) -> (411, 358200)
+  Converting time strings to indices...
+    Burst indices: [288467, 288587]
+  Calculating slicing range...
+    Burst: [288467, 288587] (duration: 120 samples)
+    Total length: 358200 samples
+    Ideal range: [287267, 289787]
+    Final range: [287267, 289787]
+    Coverage: 2520 samples (4.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(287267), np.int64(288467), np.int64(289667)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.58it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=58 status=OK file=240623132330-Skyline High School.csv type=3 windows=3 seconds=92.9
+--- index 59 / 73 : 04:52:00 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:33:26 to 16:33:41
+Source: 240624112957-Skyline High School.csv
+============================================================
+Loading CSV file: 240624112957-Skyline High School.csv
+  Data shape: (482987, 411)
+  Time range: 11:29:57.474 to 00:59:02.755
+  Frequency channels: 411
+  Burst protection enabled: [181160, 181310]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (482987, 411) -> (411, 482987)
+  Converting time strings to indices...
+    Burst indices: [181160, 181310]
+  Calculating slicing range...
+    Burst: [181160, 181310] (duration: 150 samples)
+    Total length: 482987 samples
+    Ideal range: [179960, 182510]
+    Final range: [179960, 182510]
+    Coverage: 2550 samples (4.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(179960), np.int64(181160), np.int64(182360)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.94it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=59 status=OK file=240624112957-Skyline High School.csv type=3 windows=3 seconds=131.6
+--- index 60 / 73 : 04:54:12 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 15:17:51 to 15:18:07
+Source: 240627125611-Skyline High School.csv
+============================================================
+Loading CSV file: 240627125611-Skyline High School.csv
+  Data shape: (346917, 411)
+  Time range: 12:56:11.153 to 22:34:31.006
+  Frequency channels: 411
+  Burst protection enabled: [84979, 85139]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (346917, 411) -> (411, 346917)
+  Converting time strings to indices...
+    Burst indices: [84979, 85139]
+  Calculating slicing range...
+    Burst: [84979, 85139] (duration: 160 samples)
+    Total length: 346917 samples
+    Ideal range: [83779, 86339]
+    Final range: [83779, 86339]
+    Coverage: 2560 samples (4.3 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(83779), np.int64(84979), np.int64(86179)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.98it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=60 status=OK file=240627125611-Skyline High School.csv type=3 windows=3 seconds=91.7
+--- index 61 / 73 : 04:55:45 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 21:03:27 to 21:03:40
+Source: 240627125611-Skyline High School.csv
+============================================================
+Loading CSV file: 240627125611-Skyline High School.csv
+  Data shape: (346917, 411)
+  Time range: 12:56:11.153 to 22:34:31.006
+  Frequency channels: 411
+  Burst protection enabled: [292289, 292419]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (346917, 411) -> (411, 346917)
+  Converting time strings to indices...
+    Burst indices: [292289, 292419]
+  Calculating slicing range...
+    Burst: [292289, 292419] (duration: 130 samples)
+    Total length: 346917 samples
+    Ideal range: [291089, 293619]
+    Final range: [291089, 293619]
+    Coverage: 2530 samples (4.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(291089), np.int64(292289), np.int64(293489)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 32.19it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=61 status=OK file=240627125611-Skyline High School.csv type=3 windows=3 seconds=87.3
+--- index 62 / 73 : 04:57:13 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:29:24 to 16:29:38
+Source: 240629145133-Skyline High School.csv
+============================================================
+Loading CSV file: 240629145133-Skyline High School.csv
+  Data shape: (305950, 411)
+  Time range: 14:51:33.363 to 23:22:28.810
+  Frequency channels: 411
+  Burst protection enabled: [58591, 58731]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (305950, 411) -> (411, 305950)
+  Converting time strings to indices...
+    Burst indices: [58591, 58731]
+  Calculating slicing range...
+    Burst: [58591, 58731] (duration: 140 samples)
+    Total length: 305950 samples
+    Ideal range: [57391, 59931]
+    Final range: [57391, 59931]
+    Coverage: 2540 samples (4.2 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(57391), np.int64(58591), np.int64(59791)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 39.96it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=62 status=OK file=240629145133-Skyline High School.csv type=3 windows=3 seconds=78.2
+--- index 63 / 73 : 04:58:32 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 19:50:02 to 19:51:06
+Source: 240629145133-Skyline High School.csv
+============================================================
+Loading CSV file: 240629145133-Skyline High School.csv
+  Data shape: (305950, 411)
+  Time range: 14:51:33.363 to 23:22:28.810
+  Frequency channels: 411
+  Burst protection enabled: [178733, 179372]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (305950, 411) -> (411, 305950)
+  Converting time strings to indices...
+    Burst indices: [178733, 179372]
+  Calculating slicing range...
+    Burst: [178733, 179372] (duration: 639 samples)
+    Total length: 305950 samples
+    Ideal range: [177533, 180572]
+    Final range: [177533, 180572]
+    Coverage: 3039 samples (5.1 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(177533), np.int64(178733), np.int64(179933)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 39.83it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=63 status=OK file=240629145133-Skyline High School.csv type=3 windows=3 seconds=78.8
+--- index 64 / 73 : 04:59:51 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:12:40 to 17:13:33
+Source: 240701145239-Skyline High School.csv
+============================================================
+Loading CSV file: 240701145239-Skyline High School.csv
+  Data shape: (263316, 411)
+  Time range: 14:52:38.729 to 22:13:22.074
+  Frequency channels: 411
+  Burst protection enabled: [83658, 84186]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (263316, 411) -> (411, 263316)
+  Converting time strings to indices...
+    Burst indices: [83658, 84186]
+  Calculating slicing range...
+    Burst: [83658, 84186] (duration: 528 samples)
+    Total length: 263316 samples
+    Ideal range: [82458, 85386]
+    Final range: [82458, 85386]
+    Coverage: 2928 samples (4.9 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(82458), np.int64(83658), np.int64(84858)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 39.48it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=64 status=OK file=240701145239-Skyline High School.csv type=3 windows=3 seconds=67.2
+--- index 65 / 73 : 05:00:59 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 14:36:21 to 14:47:19
+Source: 240704130620-Skyline High School.csv
+============================================================
+Loading CSV file: 240704130620-Skyline High School.csv
+  Data shape: (337243, 411)
+  Time range: 13:06:20.174 to 22:32:14.255
+  Frequency channels: 411
+  Burst protection enabled: [53643, 60179]
+  Applying advanced RFI cleaning (Type 2, Method: fast)...
+  Data transposed: (337243, 411) -> (411, 337243)
+  Converting time strings to indices...
+    Burst indices: [53643, 60179]
+  Calculating slicing range...
+    Burst: [53643, 60179] (duration: 6536 samples)
+    Total length: 337243 samples
+    Ideal range: [52443, 61379]
+    Final range: [52443, 61379]
+    Coverage: 8936 samples (14.9 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 8 windows
+    Positions: [np.int64(52443), np.int64(53643), np.int64(54843), np.int64(56043), np.int64(57243), np.int64(58443), np.int64(59643), np.int64(60843)]
+  Saving 8 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+Saving windows:   0%|          | 0/8 [00:00<?, ?it/s]Saving windows:  50%|█████     | 4/8 [00:00<00:00, 35.91it/s]Saving windows: 100%|██████████| 8/8 [00:00<00:00, 37.53it/s]Saving windows: 100%|██████████| 8/8 [00:00<00:00, 37.25it/s]
+  Saved 8 files
+
+✅ Processing completed!
+   Generated 8 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+RESULT index=65 status=OK file=240704130620-Skyline High School.csv type=2 windows=8 seconds=84.7
+--- index 66 / 73 : 05:02:25 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 14:40:56 to 14:47:01
+Source: 240708143141-Skyline High School.csv
+============================================================
+Loading CSV file: 240708143141-Skyline High School.csv
+  Data shape: (371867, 411)
+  Time range: 14:31:40.724 to 00:53:25.769
+  Frequency channels: 411
+  Burst protection enabled: [5536, 9174]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (371867, 411) -> (411, 371867)
+  Converting time strings to indices...
+    Burst indices: [5536, 9174]
+  Calculating slicing range...
+    Burst: [5536, 9174] (duration: 3638 samples)
+    Total length: 371867 samples
+    Ideal range: [4336, 10374]
+    Final range: [4336, 10374]
+    Coverage: 6038 samples (10.1 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 6 windows
+    Positions: [np.int64(4336), np.int64(5536), np.int64(6736), np.int64(7936), np.int64(9136), np.int64(10336)]
+  Saving 6 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/6 [00:00<?, ?it/s]Saving windows:  67%|██████▋   | 4/6 [00:00<00:00, 38.51it/s]Saving windows: 100%|██████████| 6/6 [00:00<00:00, 39.13it/s]
+  Saved 6 files
+
+✅ Processing completed!
+   Generated 6 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=66 status=OK file=240708143141-Skyline High School.csv type=3 windows=6 seconds=93.2
+--- index 67 / 73 : 05:03:59 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:15:25 to 17:19:56
+Source: 240724113627-Skyline High School.csv
+============================================================
+Loading CSV file: 240724113627-Skyline High School.csv
+  Data shape: (374839, 411)
+  Time range: 11:36:26.942 to 22:02:04.980
+  Frequency channels: 411
+  Burst protection enabled: [203087, 205793]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (374839, 411) -> (411, 374839)
+  Converting time strings to indices...
+    Burst indices: [203087, 205793]
+  Calculating slicing range...
+    Burst: [203087, 205793] (duration: 2706 samples)
+    Total length: 374839 samples
+    Ideal range: [201887, 206993]
+    Final range: [201887, 206993]
+    Coverage: 5106 samples (8.5 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 5 windows
+    Positions: [np.int64(201887), np.int64(203087), np.int64(204287), np.int64(205487), np.int64(206687)]
+  Saving 5 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/5 [00:00<?, ?it/s]Saving windows:  80%|████████  | 4/5 [00:00<00:00, 36.52it/s]Saving windows: 100%|██████████| 5/5 [00:00<00:00, 36.70it/s]
+  Saved 5 files
+
+✅ Processing completed!
+   Generated 5 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=67 status=OK file=240724113627-Skyline High School.csv type=3 windows=5 seconds=100.3
+--- index 68 / 73 : 05:05:40 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 15:33:52 to 15:35:47
+Source: 240725113837-Skyline High School.csv
+============================================================
+Loading CSV file: 240725113837-Skyline High School.csv
+  Data shape: (250183, 411)
+  Time range: 11:38:36.647 to 18:36:17.464
+  Frequency channels: 411
+  Burst protection enabled: [140914, 142062]
+  Applying advanced RFI cleaning (Type 2, Method: fast)...
+  Data transposed: (250183, 411) -> (411, 250183)
+  Converting time strings to indices...
+    Burst indices: [140914, 142062]
+  Calculating slicing range...
+    Burst: [140914, 142062] (duration: 1148 samples)
+    Total length: 250183 samples
+    Ideal range: [139714, 143262]
+    Final range: [139714, 143262]
+    Coverage: 3548 samples (5.9 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(139714), np.int64(140914), np.int64(142114)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.63it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_2
+RESULT index=68 status=OK file=240725113837-Skyline High School.csv type=2 windows=3 seconds=66.4
+--- index 69 / 73 : 05:06:47 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 16:45:16 to 16:45:35
+Source: 240725113837-Skyline High School.csv
+============================================================
+Loading CSV file: 240725113837-Skyline High School.csv
+  Data shape: (250183, 411)
+  Time range: 11:38:36.647 to 18:36:17.464
+  Frequency channels: 411
+  Burst protection enabled: [183681, 183871]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (250183, 411) -> (411, 250183)
+  Converting time strings to indices...
+    Burst indices: [183681, 183871]
+  Calculating slicing range...
+    Burst: [183681, 183871] (duration: 190 samples)
+    Total length: 250183 samples
+    Ideal range: [182481, 185071]
+    Final range: [182481, 185071]
+    Coverage: 2590 samples (4.3 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(182481), np.int64(183681), np.int64(184881)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 37.19it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=69 status=OK file=240725113837-Skyline High School.csv type=3 windows=3 seconds=66.6
+--- index 70 / 73 : 05:07:55 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:22:50 to 17:23:21
+Source: 240726140237-Skyline High School.csv
+============================================================
+Loading CSV file: 240726140237-Skyline High School.csv
+  Data shape: (293088, 411)
+  Time range: 14:02:36.583 to 22:13:08.511
+  Frequency channels: 411
+  Burst protection enabled: [119632, 119940]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (293088, 411) -> (411, 293088)
+  Converting time strings to indices...
+    Burst indices: [119632, 119940]
+  Calculating slicing range...
+    Burst: [119632, 119940] (duration: 308 samples)
+    Total length: 293088 samples
+    Ideal range: [118432, 121140]
+    Final range: [118432, 121140]
+    Coverage: 2708 samples (4.5 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(118432), np.int64(119632), np.int64(120832)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.40it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=70 status=OK file=240726140237-Skyline High School.csv type=3 windows=3 seconds=77.4
+--- index 71 / 73 : 05:09:13 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 21:30:33 to 21:30:58
+Source: 240726140237-Skyline High School.csv
+============================================================
+Loading CSV file: 240726140237-Skyline High School.csv
+  Data shape: (293088, 411)
+  Time range: 14:02:36.583 to 22:13:08.511
+  Frequency channels: 411
+  Burst protection enabled: [267639, 267888]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (293088, 411) -> (411, 293088)
+  Converting time strings to indices...
+    Burst indices: [267639, 267888]
+  Calculating slicing range...
+    Burst: [267639, 267888] (duration: 249 samples)
+    Total length: 293088 samples
+    Ideal range: [266439, 269088]
+    Final range: [266439, 269088]
+    Coverage: 2649 samples (4.4 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(266439), np.int64(267639), np.int64(268839)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 39.26it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=71 status=OK file=240726140237-Skyline High School.csv type=3 windows=3 seconds=76.5
+--- index 72 / 73 : 05:10:30 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 18:12:36 to 18:13:09
+Source: 240728145301-Skyline High School.csv
+============================================================
+Loading CSV file: 240728145301-Skyline High School.csv
+  Data shape: (277016, 411)
+  Time range: 14:53:01.050 to 22:37:57.172
+  Frequency channels: 411
+  Burst protection enabled: [118915, 119242]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (277016, 411) -> (411, 277016)
+  Converting time strings to indices...
+    Burst indices: [118915, 119242]
+  Calculating slicing range...
+    Burst: [118915, 119242] (duration: 327 samples)
+    Total length: 277016 samples
+    Ideal range: [117715, 120442]
+    Final range: [117715, 120442]
+    Coverage: 2727 samples (4.5 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(117715), np.int64(118915), np.int64(120115)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 38.76it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=72 status=OK file=240728145301-Skyline High School.csv type=3 windows=3 seconds=72.1
+--- index 73 / 73 : 05:11:43 ---
+BurstFixedWindowSlicer initialized:
+  Window duration: 240s (2400 samples)
+  Overlap: 50.0% (step: 1200 samples)
+  Buffer zone: 2min (1200 samples)
+  Target size: (128, 128)
+
+============================================================
+Processing burst: 17:23:15 to 17:24:52
+Source: 240729165011-Skyline High School.csv
+============================================================
+Loading CSV file: 240729165011-Skyline High School.csv
+  Data shape: (280798, 411)
+  Time range: 16:50:11.323 to 00:40:12.127
+  Frequency channels: 411
+  Burst protection enabled: [19752, 20718]
+  Applying advanced RFI cleaning (Type 3, Method: fast)...
+  Data transposed: (280798, 411) -> (411, 280798)
+  Converting time strings to indices...
+    Burst indices: [19752, 20718]
+  Calculating slicing range...
+    Burst: [19752, 20718] (duration: 966 samples)
+    Total length: 280798 samples
+    Ideal range: [18552, 21918]
+    Final range: [18552, 21918]
+    Coverage: 3366 samples (5.6 minutes)
+  Extracting fixed windows...
+    Window size: 2400 samples (240s)
+    Step size: 1200 samples (120.0s)
+    Extracted 3 windows
+    Positions: [np.int64(18552), np.int64(19752), np.int64(20952)]
+  Saving 3 windows to /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+Saving windows:   0%|          | 0/3 [00:00<?, ?it/s]Saving windows: 100%|██████████| 3/3 [00:00<00:00, 36.80it/s]
+  Saved 3 files
+
+✅ Processing completed!
+   Generated 3 windows of size (128, 128)
+   Saved to: /home/ubuntu/Desktop/TransferLearning_CNN/data/burst_data/csv/gan_training_windows_sumthreshold/type_3
+RESULT index=73 status=OK file=240729165011-Skyline High School.csv type=3 windows=3 seconds=73.2
+Batch finished: Sat Aug  8 05:12:57 UTC 2026
+=== SUMMARY ===
+RESULT index=0 status=OK file=240330182002-PeachMountian.csv type=3 windows=1 seconds=1.6
+RESULT index=1 status=OK file=240417180250-Skyline High School.csv type=5 windows=3 seconds=73.6
+RESULT index=2 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=37.8
+RESULT index=3 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=37.7
+RESULT index=4 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=4 seconds=37.9
+RESULT index=5 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=7 seconds=39.8
+RESULT index=6 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=5 seconds=37.6
+RESULT index=7 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=38.1
+RESULT index=8 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=10 seconds=38.3
+RESULT index=9 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=10 seconds=38.3
+RESULT index=10 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=5 seconds=38.0
+RESULT index=11 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=5 seconds=37.8
+RESULT index=12 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=37.8
+RESULT index=13 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=37.7
+RESULT index=14 status=OK file=240420131240-Skyline High School.csv type=3 windows=4 seconds=101.8
+RESULT index=15 status=OK file=240420131240-Skyline High School.csv type=3 windows=3 seconds=101.2
+RESULT index=16 status=OK file=240420154027-Peach Mountain.csv type=3 windows=4 seconds=2.4
+RESULT index=17 status=OK file=240420160001-Peach Mountain.csv type=3 windows=2 seconds=2.4
+RESULT index=18 status=OK file=240420162002-Peach Mountain.csv type=3 windows=2 seconds=2.3
+RESULT index=19 status=OK file=240420162002-Peach Mountain.csv type=3 windows=4 seconds=2.4
+RESULT index=20 status=OK file=240420162002-Peach Mountain.csv type=5 windows=1 seconds=2.3
+RESULT index=21 status=OK file=240420172001-Peach Mountain.csv type=3 windows=1 seconds=2.3
+RESULT index=22 status=OK file=240420174001-Peach Mountain.csv type=3 windows=3 seconds=2.5
+RESULT index=23 status=OK file=240420182002-Peach Mountain.csv type=3 windows=2 seconds=2.4
+RESULT index=24 status=OK file=240420190001-Peach Mountain.csv type=3 windows=3 seconds=2.4
+RESULT index=25 status=OK file=240420190001-Peach Mountain.csv type=3 windows=2 seconds=2.4
+RESULT index=26 status=OK file=240422122420-Skyline High School.csv type=3 windows=4 seconds=110.3
+RESULT index=27 status=OK file=240422122420-Skyline High School.csv type=3 windows=3 seconds=110.0
+RESULT index=28 status=OK file=240422122420-Skyline High School.csv type=3 windows=3 seconds=110.0
+RESULT index=29 status=OK file=240422130332-Marquette Senior Hig.csv type=3 windows=3 seconds=55.5
+RESULT index=30 status=OK file=240422130332-Marquette Senior Hig.csv type=3 windows=3 seconds=55.0
+RESULT index=31 status=OK file=240422130332-Marquette Senior Hig.csv type=3 windows=3 seconds=54.9
+RESULT index=32 status=OK file=240423174411-Skyline High School.csv type=2 windows=5 seconds=35.9
+RESULT index=33 status=OK file=240425114645-Skyline High School.csv type=2 windows=4 seconds=92.3
+RESULT index=34 status=OK file=240501114805-Skyline High School.csv type=3 windows=5 seconds=105.4
+RESULT index=35 status=OK file=240501114805-Skyline High School.csv type=3 windows=5 seconds=108.5
+RESULT index=36 status=OK file=240503122451-Skyline High School.csv type=2 windows=3 seconds=84.6
+RESULT index=37 status=OK file=240503122451-Skyline High School.csv type=2 windows=3 seconds=83.6
+RESULT index=38 status=OK file=240504112151-Skyline High School.csv type=3 windows=3 seconds=147.2
+RESULT index=39 status=OK file=240508114916-Skyline High School.csv type=3 windows=3 seconds=114.1
+RESULT index=40 status=OK file=240508114916-Skyline High School.csv type=3 windows=3 seconds=113.7
+RESULT index=41 status=OK file=240508114916-Skyline High School.csv type=3 windows=3 seconds=113.3
+RESULT index=42 status=OK file=240509120239-Skyline High School.csv type=3 windows=3 seconds=69.0
+RESULT index=43 status=OK file=240514120913-Skyline High School.csv type=3 windows=3 seconds=67.9
+RESULT index=44 status=OK file=240514120913-Skyline High School.csv type=3 windows=3 seconds=67.8
+RESULT index=45 status=OK file=240514120913-Skyline High School.csv type=2 windows=4 seconds=67.5
+RESULT index=46 status=OK file=240514120913-Skyline High School.csv type=2 windows=3 seconds=66.3
+RESULT index=47 status=OK file=240514115739-Huron.csv type=3 windows=3 seconds=20.2
+RESULT index=48 status=OK file=240519161711-Skyline High School.csv type=3 windows=3 seconds=73.6
+RESULT index=49 status=OK file=240519161711-Skyline High School.csv type=3 windows=3 seconds=73.1
+RESULT index=50 status=OK file=240607103942-Skyline High School.csv type=3 windows=3 seconds=86.9
+RESULT index=51 status=OK file=240607103942-Skyline High School.csv type=3 windows=3 seconds=86.6
+RESULT index=52 status=OK file=240608132947-Skyline High School.csv type=3 windows=3 seconds=118.0
+RESULT index=53 status=OK file=240611115032-Skyline High School.csv type=3 windows=3 seconds=99.7
+RESULT index=54 status=OK file=240619114432-Skyline High School.csv type=3 windows=3 seconds=124.4
+RESULT index=55 status=OK file=240619114432-Skyline High School.csv type=3 windows=3 seconds=123.6
+RESULT index=56 status=OK file=240620124045-Skyline High School.csv type=3 windows=3 seconds=121.7
+RESULT index=57 status=OK file=240621161136-Skyline High School.csv type=2 windows=3 seconds=86.5
+RESULT index=58 status=OK file=240623132330-Skyline High School.csv type=3 windows=3 seconds=92.9
+RESULT index=59 status=OK file=240624112957-Skyline High School.csv type=3 windows=3 seconds=131.6
+RESULT index=60 status=OK file=240627125611-Skyline High School.csv type=3 windows=3 seconds=91.7
+RESULT index=61 status=OK file=240627125611-Skyline High School.csv type=3 windows=3 seconds=87.3
+RESULT index=62 status=OK file=240629145133-Skyline High School.csv type=3 windows=3 seconds=78.2
+RESULT index=63 status=OK file=240629145133-Skyline High School.csv type=3 windows=3 seconds=78.8
+RESULT index=64 status=OK file=240701145239-Skyline High School.csv type=3 windows=3 seconds=67.2
+RESULT index=65 status=OK file=240704130620-Skyline High School.csv type=2 windows=8 seconds=84.7
+RESULT index=66 status=OK file=240708143141-Skyline High School.csv type=3 windows=6 seconds=93.2
+RESULT index=67 status=OK file=240724113627-Skyline High School.csv type=3 windows=5 seconds=100.3
+RESULT index=68 status=OK file=240725113837-Skyline High School.csv type=2 windows=3 seconds=66.4
+RESULT index=69 status=OK file=240725113837-Skyline High School.csv type=3 windows=3 seconds=66.6
+RESULT index=70 status=OK file=240726140237-Skyline High School.csv type=3 windows=3 seconds=77.4
+RESULT index=71 status=OK file=240726140237-Skyline High School.csv type=3 windows=3 seconds=76.5
+RESULT index=72 status=OK file=240728145301-Skyline High School.csv type=3 windows=3 seconds=72.1
+RESULT index=73 status=OK file=240729165011-Skyline High School.csv type=3 windows=3 seconds=73.2
+RESULT index=0 status=OK file=240330182002-PeachMountian.csv type=3 windows=1 seconds=1.6
+RESULT index=1 status=OK file=240417180250-Skyline High School.csv type=5 windows=3 seconds=73.6
+RESULT index=2 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=37.8
+RESULT index=3 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=37.7
+RESULT index=4 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=4 seconds=37.9
+RESULT index=5 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=7 seconds=39.8
+RESULT index=6 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=5 seconds=37.6
+RESULT index=7 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=38.1
+RESULT index=8 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=10 seconds=38.3
+RESULT index=9 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=10 seconds=38.3
+RESULT index=10 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=5 seconds=38.0
+RESULT index=11 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=5 seconds=37.8
+RESULT index=12 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=37.8
+RESULT index=13 status=OK file=240419152923-Marquette Senior Hig.csv type=3 windows=3 seconds=37.7
+RESULT index=14 status=OK file=240420131240-Skyline High School.csv type=3 windows=4 seconds=101.8
+RESULT index=15 status=OK file=240420131240-Skyline High School.csv type=3 windows=3 seconds=101.2
+RESULT index=16 status=OK file=240420154027-Peach Mountain.csv type=3 windows=4 seconds=2.4
+RESULT index=17 status=OK file=240420160001-Peach Mountain.csv type=3 windows=2 seconds=2.4
+RESULT index=18 status=OK file=240420162002-Peach Mountain.csv type=3 windows=2 seconds=2.3
+RESULT index=19 status=OK file=240420162002-Peach Mountain.csv type=3 windows=4 seconds=2.4
+RESULT index=20 status=OK file=240420162002-Peach Mountain.csv type=5 windows=1 seconds=2.3
+RESULT index=21 status=OK file=240420172001-Peach Mountain.csv type=3 windows=1 seconds=2.3
+RESULT index=22 status=OK file=240420174001-Peach Mountain.csv type=3 windows=3 seconds=2.5
+RESULT index=23 status=OK file=240420182002-Peach Mountain.csv type=3 windows=2 seconds=2.4
+RESULT index=24 status=OK file=240420190001-Peach Mountain.csv type=3 windows=3 seconds=2.4
+RESULT index=25 status=OK file=240420190001-Peach Mountain.csv type=3 windows=2 seconds=2.4
+RESULT index=26 status=OK file=240422122420-Skyline High School.csv type=3 windows=4 seconds=110.3
+RESULT index=27 status=OK file=240422122420-Skyline High School.csv type=3 windows=3 seconds=110.0
+RESULT index=28 status=OK file=240422122420-Skyline High School.csv type=3 windows=3 seconds=110.0
+RESULT index=29 status=OK file=240422130332-Marquette Senior Hig.csv type=3 windows=3 seconds=55.5
+RESULT index=30 status=OK file=240422130332-Marquette Senior Hig.csv type=3 windows=3 seconds=55.0
+RESULT index=31 status=OK file=240422130332-Marquette Senior Hig.csv type=3 windows=3 seconds=54.9
+RESULT index=32 status=OK file=240423174411-Skyline High School.csv type=2 windows=5 seconds=35.9
+RESULT index=33 status=OK file=240425114645-Skyline High School.csv type=2 windows=4 seconds=92.3
+RESULT index=34 status=OK file=240501114805-Skyline High School.csv type=3 windows=5 seconds=105.4
+RESULT index=35 status=OK file=240501114805-Skyline High School.csv type=3 windows=5 seconds=108.5
+RESULT index=36 status=OK file=240503122451-Skyline High School.csv type=2 windows=3 seconds=84.6
+RESULT index=37 status=OK file=240503122451-Skyline High School.csv type=2 windows=3 seconds=83.6
+RESULT index=38 status=OK file=240504112151-Skyline High School.csv type=3 windows=3 seconds=147.2
+RESULT index=39 status=OK file=240508114916-Skyline High School.csv type=3 windows=3 seconds=114.1
+RESULT index=40 status=OK file=240508114916-Skyline High School.csv type=3 windows=3 seconds=113.7
+RESULT index=41 status=OK file=240508114916-Skyline High School.csv type=3 windows=3 seconds=113.3
+RESULT index=42 status=OK fil

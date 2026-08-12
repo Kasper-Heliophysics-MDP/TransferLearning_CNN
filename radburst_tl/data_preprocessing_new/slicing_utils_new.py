@@ -14,6 +14,7 @@ Based on existing data_slicing.py but designed specifically for:
 import numpy as np
 import pandas as pd
 import cv2
+import gc
 import os
 from datetime import datetime
 from tqdm import tqdm
@@ -24,8 +25,11 @@ sys.path.append('../data_preprocessing')
 from data_label import time_to_column_indices
 from data_denoise import remove_horizontal_noise, remove_vertical_noise
 
-# Import new advanced RFI cleaning
-from denoise_new import advanced_rfi_cleaning_wrapper
+# RFI cleaning: sumthreshold_denoise (ecallisto_grabber/denoising/) replaces
+# the old denoise_new -- same call signature (drop-in), validated on real
+# own-station + eCallisto data; see ecallisto_grabber/开发日志.md for why.
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'ecallisto_grabber', 'denoising'))
+from sumthreshold_denoise import sumthreshold_cleaning_wrapper as advanced_rfi_cleaning_wrapper
 
 
 class BurstFixedWindowSlicer:
@@ -108,12 +112,25 @@ class BurstFixedWindowSlicer:
             # Infer burst type from filename if not provided
             if burst_type is None:
                 burst_type = self._infer_burst_type_from_filename(csv_file_path)
-            
+
+            # raw_data/spectral_data's float64 backing stays resident for the
+            # whole cleaning call otherwise (raw_data is returned below, so
+            # Python can't free it until this function exits) -- on a real
+            # ~500k-row file that's ~5GB sitting unused on top of whatever
+            # the cleaner itself needs, which measured as the dominant cause
+            # of OOM-kills at 12-13GB peak RSS on this 15GB no-swap machine.
+            # Nothing downstream (every current caller) reads the 3rd return
+            # value, so drop the heavy object now instead of after.
+            spectral_values = spectral_data.to_numpy(dtype=np.float32)
+            raw_data = None
+            spectral_data = None
+            gc.collect()
+
             print(f"  Applying advanced RFI cleaning (Type {burst_type}, Method: {cleaning_method})...")
             processed_data = advanced_rfi_cleaning_wrapper(
-                spectral_data,
+                spectral_values,
                 burst_start_idx=burst_start_idx,
-                burst_end_idx=burst_end_idx, 
+                burst_end_idx=burst_end_idx,
                 burst_type=burst_type,
                 method=cleaning_method
             )
@@ -269,7 +286,12 @@ class BurstFixedWindowSlicer:
         # Resize: (411, 2400) -> (128, 128)
         # Time dimension: 2400 -> 128 (compression ratio: 18.75)
         # Freq dimension: 411 -> 128 (compression ratio: 3.2)
-        resized = cv2.resize(window_float, self.target_size, interpolation=cv2.INTER_LINEAR)
+        # INTER_AREA, not INTER_LINEAR: at these compression ratios linear
+        # interpolation only samples the 2 nearest source pixels per output
+        # pixel and ignores the rest, which aliases; INTER_AREA box-averages
+        # every source pixel that maps into each output pixel (OpenCV's own
+        # recommendation for shrinking).
+        resized = cv2.resize(window_float, self.target_size, interpolation=cv2.INTER_AREA)
         
         return resized
     

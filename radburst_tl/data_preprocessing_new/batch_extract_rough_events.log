@@ -1,0 +1,126 @@
+Starting rough-crop batch: 41 unique files, method=fast, Mon Aug 10 18:02:20 UTC 2026
+--- file_index 0 / 40 : 18:02:20 ---
+RESULT file_index=0 status=OK file=240330182002-PeachMountian.csv bursts_in_file=1 events_extracted=1 seconds=1.5
+--- file_index 1 / 40 : 18:02:22 ---
+RESULT file_index=1 status=OK file=240417180250-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=73.5
+--- file_index 2 / 40 : 18:03:37 ---
+RESULT file_index=2 status=OK file=240419152923-Marquette Senior Hig.csv bursts_in_file=12 events_extracted=12 seconds=47.0
+--- file_index 3 / 40 : 18:04:24 ---
+RESULT file_index=3 status=OK file=240420131240-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=115.6
+--- file_index 4 / 40 : 18:06:21 ---
+RESULT file_index=4 status=OK file=240420154027-Peach Mountain.csv bursts_in_file=1 events_extracted=1 seconds=2.4
+--- file_index 5 / 40 : 18:06:24 ---
+RESULT file_index=5 status=OK file=240420160001-Peach Mountain.csv bursts_in_file=1 events_extracted=1 seconds=2.5
+--- file_index 6 / 40 : 18:06:27 ---
+RESULT file_index=6 status=OK file=240420162002-Peach Mountain.csv bursts_in_file=3 events_extracted=3 seconds=2.5
+--- file_index 7 / 40 : 18:06:31 ---
+RESULT file_index=7 status=OK file=240420172001-Peach Mountain.csv bursts_in_file=1 events_extracted=1 seconds=2.3
+--- file_index 8 / 40 : 18:06:34 ---
+RESULT file_index=8 status=OK file=240420174001-Peach Mountain.csv bursts_in_file=1 events_extracted=1 seconds=2.4
+--- file_index 9 / 40 : 18:06:37 ---
+RESULT file_index=9 status=OK file=240420182002-Peach Mountain.csv bursts_in_file=1 events_extracted=1 seconds=2.3
+--- file_index 10 / 40 : 18:06:40 ---
+RESULT file_index=10 status=OK file=240420190001-Peach Mountain.csv bursts_in_file=2 events_extracted=2 seconds=2.4
+--- file_index 11 / 40 : 18:06:43 ---
+RESULT file_index=11 status=OK file=240422122420-Skyline High School.csv bursts_in_file=3 events_extracted=3 seconds=114.8
+--- file_index 12 / 40 : 18:08:39 ---
+RESULT file_index=12 status=OK file=240422130332-Marquette Senior Hig.csv bursts_in_file=3 events_extracted=3 seconds=57.9
+--- file_index 13 / 40 : 18:09:38 ---
+RESULT file_index=13 status=OK file=240423174411-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=36.4
+--- file_index 14 / 40 : 18:10:15 ---
+RESULT file_index=14 status=OK file=240425114645-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=93.7
+--- file_index 15 / 40 : 18:11:50 ---
+RESULT file_index=15 status=OK file=240501114805-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=107.6
+--- file_index 16 / 40 : 18:13:38 ---
+RESULT file_index=16 status=OK file=240503122451-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=82.6
+--- file_index 17 / 40 : 18:15:02 ---
+RESULT file_index=17 status=OK file=240504112151-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=143.4
+--- file_index 18 / 40 : 18:17:26 ---
+RESULT file_index=18 status=OK file=240508114916-Skyline High School.csv bursts_in_file=3 events_extracted=3 seconds=116.2
+--- file_index 19 / 40 : 18:19:23 ---
+RESULT file_index=19 status=OK file=240509120239-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=67.9
+--- file_index 20 / 40 : 18:20:32 ---
+RESULT file_index=20 status=OK file=240514115739-Huron.csv bursts_in_file=1 events_extracted=1 seconds=20.4
+--- file_index 21 / 40 : 18:20:53 ---
+RESULT file_index=21 status=OK file=240514120913-Skyline High School.csv bursts_in_file=4 events_extracted=4 seconds=70.4
+--- file_index 22 / 40 : 18:22:04 ---
+RESULT file_index=22 status=OK file=240519161711-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=76.6
+--- file_index 23 / 40 : 18:23:22 ---
+RESULT file_index=23 status=OK file=240607103942-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=89.5
+--- file_index 24 / 40 : 18:24:52 ---
+RESULT file_index=24 status=OK file=240608132947-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=118.9
+--- file_index 25 / 40 : 18:26:52 ---
+RESULT file_index=25 status=OK file=240611115032-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=101.4
+--- file_index 26 / 40 : 18:28:34 ---
+RESULT file_index=26 status=OK file=240619114432-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=129.2
+--- file_index 27 / 40 : 18:30:44 ---
+RESULT file_index=27 status=OK file=240620124045-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=123.0
+--- file_index 28 / 40 : 18:32:48 ---
+RESULT file_index=28 status=OK file=240621161136-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=85.1
+--- file_index 29 / 40 : 18:34:14 ---
+RESULT file_index=29 status=OK file=240623132330-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=89.5
+--- file_index 30 / 40 : 18:35:44 ---
+RESULT file_index=30 status=OK file=240624112957-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=130.7
+--- file_index 31 / 40 : 18:37:56 ---
+RESULT file_index=31 status=OK file=240627125611-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=92.0
+--- file_index 32 / 40 : 18:39:29 ---
+RESULT file_index=32 status=OK file=240629145133-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=77.5
+--- file_index 33 / 40 : 18:40:47 ---
+RESULT file_index=33 status=OK file=240701145239-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=64.4
+--- file_index 34 / 40 : 18:41:52 ---
+RESULT file_index=34 status=OK file=240704130620-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=83.9
+--- file_index 35 / 40 : 18:43:17 ---
+RESULT file_index=35 status=OK file=240708143141-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=92.8
+--- file_index 36 / 40 : 18:44:51 ---
+RESULT file_index=36 status=OK file=240724113627-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=95.1
+--- file_index 37 / 40 : 18:46:27 ---
+RESULT file_index=37 status=OK file=240725113837-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=64.3
+--- file_index 38 / 40 : 18:47:32 ---
+RESULT file_index=38 status=OK file=240726140237-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=74.0
+--- file_index 39 / 40 : 18:48:47 ---
+RESULT file_index=39 status=OK file=240728145301-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=68.1
+--- file_index 40 / 40 : 18:49:56 ---
+RESULT file_index=40 status=OK file=240729165011-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=69.0
+Batch finished: Mon Aug 10 18:51:05 UTC 2026
+=== SUMMARY ===
+RESULT file_index=0 status=OK file=240330182002-PeachMountian.csv bursts_in_file=1 events_extracted=1 seconds=1.5
+RESULT file_index=1 status=OK file=240417180250-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=73.5
+RESULT file_index=2 status=OK file=240419152923-Marquette Senior Hig.csv bursts_in_file=12 events_extracted=12 seconds=47.0
+RESULT file_index=3 status=OK file=240420131240-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=115.6
+RESULT file_index=4 status=OK file=240420154027-Peach Mountain.csv bursts_in_file=1 events_extracted=1 seconds=2.4
+RESULT file_index=5 status=OK file=240420160001-Peach Mountain.csv bursts_in_file=1 events_extracted=1 seconds=2.5
+RESULT file_index=6 status=OK file=240420162002-Peach Mountain.csv bursts_in_file=3 events_extracted=3 seconds=2.5
+RESULT file_index=7 status=OK file=240420172001-Peach Mountain.csv bursts_in_file=1 events_extracted=1 seconds=2.3
+RESULT file_index=8 status=OK file=240420174001-Peach Mountain.csv bursts_in_file=1 events_extracted=1 seconds=2.4
+RESULT file_index=9 status=OK file=240420182002-Peach Mountain.csv bursts_in_file=1 events_extracted=1 seconds=2.3
+RESULT file_index=10 status=OK file=240420190001-Peach Mountain.csv bursts_in_file=2 events_extracted=2 seconds=2.4
+RESULT file_index=11 status=OK file=240422122420-Skyline High School.csv bursts_in_file=3 events_extracted=3 seconds=114.8
+RESULT file_index=12 status=OK file=240422130332-Marquette Senior Hig.csv bursts_in_file=3 events_extracted=3 seconds=57.9
+RESULT file_index=13 status=OK file=240423174411-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=36.4
+RESULT file_index=14 status=OK file=240425114645-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=93.7
+RESULT file_index=15 status=OK file=240501114805-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=107.6
+RESULT file_index=16 status=OK file=240503122451-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=82.6
+RESULT file_index=17 status=OK file=240504112151-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=143.4
+RESULT file_index=18 status=OK file=240508114916-Skyline High School.csv bursts_in_file=3 events_extracted=3 seconds=116.2
+RESULT file_index=19 status=OK file=240509120239-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=67.9
+RESULT file_index=20 status=OK file=240514115739-Huron.csv bursts_in_file=1 events_extracted=1 seconds=20.4
+RESULT file_index=21 status=OK file=240514120913-Skyline High School.csv bursts_in_file=4 events_extracted=4 seconds=70.4
+RESULT file_index=22 status=OK file=240519161711-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=76.6
+RESULT file_index=23 status=OK file=240607103942-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=89.5
+RESULT file_index=24 status=OK file=240608132947-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=118.9
+RESULT file_index=25 status=OK file=240611115032-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=101.4
+RESULT file_index=26 status=OK file=240619114432-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=129.2
+RESULT file_index=27 status=OK file=240620124045-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=123.0
+RESULT file_index=28 status=OK file=240621161136-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=85.1
+RESULT file_index=29 status=OK file=240623132330-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=89.5
+RESULT file_index=30 status=OK file=240624112957-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=130.7
+RESULT file_index=31 status=OK file=240627125611-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=92.0
+RESULT file_index=32 status=OK file=240629145133-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=77.5
+RESULT file_index=33 status=OK file=240701145239-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=64.4
+RESULT file_index=34 status=OK file=240704130620-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=83.9
+RESULT file_index=35 status=OK file=240708143141-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=92.8
+RESULT file_index=36 status=OK file=240724113627-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=95.1
+RESULT file_index=37 status=OK file=240725113837-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=64.3
+RESULT file_index=38 status=OK file=240726140237-Skyline High School.csv bursts_in_file=2 events_extracted=2 seconds=74.0
+RESULT file_index=39 status=OK file=240728145301-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=68.1
+RESULT file_index=40 status=OK file=240729165011-Skyline High School.csv bursts_in_file=1 events_extracted=1 seconds=69.0

@@ -1,0 +1,1812 @@
+Fetching Monstein catalog 2021-01-01 .. 2024-03-31 ...
+  [burst_catalog] fetching 2021-01 ...
+  [burst_catalog] fetching 2021-02 ...
+  [burst_catalog] fetching 2021-03 ...
+  [burst_catalog] fetching 2021-04 ...
+  [burst_catalog] fetching 2021-05 ...
+  [burst_catalog] fetching 2021-06 ...
+  [burst_catalog] fetching 2021-07 ...
+  [burst_catalog] fetching 2021-08 ...
+  [burst_catalog] fetching 2021-09 ...
+  [burst_catalog] fetching 2021-10 ...
+  [burst_catalog] fetching 2021-11 ...
+  [burst_catalog] fetching 2021-12 ...
+  [burst_catalog] fetching 2022-01 ...
+  [burst_catalog] fetching 2022-02 ...
+  [burst_catalog] fetching 2022-03 ...
+  [burst_catalog] fetching 2022-04 ...
+  [burst_catalog] fetching 2022-05 ...
+  [burst_catalog] fetching 2022-06 ...
+  [burst_catalog] fetching 2022-07 ...
+  [burst_catalog] fetching 2022-08 ...
+  [burst_catalog] fetching 2022-09 ...
+  [burst_catalog] fetching 2022-10 ...
+  [burst_catalog] fetching 2022-11 ...
+  [burst_catalog] fetching 2022-12 ...
+  [burst_catalog] fetching 2023-01 ...
+  [burst_catalog] fetching 2023-02 ...
+  [burst_catalog] fetching 2023-03 ...
+  [burst_catalog] fetching 2023-04 ...
+  [burst_catalog] fetching 2023-05 ...
+  [burst_catalog] fetching 2023-06 ...
+  [burst_catalog] fetching 2023-07 ...
+  [burst_catalog] fetching 2023-08 ...
+  [burst_catalog] fetching 2023-09 ...
+  [burst_catalog] fetching 2023-10 ...
+  [burst_catalog] fetching 2023-11 ...
+  [burst_catalog] fetching 2023-12 ...
+  [burst_catalog] fetching 2024-01 ...
+  [burst_catalog] fetching 2024-02 ...
+  [burst_catalog] fetching 2024-03 ...
+1779 (station, event) rows after filtering (stations=['Arecibo-Observatory'], types=['II', 'III', 'V'])
+  [windows] loaded 272 reviewed events (132 with a manual time correction)
+432 distinct (station, date) pairs to fetch; 0 already done
+
+[1] Arecibo-Observatory 20211010 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-10-10 has 16 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (3 excluded) + 3 box(es) in 30.9s (22 files downloaded)
+
+[2] Arecibo-Observatory 20211013 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-10-13 has 19 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 window(s) (1 excluded) + 1 box(es) in 37.6s (28 files downloaded)
+
+[3] Arecibo-Observatory 20211023 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-10-23 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 68.3s (44 files downloaded)
+
+[4] Arecibo-Observatory 20211025 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-10-25 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 67.9s (44 files downloaded)
+
+[5] Arecibo-Observatory 20211026 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-10-26 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 64.9s (43 files downloaded)
+
+[6] Arecibo-Observatory 20211027 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-10-27 has 39 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 69.7s (46 files downloaded)
+
+[7] Arecibo-Observatory 20211028 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-10-28 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 12 window(s) (1 excluded) + 4 box(es) in 68.4s (44 files downloaded)
+
+[8] Arecibo-Observatory 20211030 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-10-30 has 31 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (2 excluded) + 1 box(es) in 56.0s (46 files downloaded)
+
+[9] Arecibo-Observatory 20211031 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-10-31 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 65.1s (44 files downloaded)
+
+[10] Arecibo-Observatory 20211101 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-11-01 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 63.6s (44 files downloaded)
+
+[11] Arecibo-Observatory 20211103 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-11-03 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 63.6s (44 files downloaded)
+
+[12] Arecibo-Observatory 20211117 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-11-17 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 65.7s (44 files downloaded)
+
+[13] Arecibo-Observatory 20211215 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-12-15 has 29 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 46.2s (29 files downloaded)
+
+[14] Arecibo-Observatory 20211221 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-12-21 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 68.9s (44 files downloaded)
+
+[15] Arecibo-Observatory 20211223 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-12-23 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 8 window(s) (0 excluded) + 2 box(es) in 68.9s (44 files downloaded)
+
+[16] Arecibo-Observatory 20211228 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2021-12-28 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 68.6s (44 files downloaded)
+
+[17] Arecibo-Observatory 20220101 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-01-01 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (0 excluded) + 1 box(es) in 68.3s (44 files downloaded)
+
+[18] Arecibo-Observatory 20220107 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-01-07 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 67.6s (44 files downloaded)
+
+[19] Arecibo-Observatory 20220109 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-01-09 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 68.1s (44 files downloaded)
+
+[20] Arecibo-Observatory 20220110 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-01-10 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 68.0s (44 files downloaded)
+
+[21] Arecibo-Observatory 20220111 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-01-11 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 68.4s (44 files downloaded)
+
+[22] Arecibo-Observatory 20220112 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-01-12 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 67.6s (44 files downloaded)
+
+[23] Arecibo-Observatory 20220113 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-01-13 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (1 excluded) + 3 box(es) in 67.7s (44 files downloaded)
+
+[24] Arecibo-Observatory 20220127 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-01-27 has 33 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (1 excluded) + 1 box(es) in 50.8s (33 files downloaded)
+
+[25] Arecibo-Observatory 20220129 -- 9 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-01-29 has 10 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (3 excluded) + 9 box(es) in 41.2s (43 files downloaded)
+
+[26] Arecibo-Observatory 20220130 -- 11 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-01-30 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (15 excluded) + 11 box(es) in 67.6s (44 files downloaded)
+
+[27] Arecibo-Observatory 20220131 -- 22 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-01-31 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 34 window(s) (15 excluded) + 23 box(es) in 68.5s (44 files downloaded)
+
+[28] Arecibo-Observatory 20220201 -- 10 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-01 has 36 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 32 window(s) (18 excluded) + 12 box(es) in 55.3s (36 files downloaded)
+
+[29] Arecibo-Observatory 20220202 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-02 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (6 excluded) + 5 box(es) in 67.7s (44 files downloaded)
+
+[30] Arecibo-Observatory 20220203 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-03 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 13 window(s) (2 excluded) + 4 box(es) in 68.2s (44 files downloaded)
+
+[31] Arecibo-Observatory 20220204 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-04 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (1 excluded) + 5 box(es) in 67.9s (44 files downloaded)
+
+[32] Arecibo-Observatory 20220205 -- 14 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-05 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 34 window(s) (3 excluded) + 15 box(es) in 67.4s (44 files downloaded)
+
+[33] Arecibo-Observatory 20220206 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-06 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 13 window(s) (10 excluded) + 3 box(es) in 67.9s (44 files downloaded)
+
+[34] Arecibo-Observatory 20220207 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-07 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 8 window(s) (4 excluded) + 3 box(es) in 67.7s (44 files downloaded)
+
+[35] Arecibo-Observatory 20220208 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-08 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (3 excluded) + 2 box(es) in 67.6s (44 files downloaded)
+
+[36] Arecibo-Observatory 20220209 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-09 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (3 excluded) + 6 box(es) in 67.3s (44 files downloaded)
+
+[37] Arecibo-Observatory 20220210 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-10 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 18 window(s) (3 excluded) + 4 box(es) in 67.5s (44 files downloaded)
+
+[38] Arecibo-Observatory 20220211 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-11 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (1 excluded) + 3 box(es) in 67.3s (44 files downloaded)
+
+[39] Arecibo-Observatory 20220212 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-12 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (4 excluded) + 7 box(es) in 67.1s (44 files downloaded)
+
+[40] Arecibo-Observatory 20220213 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-13 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 24 window(s) (1 excluded) + 5 box(es) in 67.0s (44 files downloaded)
+
+[41] Arecibo-Observatory 20220214 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-14 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 67.3s (44 files downloaded)
+
+[42] Arecibo-Observatory 20220215 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-15 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 7 window(s) (1 excluded) + 2 box(es) in 69.2s (44 files downloaded)
+
+[43] Arecibo-Observatory 20220216 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-16 has 55 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (1 excluded) + 3 box(es) in 82.5s (55 files downloaded)
+
+[44] Arecibo-Observatory 20220218 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (1 excluded) + 2 box(es) in 74.3s (49 files downloaded)
+
+[45] Arecibo-Observatory 20220228 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-02-28 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (0 excluded) + 3 box(es) in 74.7s (49 files downloaded)
+
+[46] Arecibo-Observatory 20220301 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-01 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 74.7s (49 files downloaded)
+
+[47] Arecibo-Observatory 20220302 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 19 window(s) (1 excluded) + 5 box(es) in 74.4s (49 files downloaded)
+
+[48] Arecibo-Observatory 20220303 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 74.6s (49 files downloaded)
+
+[49] Arecibo-Observatory 20220304 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-04 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 74.4s (49 files downloaded)
+
+[50] Arecibo-Observatory 20220305 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (3 excluded) + 5 box(es) in 74.9s (49 files downloaded)
+
+[51] Arecibo-Observatory 20220306 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-06 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (7 excluded) + 8 box(es) in 74.7s (49 files downloaded)
+
+[52] Arecibo-Observatory 20220307 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 19 window(s) (1 excluded) + 6 box(es) in 74.4s (49 files downloaded)
+
+[53] Arecibo-Observatory 20220308 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-08 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 26 window(s) (11 excluded) + 7 box(es) in 74.9s (49 files downloaded)
+
+[54] Arecibo-Observatory 20220309 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-09 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 window(s) (0 excluded) + 3 box(es) in 31.3s (20 files downloaded)
+
+[55] Arecibo-Observatory 20220311 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-11 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.9s (49 files downloaded)
+
+[56] Arecibo-Observatory 20220312 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (4 excluded) + 7 box(es) in 74.7s (49 files downloaded)
+
+[57] Arecibo-Observatory 20220313 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-13 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 25 window(s) (0 excluded) + 6 box(es) in 74.6s (49 files downloaded)
+
+[58] Arecibo-Observatory 20220314 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-14 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.7s (49 files downloaded)
+
+[59] Arecibo-Observatory 20220316 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-16 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (1 excluded) + 3 box(es) in 74.6s (49 files downloaded)
+
+[60] Arecibo-Observatory 20220317 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 window(s) (0 excluded) + 2 box(es) in 75.1s (49 files downloaded)
+
+[61] Arecibo-Observatory 20220318 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 19 window(s) (1 excluded) + 4 box(es) in 75.2s (49 files downloaded)
+
+[62] Arecibo-Observatory 20220319 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (0 excluded) + 4 box(es) in 75.3s (49 files downloaded)
+
+[63] Arecibo-Observatory 20220321 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-21 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 75.4s (49 files downloaded)
+
+[64] Arecibo-Observatory 20220326 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-26 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (0 excluded) + 3 box(es) in 75.6s (49 files downloaded)
+
+[65] Arecibo-Observatory 20220327 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-27 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 75.8s (49 files downloaded)
+
+[66] Arecibo-Observatory 20220328 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-28 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (0 excluded) + 3 box(es) in 75.5s (49 files downloaded)
+
+[67] Arecibo-Observatory 20220329 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-29 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (3 excluded) + 5 box(es) in 76.1s (49 files downloaded)
+
+[68] Arecibo-Observatory 20220330 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-30 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 17 window(s) (3 excluded) + 5 box(es) in 78.1s (49 files downloaded)
+
+[69] Arecibo-Observatory 20220331 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-03-31 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 25 window(s) (4 excluded) + 8 box(es) in 75.7s (49 files downloaded)
+
+[70] Arecibo-Observatory 20220401 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-01 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 18 window(s) (6 excluded) + 5 box(es) in 75.5s (49 files downloaded)
+
+[71] Arecibo-Observatory 20220402 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (8 excluded) + 3 box(es) in 75.6s (49 files downloaded)
+
+[72] Arecibo-Observatory 20220403 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 14 window(s) (1 excluded) + 3 box(es) in 76.0s (49 files downloaded)
+
+[73] Arecibo-Observatory 20220404 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-04 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (4 excluded) + 3 box(es) in 75.5s (49 files downloaded)
+
+[74] Arecibo-Observatory 20220407 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.6s (49 files downloaded)
+
+[75] Arecibo-Observatory 20220408 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-08 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 27 window(s) (3 excluded) + 7 box(es) in 75.8s (49 files downloaded)
+
+[76] Arecibo-Observatory 20220409 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-09 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (2 excluded) + 3 box(es) in 75.6s (49 files downloaded)
+
+[77] Arecibo-Observatory 20220412 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 12 window(s) (3 excluded) + 3 box(es) in 75.7s (49 files downloaded)
+
+[78] Arecibo-Observatory 20220413 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-13 has 34 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 52.5s (34 files downloaded)
+
+[79] Arecibo-Observatory 20220414 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-14 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (2 excluded) + 3 box(es) in 75.4s (49 files downloaded)
+
+[80] Arecibo-Observatory 20220415 -- 8 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/04/15/Arecibo-Observatory_20220415_111500_63.fit.gz: Compressed file ended before the end-of-stream marker was reached
+    [fetch] Arecibo-Observatory 2022-04-15 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 26 window(s) (4 excluded) + 9 box(es) in 75.4s (49 files downloaded)
+
+[81] Arecibo-Observatory 20220416 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-16 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 76.1s (49 files downloaded)
+
+[82] Arecibo-Observatory 20220417 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (1 excluded) + 2 box(es) in 141.5s (49 files downloaded)
+
+[83] Arecibo-Observatory 20220418 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 14 window(s) (0 excluded) + 3 box(es) in 76.0s (49 files downloaded)
+
+[84] Arecibo-Observatory 20220420 -- 18 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-20 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 36 window(s) (0 excluded) + 20 box(es) in 78.6s (49 files downloaded)
+
+[85] Arecibo-Observatory 20220421 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-21 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='24:32-14:33', skipping
+    [windows] could not parse time_range='24:32-14:33', skipping
+  -> 15 window(s) (0 excluded) + 3 box(es) in 75.8s (49 files downloaded)
+
+[86] Arecibo-Observatory 20220422 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-22 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 77.0s (49 files downloaded)
+
+[87] Arecibo-Observatory 20220424 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-24 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 75.7s (49 files downloaded)
+
+[88] Arecibo-Observatory 20220425 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-25 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 12 window(s) (0 excluded) + 3 box(es) in 76.3s (49 files downloaded)
+
+[89] Arecibo-Observatory 20220426 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-26 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (1 excluded) + 2 box(es) in 75.7s (49 files downloaded)
+
+[90] Arecibo-Observatory 20220427 -- 10 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-27 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 28 window(s) (2 excluded) + 10 box(es) in 75.7s (49 files downloaded)
+
+[91] Arecibo-Observatory 20220428 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-28 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 76.0s (49 files downloaded)
+
+[92] Arecibo-Observatory 20220429 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-29 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 19 window(s) (0 excluded) + 7 box(es) in 75.8s (49 files downloaded)
+
+[93] Arecibo-Observatory 20220430 -- 17 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-04-30 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 39 window(s) (4 excluded) + 23 box(es) in 75.9s (49 files downloaded)
+
+[94] Arecibo-Observatory 20220501 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-01 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 24 window(s) (0 excluded) + 8 box(es) in 75.9s (49 files downloaded)
+
+[95] Arecibo-Observatory 20220502 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 13 window(s) (0 excluded) + 4 box(es) in 75.8s (49 files downloaded)
+
+[96] Arecibo-Observatory 20220503 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 22 window(s) (0 excluded) + 5 box(es) in 76.9s (49 files downloaded)
+
+[97] Arecibo-Observatory 20220504 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-04 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (4 excluded) + 6 box(es) in 75.6s (49 files downloaded)
+
+[98] Arecibo-Observatory 20220505 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 22 window(s) (3 excluded) + 6 box(es) in 75.6s (49 files downloaded)
+
+[99] Arecibo-Observatory 20220506 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-06 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 27 window(s) (2 excluded) + 6 box(es) in 75.6s (49 files downloaded)
+
+[100] Arecibo-Observatory 20220507 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 24 window(s) (1 excluded) + 8 box(es) in 75.6s (49 files downloaded)
+
+[101] Arecibo-Observatory 20220508 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-08 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 25 window(s) (2 excluded) + 6 box(es) in 75.9s (49 files downloaded)
+
+[102] Arecibo-Observatory 20220509 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-09 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (0 excluded) + 5 box(es) in 75.5s (49 files downloaded)
+
+[103] Arecibo-Observatory 20220510 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-10 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 18 window(s) (4 excluded) + 8 box(es) in 75.6s (49 files downloaded)
+
+[104] Arecibo-Observatory 20220511 -- 14 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-11 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 37 window(s) (2 excluded) + 16 box(es) in 75.2s (49 files downloaded)
+
+[105] Arecibo-Observatory 20220512 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-12 has 43 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 7 window(s) (0 excluded) + 2 box(es) in 65.9s (43 files downloaded)
+
+[106] Arecibo-Observatory 20220513 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-13 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 27 window(s) (1 excluded) + 8 box(es) in 75.6s (49 files downloaded)
+
+[107] Arecibo-Observatory 20220514 -- 10 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-14 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='18:19.18:19', skipping
+    [windows] could not parse time_range='18:19.18:19', skipping
+  -> 25 window(s) (0 excluded) + 11 box(es) in 75.6s (49 files downloaded)
+
+[108] Arecibo-Observatory 20220515 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-15 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.3s (49 files downloaded)
+
+[109] Arecibo-Observatory 20220516 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-16 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 window(s) (0 excluded) + 2 box(es) in 75.6s (49 files downloaded)
+
+[110] Arecibo-Observatory 20220517 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (0 excluded) + 5 box(es) in 75.6s (49 files downloaded)
+
+[111] Arecibo-Observatory 20220518 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 75.7s (49 files downloaded)
+
+[112] Arecibo-Observatory 20220519 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 27 window(s) (1 excluded) + 8 box(es) in 75.8s (49 files downloaded)
+
+[113] Arecibo-Observatory 20220520 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-20 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 30 window(s) (0 excluded) + 9 box(es) in 75.6s (49 files downloaded)
+
+[114] Arecibo-Observatory 20220521 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-21 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 18 window(s) (0 excluded) + 8 box(es) in 75.6s (49 files downloaded)
+
+[115] Arecibo-Observatory 20220522 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-22 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 77.6s (49 files downloaded)
+
+[116] Arecibo-Observatory 20220524 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-24 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 17 window(s) (0 excluded) + 5 box(es) in 75.9s (49 files downloaded)
+
+[117] Arecibo-Observatory 20220525 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-25 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (0 excluded) + 5 box(es) in 76.1s (49 files downloaded)
+
+[118] Arecibo-Observatory 20220526 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-26 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (0 excluded) + 2 box(es) in 75.6s (49 files downloaded)
+
+[119] Arecibo-Observatory 20220527 -- 12 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-27 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 26 window(s) (0 excluded) + 13 box(es) in 75.7s (49 files downloaded)
+
+[120] Arecibo-Observatory 20220528 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-28 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 32 window(s) (1 excluded) + 10 box(es) in 76.0s (49 files downloaded)
+
+[121] Arecibo-Observatory 20220529 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-29 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 17 window(s) (0 excluded) + 4 box(es) in 75.6s (49 files downloaded)
+
+[122] Arecibo-Observatory 20220530 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-30 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 26 window(s) (0 excluded) + 6 box(es) in 76.7s (49 files downloaded)
+
+[123] Arecibo-Observatory 20220531 -- 10 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-05-31 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 35 window(s) (0 excluded) + 10 box(es) in 130.5s (49 files downloaded)
+
+[124] Arecibo-Observatory 20220601 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-01 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 3 box(es) in 75.4s (49 files downloaded)
+
+[125] Arecibo-Observatory 20220602 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 13 window(s) (0 excluded) + 3 box(es) in 75.6s (49 files downloaded)
+
+[126] Arecibo-Observatory 20220603 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.7s (49 files downloaded)
+
+[127] Arecibo-Observatory 20220606 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-06 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 window(s) (0 excluded) + 1 box(es) in 75.9s (49 files downloaded)
+
+[128] Arecibo-Observatory 20220609 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-09 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 18 window(s) (0 excluded) + 4 box(es) in 75.5s (49 files downloaded)
+
+[129] Arecibo-Observatory 20220611 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-11 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 76.2s (49 files downloaded)
+
+[130] Arecibo-Observatory 20220612 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 77.5s (49 files downloaded)
+
+[131] Arecibo-Observatory 20220613 -- 9 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-13 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 30 window(s) (2 excluded) + 9 box(es) in 75.6s (49 files downloaded)
+
+[132] Arecibo-Observatory 20220614 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-14 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 76.1s (49 files downloaded)
+
+[133] Arecibo-Observatory 20220624 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-24 has 40 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 62.0s (40 files downloaded)
+
+[134] Arecibo-Observatory 20220625 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-25 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 25 window(s) (0 excluded) + 9 box(es) in 75.2s (49 files downloaded)
+
+[135] Arecibo-Observatory 20220626 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-26 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 75.2s (49 files downloaded)
+
+[136] Arecibo-Observatory 20220627 -- 10 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-27 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 32 window(s) (3 excluded) + 12 box(es) in 75.1s (49 files downloaded)
+
+[137] Arecibo-Observatory 20220628 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-06-28 has 5 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 10.3s (5 files downloaded)
+
+[138] Arecibo-Observatory 20220702 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (0 excluded) + 7 box(es) in 75.4s (49 files downloaded)
+
+[139] Arecibo-Observatory 20220703 -- 15 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='15.49-15:52', skipping
+    [windows] could not parse time_range='15.49-15:52', skipping
+  -> 33 window(s) (4 excluded) + 14 box(es) in 75.3s (49 files downloaded)
+
+[140] Arecibo-Observatory 20220704 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-04 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 32 window(s) (3 excluded) + 8 box(es) in 87.1s (49 files downloaded)
+
+[141] Arecibo-Observatory 20220705 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 27 window(s) (1 excluded) + 8 box(es) in 98.4s (49 files downloaded)
+
+[142] Arecibo-Observatory 20220706 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-06 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='18:01-18:13+', skipping
+  -> 10 window(s) (2 excluded) + 2 box(es) in 75.7s (49 files downloaded)
+
+[143] Arecibo-Observatory 20220707 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.5s (49 files downloaded)
+
+[144] Arecibo-Observatory 20220712 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (4 excluded) + 1 box(es) in 75.2s (49 files downloaded)
+
+[145] Arecibo-Observatory 20220713 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-13 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='08:12-15:53+', skipping
+  -> 19 window(s) (0 excluded) + 5 box(es) in 75.0s (49 files downloaded)
+
+[146] Arecibo-Observatory 20220714 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-14 has 29 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (12 excluded) + 3 box(es) in 44.3s (29 files downloaded)
+
+[147] Arecibo-Observatory 20220715 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-15 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (2 excluded) + 8 box(es) in 74.7s (49 files downloaded)
+
+[148] Arecibo-Observatory 20220716 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-16 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (0 excluded) + 2 box(es) in 82.3s (49 files downloaded)
+
+[149] Arecibo-Observatory 20220717 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 75.4s (49 files downloaded)
+
+[150] Arecibo-Observatory 20220718 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 17 window(s) (0 excluded) + 5 box(es) in 74.9s (49 files downloaded)
+
+[151] Arecibo-Observatory 20220719 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (0 excluded) + 5 box(es) in 75.0s (49 files downloaded)
+
+[152] Arecibo-Observatory 20220720 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-20 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 3 box(es) in 74.9s (49 files downloaded)
+
+[153] Arecibo-Observatory 20220721 -- 9 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-21 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 25 window(s) (0 excluded) + 9 box(es) in 75.2s (49 files downloaded)
+
+[154] Arecibo-Observatory 20220722 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-22 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 26 window(s) (0 excluded) + 7 box(es) in 75.0s (49 files downloaded)
+
+[155] Arecibo-Observatory 20220723 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-23 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 14 window(s) (1 excluded) + 3 box(es) in 75.1s (49 files downloaded)
+
+[156] Arecibo-Observatory 20220724 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-24 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 75.2s (49 files downloaded)
+
+[157] Arecibo-Observatory 20220726 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-26 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.4s (49 files downloaded)
+
+[158] Arecibo-Observatory 20220727 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-27 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.4s (49 files downloaded)
+
+[159] Arecibo-Observatory 20220730 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-07-30 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.1s (49 files downloaded)
+
+[160] Arecibo-Observatory 20220802 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 75.0s (49 files downloaded)
+
+[161] Arecibo-Observatory 20220803 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 8 window(s) (2 excluded) + 3 box(es) in 75.2s (49 files downloaded)
+
+[162] Arecibo-Observatory 20220804 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-04 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 78.4s (49 files downloaded)
+
+[163] Arecibo-Observatory 20220805 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 36 window(s) (1 excluded) + 9 box(es) in 76.1s (49 files downloaded)
+
+[164] Arecibo-Observatory 20220806 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-06 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.0s (49 files downloaded)
+
+[165] Arecibo-Observatory 20220807 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 75.3s (49 files downloaded)
+
+[166] Arecibo-Observatory 20220808 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-08 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 20 window(s) (0 excluded) + 4 box(es) in 74.8s (49 files downloaded)
+
+[167] Arecibo-Observatory 20220811 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-11 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.9s (49 files downloaded)
+
+[168] Arecibo-Observatory 20220812 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 4 box(es) in 75.5s (49 files downloaded)
+
+[169] Arecibo-Observatory 20220813 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-13 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (0 excluded) + 2 box(es) in 74.5s (49 files downloaded)
+
+[170] Arecibo-Observatory 20220814 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-14 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 12 window(s) (1 excluded) + 5 box(es) in 75.7s (49 files downloaded)
+
+[171] Arecibo-Observatory 20220815 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-15 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 19 window(s) (9 excluded) + 7 box(es) in 75.8s (49 files downloaded)
+
+[172] Arecibo-Observatory 20220817 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 window(s) (0 excluded) + 3 box(es) in 75.7s (49 files downloaded)
+
+[173] Arecibo-Observatory 20220818 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 22 window(s) (3 excluded) + 7 box(es) in 76.8s (49 files downloaded)
+
+[174] Arecibo-Observatory 20220819 -- 2 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/08/19/Arecibo-Observatory_20220819_183000_63.fit.gz: Compressed file ended before the end-of-stream marker was reached
+    [fetch] Arecibo-Observatory 2022-08-19 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (0 excluded) + 3 box(es) in 75.4s (49 files downloaded)
+
+[175] Arecibo-Observatory 20220820 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-20 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.0s (49 files downloaded)
+
+[176] Arecibo-Observatory 20220823 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-23 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.9s (49 files downloaded)
+
+[177] Arecibo-Observatory 20220824 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-24 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (2 excluded) + 4 box(es) in 75.1s (49 files downloaded)
+
+[178] Arecibo-Observatory 20220825 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-25 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 4 box(es) in 75.2s (49 files downloaded)
+
+[179] Arecibo-Observatory 20220826 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-26 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 75.5s (49 files downloaded)
+
+[180] Arecibo-Observatory 20220827 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-27 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 24 window(s) (0 excluded) + 6 box(es) in 75.0s (49 files downloaded)
+
+[181] Arecibo-Observatory 20220828 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-28 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (2 excluded) + 2 box(es) in 74.8s (49 files downloaded)
+
+[182] Arecibo-Observatory 20220829 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-29 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 18 window(s) (2 excluded) + 5 box(es) in 75.0s (49 files downloaded)
+
+[183] Arecibo-Observatory 20220830 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-08-30 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (1 excluded) + 1 box(es) in 75.3s (49 files downloaded)
+
+[184] Arecibo-Observatory 20220903 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.9s (49 files downloaded)
+
+[185] Arecibo-Observatory 20220905 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 20 window(s) (0 excluded) + 4 box(es) in 75.2s (49 files downloaded)
+
+[186] Arecibo-Observatory 20220906 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-06 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 74.8s (49 files downloaded)
+
+[187] Arecibo-Observatory 20220909 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-09 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 75.1s (49 files downloaded)
+
+[188] Arecibo-Observatory 20220911 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-11 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (0 excluded) + 6 box(es) in 78.1s (49 files downloaded)
+
+[189] Arecibo-Observatory 20220912 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (1 excluded) + 2 box(es) in 75.5s (49 files downloaded)
+
+[190] Arecibo-Observatory 20220913 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-13 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 24 window(s) (1 excluded) + 7 box(es) in 75.0s (49 files downloaded)
+
+[191] Arecibo-Observatory 20220914 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-14 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 24 window(s) (0 excluded) + 6 box(es) in 74.5s (49 files downloaded)
+
+[192] Arecibo-Observatory 20220915 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-15 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 25 window(s) (2 excluded) + 7 box(es) in 74.6s (49 files downloaded)
+
+[193] Arecibo-Observatory 20220916 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-16 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (1 excluded) + 2 box(es) in 75.3s (49 files downloaded)
+
+[194] Arecibo-Observatory 20220917 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 19 window(s) (0 excluded) + 4 box(es) in 74.9s (49 files downloaded)
+
+[195] Arecibo-Observatory 20220918 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 4 box(es) in 74.7s (49 files downloaded)
+
+[196] Arecibo-Observatory 20220919 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 20 window(s) (4 excluded) + 4 box(es) in 74.9s (49 files downloaded)
+
+[197] Arecibo-Observatory 20220920 -- 12 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-20 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 38 window(s) (1 excluded) + 12 box(es) in 76.1s (49 files downloaded)
+
+[198] Arecibo-Observatory 20220921 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-21 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (0 excluded) + 3 box(es) in 78.2s (49 files downloaded)
+
+[199] Arecibo-Observatory 20220922 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-22 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 window(s) (0 excluded) + 2 box(es) in 74.6s (49 files downloaded)
+
+[200] Arecibo-Observatory 20220923 -- 13 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-23 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 30 window(s) (5 excluded) + 15 box(es) in 74.8s (49 files downloaded)
+
+[201] Arecibo-Observatory 20220924 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-24 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 22 window(s) (0 excluded) + 7 box(es) in 74.8s (49 files downloaded)
+
+[202] Arecibo-Observatory 20220925 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-25 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 74.8s (49 files downloaded)
+
+[203] Arecibo-Observatory 20220926 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-26 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 14 window(s) (0 excluded) + 4 box(es) in 75.0s (49 files downloaded)
+
+[204] Arecibo-Observatory 20220927 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-27 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.3s (49 files downloaded)
+
+[205] Arecibo-Observatory 20220929 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-29 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 7 window(s) (0 excluded) + 4 box(es) in 75.7s (49 files downloaded)
+
+[206] Arecibo-Observatory 20220930 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-09-30 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (7 excluded) + 6 box(es) in 75.2s (49 files downloaded)
+
+[207] Arecibo-Observatory 20221001 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-01 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 22 window(s) (1 excluded) + 5 box(es) in 74.7s (49 files downloaded)
+
+[208] Arecibo-Observatory 20221002 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.9s (49 files downloaded)
+
+[209] Arecibo-Observatory 20221003 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.4s (49 files downloaded)
+
+[210] Arecibo-Observatory 20221005 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.9s (49 files downloaded)
+
+[211] Arecibo-Observatory 20221006 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-06 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 13 window(s) (0 excluded) + 5 box(es) in 74.9s (49 files downloaded)
+
+[212] Arecibo-Observatory 20221007 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (4 excluded) + 3 box(es) in 75.1s (49 files downloaded)
+
+[213] Arecibo-Observatory 20221008 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-08 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.5s (49 files downloaded)
+
+[214] Arecibo-Observatory 20221010 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-10 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (0 excluded) + 5 box(es) in 74.7s (49 files downloaded)
+
+[215] Arecibo-Observatory 20221011 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-11 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 24 window(s) (2 excluded) + 7 box(es) in 120.8s (49 files downloaded)
+
+[216] Arecibo-Observatory 20221012 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (1 excluded) + 2 box(es) in 74.8s (49 files downloaded)
+
+[217] Arecibo-Observatory 20221013 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-13 has 47 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 8 window(s) (0 excluded) + 2 box(es) in 71.2s (47 files downloaded)
+
+[218] Arecibo-Observatory 20221015 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-15 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.9s (49 files downloaded)
+
+[219] Arecibo-Observatory 20221016 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-16 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 74.7s (49 files downloaded)
+
+[220] Arecibo-Observatory 20221017 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.0s (49 files downloaded)
+
+[221] Arecibo-Observatory 20221019 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.3s (49 files downloaded)
+
+[222] Arecibo-Observatory 20221022 -- 3 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/10/22/Arecibo-Observatory_20221022_103000_62.fit.gz: Compressed file ended before the end-of-stream marker was reached
+    [fetch] Arecibo-Observatory 2022-10-22 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='14.51-14:52', skipping
+    [windows] could not parse time_range='14.51-14:52', skipping
+  -> 10 window(s) (0 excluded) + 2 box(es) in 74.7s (49 files downloaded)
+
+[223] Arecibo-Observatory 20221024 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-24 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.6s (49 files downloaded)
+
+[224] Arecibo-Observatory 20221025 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-25 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (4 excluded) + 5 box(es) in 74.5s (49 files downloaded)
+
+[225] Arecibo-Observatory 20221026 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-26 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.4s (49 files downloaded)
+
+[226] Arecibo-Observatory 20221027 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-27 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 13 window(s) (0 excluded) + 3 box(es) in 74.2s (49 files downloaded)
+
+[227] Arecibo-Observatory 20221028 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-28 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (1 excluded) + 2 box(es) in 75.1s (49 files downloaded)
+
+[228] Arecibo-Observatory 20221029 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-29 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.6s (49 files downloaded)
+
+[229] Arecibo-Observatory 20221030 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-10-30 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (0 excluded) + 3 box(es) in 74.5s (49 files downloaded)
+
+[230] Arecibo-Observatory 20221103 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 12 window(s) (0 excluded) + 3 box(es) in 75.1s (49 files downloaded)
+
+[231] Arecibo-Observatory 20221104 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-04 has 33 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 56.7s (41 files downloaded)
+
+[232] Arecibo-Observatory 20221105 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-05 has 38 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 17 window(s) (0 excluded) + 3 box(es) in 57.8s (38 files downloaded)
+
+[233] Arecibo-Observatory 20221107 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (0 excluded) + 3 box(es) in 74.9s (49 files downloaded)
+
+[234] Arecibo-Observatory 20221108 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-08 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.4s (49 files downloaded)
+
+[235] Arecibo-Observatory 20221109 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-09 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 75.6s (49 files downloaded)
+
+[236] Arecibo-Observatory 20221110 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-10 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 25 window(s) (1 excluded) + 7 box(es) in 74.4s (49 files downloaded)
+
+[237] Arecibo-Observatory 20221111 -- 9 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-11 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] 20221111 18:27-18:26 type=III parses to 1439 min -- catalog typo (end before start), skipping box
+  -> 20 window(s) (5 excluded) + 8 box(es) in 75.1s (49 files downloaded)
+
+[238] Arecibo-Observatory 20221112 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (2 excluded) + 7 box(es) in 74.4s (49 files downloaded)
+
+[239] Arecibo-Observatory 20221113 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-13 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 window(s) (0 excluded) + 2 box(es) in 74.6s (49 files downloaded)
+
+[240] Arecibo-Observatory 20221114 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-14 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (0 excluded) + 3 box(es) in 75.4s (49 files downloaded)
+
+[241] Arecibo-Observatory 20221115 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-15 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.8s (49 files downloaded)
+
+[242] Arecibo-Observatory 20221119 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 5 box(es) in 74.9s (49 files downloaded)
+
+[243] Arecibo-Observatory 20221122 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-22 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 24 window(s) (2 excluded) + 8 box(es) in 75.3s (49 files downloaded)
+
+[244] Arecibo-Observatory 20221123 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-23 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (0 excluded) + 2 box(es) in 75.0s (49 files downloaded)
+
+[245] Arecibo-Observatory 20221127 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-27 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.7s (49 files downloaded)
+
+[246] Arecibo-Observatory 20221128 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-28 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (0 excluded) + 1 box(es) in 74.8s (49 files downloaded)
+
+[247] Arecibo-Observatory 20221130 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-11-30 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.9s (49 files downloaded)
+
+[248] Arecibo-Observatory 20221202 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.6s (49 files downloaded)
+
+[249] Arecibo-Observatory 20221203 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 6 box(es) in 76.3s (49 files downloaded)
+
+[250] Arecibo-Observatory 20221205 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 75.5s (49 files downloaded)
+
+[251] Arecibo-Observatory 20221206 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-06 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 18 window(s) (1 excluded) + 6 box(es) in 74.8s (49 files downloaded)
+
+[252] Arecibo-Observatory 20221207 -- 9 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 30 window(s) (2 excluded) + 9 box(es) in 74.4s (49 files downloaded)
+
+[253] Arecibo-Observatory 20221208 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-08 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 window(s) (0 excluded) + 2 box(es) in 74.3s (49 files downloaded)
+
+[254] Arecibo-Observatory 20221210 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-10 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 17 window(s) (0 excluded) + 6 box(es) in 74.6s (49 files downloaded)
+
+[255] Arecibo-Observatory 20221211 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-11 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 20 window(s) (0 excluded) + 5 box(es) in 72.2s (49 files downloaded)
+
+[256] Arecibo-Observatory 20221212 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='18:03.18:03', skipping
+    [windows] could not parse time_range='18:03.18:03', skipping
+  -> 13 window(s) (0 excluded) + 3 box(es) in 73.9s (49 files downloaded)
+
+[257] Arecibo-Observatory 20221213 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-13 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 19 window(s) (0 excluded) + 5 box(es) in 74.2s (49 files downloaded)
+
+[258] Arecibo-Observatory 20221214 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-14 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 12 window(s) (1 excluded) + 3 box(es) in 75.2s (49 files downloaded)
+
+[259] Arecibo-Observatory 20221215 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-15 has 47 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='23:58-24:00', skipping
+    [windows] could not parse time_range='23:58-24:00', skipping
+  -> 22 window(s) (2 excluded) + 6 box(es) in 71.1s (47 files downloaded)
+
+[260] Arecibo-Observatory 20221216 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-16 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 20 window(s) (2 excluded) + 4 box(es) in 74.2s (49 files downloaded)
+
+[261] Arecibo-Observatory 20221217 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.5s (49 files downloaded)
+
+[262] Arecibo-Observatory 20221218 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 4 box(es) in 74.3s (49 files downloaded)
+
+[263] Arecibo-Observatory 20221219 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.5s (49 files downloaded)
+
+[264] Arecibo-Observatory 20221220 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-20 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (0 excluded) + 6 box(es) in 74.5s (49 files downloaded)
+
+[265] Arecibo-Observatory 20221221 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-21 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 3 box(es) in 74.4s (49 files downloaded)
+
+[266] Arecibo-Observatory 20221222 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-22 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 19 window(s) (0 excluded) + 5 box(es) in 75.4s (49 files downloaded)
+
+[267] Arecibo-Observatory 20221223 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-23 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (0 excluded) + 3 box(es) in 73.8s (49 files downloaded)
+
+[268] Arecibo-Observatory 20221224 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-24 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 22 window(s) (5 excluded) + 9 box(es) in 74.4s (49 files downloaded)
+
+[269] Arecibo-Observatory 20221225 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-25 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.3s (49 files downloaded)
+
+[270] Arecibo-Observatory 20221226 -- 10 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/12/26/Arecibo-Observatory_20221226_193000_62.fit.gz: Compressed file ended before the end-of-stream marker was reached
+    [fetch] Arecibo-Observatory 2022-12-26 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 32 window(s) (0 excluded) + 11 box(es) in 74.7s (49 files downloaded)
+
+[271] Arecibo-Observatory 20221227 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-27 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 138.1s (49 files downloaded)
+
+[272] Arecibo-Observatory 20221229 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-29 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.2s (49 files downloaded)
+
+[273] Arecibo-Observatory 20221230 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-30 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.2s (49 files downloaded)
+
+[274] Arecibo-Observatory 20221231 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2022-12-31 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 19 window(s) (0 excluded) + 4 box(es) in 74.4s (49 files downloaded)
+
+[275] Arecibo-Observatory 20230101 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-01 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 4 box(es) in 74.1s (49 files downloaded)
+
+[276] Arecibo-Observatory 20230102 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 12 window(s) (0 excluded) + 3 box(es) in 75.1s (49 files downloaded)
+
+[277] Arecibo-Observatory 20230103 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 73.7s (49 files downloaded)
+
+[278] Arecibo-Observatory 20230104 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-04 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 73.9s (49 files downloaded)
+
+[279] Arecibo-Observatory 20230105 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 window(s) (0 excluded) + 2 box(es) in 73.8s (49 files downloaded)
+
+[280] Arecibo-Observatory 20230106 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-06 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 73.7s (49 files downloaded)
+
+[281] Arecibo-Observatory 20230107 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 0 window(s) (0 excluded) + 0 box(es) in 75.8s (49 files downloaded)
+
+[282] Arecibo-Observatory 20230108 -- 15 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-08 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='15:21-15.22', skipping
+    [windows] could not parse time_range='15:21-15.22', skipping
+  -> 36 window(s) (4 excluded) + 15 box(es) in 73.9s (49 files downloaded)
+
+[283] Arecibo-Observatory 20230109 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-09 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 25 window(s) (4 excluded) + 9 box(es) in 74.0s (49 files downloaded)
+
+[284] Arecibo-Observatory 20230110 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-10 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 25 window(s) (9 excluded) + 8 box(es) in 73.9s (49 files downloaded)
+
+[285] Arecibo-Observatory 20230111 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-11 has 42 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 20 window(s) (0 excluded) + 5 box(es) in 63.8s (42 files downloaded)
+
+[286] Arecibo-Observatory 20230112 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (0 excluded) + 2 box(es) in 75.1s (49 files downloaded)
+
+[287] Arecibo-Observatory 20230113 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-13 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (4 excluded) + 1 box(es) in 73.8s (49 files downloaded)
+
+[288] Arecibo-Observatory 20230116 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-16 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 5 box(es) in 73.8s (49 files downloaded)
+
+[289] Arecibo-Observatory 20230117 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 73.9s (49 files downloaded)
+
+[290] Arecibo-Observatory 20230119 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 73.9s (49 files downloaded)
+
+[291] Arecibo-Observatory 20230120 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-20 has 25 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 window(s) (0 excluded) + 2 box(es) in 38.6s (25 files downloaded)
+
+[292] Arecibo-Observatory 20230123 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-23 has 34 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 51.7s (34 files downloaded)
+
+[293] Arecibo-Observatory 20230124 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-24 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 14 window(s) (0 excluded) + 3 box(es) in 75.2s (49 files downloaded)
+
+[294] Arecibo-Observatory 20230125 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-25 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 73.9s (49 files downloaded)
+
+[295] Arecibo-Observatory 20230127 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-27 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 window(s) (0 excluded) + 2 box(es) in 74.2s (49 files downloaded)
+
+[296] Arecibo-Observatory 20230129 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-29 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (0 excluded) + 6 box(es) in 73.8s (49 files downloaded)
+
+[297] Arecibo-Observatory 20230130 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-30 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 4 box(es) in 73.6s (49 files downloaded)
+
+[298] Arecibo-Observatory 20230131 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-01-31 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.0s (49 files downloaded)
+
+[299] Arecibo-Observatory 20230202 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 74.3s (49 files downloaded)
+
+[300] Arecibo-Observatory 20230203 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 25 window(s) (2 excluded) + 7 box(es) in 73.9s (49 files downloaded)
+
+[301] Arecibo-Observatory 20230204 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-04 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (1 excluded) + 4 box(es) in 75.4s (49 files downloaded)
+
+[302] Arecibo-Observatory 20230205 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 75.2s (49 files downloaded)
+
+[303] Arecibo-Observatory 20230206 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-06 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.0s (49 files downloaded)
+
+[304] Arecibo-Observatory 20230207 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (0 excluded) + 6 box(es) in 74.6s (49 files downloaded)
+
+[305] Arecibo-Observatory 20230208 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-08 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (2 excluded) + 1 box(es) in 74.4s (49 files downloaded)
+
+[306] Arecibo-Observatory 20230209 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-09 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (0 excluded) + 7 box(es) in 75.0s (49 files downloaded)
+
+[307] Arecibo-Observatory 20230210 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-10 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 18 window(s) (1 excluded) + 4 box(es) in 74.8s (49 files downloaded)
+
+[308] Arecibo-Observatory 20230211 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-11 has 10 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 18 window(s) (0 excluded) + 5 box(es) in 45.9s (49 files downloaded)
+
+[309] Arecibo-Observatory 20230212 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-12 has 32 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 14 window(s) (0 excluded) + 3 box(es) in 51.3s (35 files downloaded)
+
+[310] Arecibo-Observatory 20230213 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-13 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 74.9s (49 files downloaded)
+
+[311] Arecibo-Observatory 20230214 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-14 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.1s (49 files downloaded)
+
+[312] Arecibo-Observatory 20230215 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-15 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 5 box(es) in 74.8s (49 files downloaded)
+
+[313] Arecibo-Observatory 20230216 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-16 has 38 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 13 window(s) (0 excluded) + 3 box(es) in 58.1s (38 files downloaded)
+
+[314] Arecibo-Observatory 20230217 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (5 excluded) + 9 box(es) in 74.9s (49 files downloaded)
+
+[315] Arecibo-Observatory 20230218 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 74.8s (49 files downloaded)
+
+[316] Arecibo-Observatory 20230219 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 28 window(s) (0 excluded) + 7 box(es) in 75.4s (49 files downloaded)
+
+[317] Arecibo-Observatory 20230220 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-20 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (0 excluded) + 2 box(es) in 75.2s (49 files downloaded)
+
+[318] Arecibo-Observatory 20230221 -- 9 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-21 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 32 window(s) (6 excluded) + 10 box(es) in 75.5s (49 files downloaded)
+
+[319] Arecibo-Observatory 20230222 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-22 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 14 window(s) (0 excluded) + 3 box(es) in 76.3s (49 files downloaded)
+
+[320] Arecibo-Observatory 20230223 -- 2 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2023/02/23/Arecibo-Observatory_20230223_104500_62.fit.gz: Compressed file ended before the end-of-stream marker was reached
+    [fetch] Arecibo-Observatory 2023-02-23 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 window(s) (0 excluded) + 3 box(es) in 75.9s (49 files downloaded)
+
+[321] Arecibo-Observatory 20230224 -- 13 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-24 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 33 window(s) (1 excluded) + 14 box(es) in 75.6s (49 files downloaded)
+
+[322] Arecibo-Observatory 20230225 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-25 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 28 window(s) (0 excluded) + 11 box(es) in 75.8s (49 files downloaded)
+
+[323] Arecibo-Observatory 20230226 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-26 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (6 excluded) + 6 box(es) in 75.9s (49 files downloaded)
+
+[324] Arecibo-Observatory 20230227 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-27 has 46 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 13 window(s) (0 excluded) + 4 box(es) in 70.9s (46 files downloaded)
+
+[325] Arecibo-Observatory 20230228 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-02-28 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='15:43-15.43', skipping
+    [windows] could not parse time_range='14.50-14:57', skipping
+    [windows] could not parse time_range='15:43-15.43', skipping
+    [windows] could not parse time_range='14.50-14:57', skipping
+  -> 0 window(s) (0 excluded) + 0 box(es) in 75.7s (49 files downloaded)
+
+[326] Arecibo-Observatory 20230301 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-01 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (3 excluded) + 6 box(es) in 75.5s (49 files downloaded)
+
+[327] Arecibo-Observatory 20230302 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='17:10-18:40+', skipping
+  -> 10 window(s) (0 excluded) + 2 box(es) in 75.5s (49 files downloaded)
+
+[328] Arecibo-Observatory 20230303 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 17 window(s) (2 excluded) + 5 box(es) in 76.0s (49 files downloaded)
+
+[329] Arecibo-Observatory 20230304 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-04 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 19 window(s) (2 excluded) + 4 box(es) in 76.1s (49 files downloaded)
+
+[330] Arecibo-Observatory 20230305 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 8 window(s) (0 excluded) + 2 box(es) in 76.0s (49 files downloaded)
+
+[331] Arecibo-Observatory 20230306 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-06 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] 20230306 19:00-10:02 type=III parses to 902 min -- catalog typo (end before start), skipping box
+  -> 0 window(s) (0 excluded) + 0 box(es) in 76.1s (49 files downloaded)
+
+[332] Arecibo-Observatory 20230308 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-08 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.9s (49 files downloaded)
+
+[333] Arecibo-Observatory 20230310 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-10 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 76.1s (49 files downloaded)
+
+[334] Arecibo-Observatory 20230311 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-11 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 76.1s (49 files downloaded)
+
+[335] Arecibo-Observatory 20230312 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 12 window(s) (1 excluded) + 3 box(es) in 135.2s (49 files downloaded)
+
+[336] Arecibo-Observatory 20230313 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-13 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (0 excluded) + 2 box(es) in 75.6s (49 files downloaded)
+
+[337] Arecibo-Observatory 20230314 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-14 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 75.4s (49 files downloaded)
+
+[338] Arecibo-Observatory 20230315 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-15 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 4 box(es) in 75.5s (49 files downloaded)
+
+[339] Arecibo-Observatory 20230317 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-17 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 12 window(s) (1 excluded) + 4 box(es) in 68.1s (44 files downloaded)
+
+[340] Arecibo-Observatory 20230318 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (5 excluded) + 6 box(es) in 121.7s (49 files downloaded)
+
+[341] Arecibo-Observatory 20230319 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (4 excluded) + 5 box(es) in 75.5s (49 files downloaded)
+
+[342] Arecibo-Observatory 20230321 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-21 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 14 window(s) (2 excluded) + 5 box(es) in 75.6s (49 files downloaded)
+
+[343] Arecibo-Observatory 20230322 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-22 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 14 window(s) (4 excluded) + 3 box(es) in 76.3s (49 files downloaded)
+
+[344] Arecibo-Observatory 20230323 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-23 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 31 window(s) (2 excluded) + 8 box(es) in 77.1s (49 files downloaded)
+
+[345] Arecibo-Observatory 20230324 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-24 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='12:11-16:13+', skipping
+  -> 5 window(s) (0 excluded) + 1 box(es) in 77.0s (49 files downloaded)
+
+[346] Arecibo-Observatory 20230325 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-25 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 20 window(s) (0 excluded) + 4 box(es) in 76.7s (49 files downloaded)
+
+[347] Arecibo-Observatory 20230326 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-26 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 14 window(s) (3 excluded) + 5 box(es) in 76.3s (49 files downloaded)
+
+[348] Arecibo-Observatory 20230327 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-27 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (1 excluded) + 3 box(es) in 76.6s (49 files downloaded)
+
+[349] Arecibo-Observatory 20230329 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-29 has 40 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='13:38:13:38', skipping
+  -> 17 window(s) (0 excluded) + 5 box(es) in 62.0s (40 files downloaded)
+
+[350] Arecibo-Observatory 20230330 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-30 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 13 window(s) (0 excluded) + 4 box(es) in 76.1s (49 files downloaded)
+
+[351] Arecibo-Observatory 20230331 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-03-31 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 20 window(s) (0 excluded) + 4 box(es) in 77.6s (49 files downloaded)
+
+[352] Arecibo-Observatory 20230401 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-01 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (1 excluded) + 1 box(es) in 76.3s (49 files downloaded)
+
+[353] Arecibo-Observatory 20230402 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 76.2s (49 files downloaded)
+
+[354] Arecibo-Observatory 20230404 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-04 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 8 window(s) (0 excluded) + 3 box(es) in 76.4s (49 files downloaded)
+
+[355] Arecibo-Observatory 20230405 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 76.3s (49 files downloaded)
+
+[356] Arecibo-Observatory 20230406 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-06 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (3 excluded) + 1 box(es) in 76.5s (49 files downloaded)
+
+[357] Arecibo-Observatory 20230407 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 76.2s (49 files downloaded)
+
+[358] Arecibo-Observatory 20230408 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-08 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 14 window(s) (0 excluded) + 4 box(es) in 76.4s (49 files downloaded)
+
+[359] Arecibo-Observatory 20230409 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-09 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.7s (49 files downloaded)
+
+[360] Arecibo-Observatory 20230411 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-11 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (3 excluded) + 3 box(es) in 76.1s (49 files downloaded)
+
+[361] Arecibo-Observatory 20230413 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-13 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 22 window(s) (0 excluded) + 6 box(es) in 75.8s (49 files downloaded)
+
+[362] Arecibo-Observatory 20230414 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-14 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 78.8s (49 files downloaded)
+
+[363] Arecibo-Observatory 20230415 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-15 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (1 excluded) + 2 box(es) in 76.4s (49 files downloaded)
+
+[364] Arecibo-Observatory 20230416 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-16 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (2 excluded) + 3 box(es) in 76.1s (49 files downloaded)
+
+[365] Arecibo-Observatory 20230417 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 29 window(s) (0 excluded) + 7 box(es) in 76.4s (49 files downloaded)
+
+[366] Arecibo-Observatory 20230418 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (0 excluded) + 3 box(es) in 79.6s (49 files downloaded)
+
+[367] Arecibo-Observatory 20230419 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (0 excluded) + 3 box(es) in 76.1s (49 files downloaded)
+
+[368] Arecibo-Observatory 20230420 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-20 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 window(s) (0 excluded) + 3 box(es) in 76.4s (49 files downloaded)
+
+[369] Arecibo-Observatory 20230421 -- 9 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-21 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 26 window(s) (0 excluded) + 10 box(es) in 76.1s (49 files downloaded)
+
+[370] Arecibo-Observatory 20230422 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-22 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 76.5s (49 files downloaded)
+
+[371] Arecibo-Observatory 20230423 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-23 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (2 excluded) + 2 box(es) in 76.1s (49 files downloaded)
+
+[372] Arecibo-Observatory 20230425 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-25 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 12 window(s) (0 excluded) + 4 box(es) in 76.0s (49 files downloaded)
+
+[373] Arecibo-Observatory 20230426 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-26 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 77.0s (49 files downloaded)
+
+[374] Arecibo-Observatory 20230427 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-27 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (0 excluded) + 3 box(es) in 76.4s (49 files downloaded)
+
+[375] Arecibo-Observatory 20230428 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-28 has 50 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 25 window(s) (1 excluded) + 8 box(es) in 76.7s (50 files downloaded)
+
+[376] Arecibo-Observatory 20230429 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-29 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 29 window(s) (1 excluded) + 8 box(es) in 75.2s (49 files downloaded)
+
+[377] Arecibo-Observatory 20230430 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-04-30 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 75.8s (49 files downloaded)
+
+[378] Arecibo-Observatory 20230501 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-01 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 25 window(s) (1 excluded) + 8 box(es) in 75.7s (49 files downloaded)
+
+[379] Arecibo-Observatory 20230502 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 3 box(es) in 75.3s (49 files downloaded)
+
+[380] Arecibo-Observatory 20230503 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 75.8s (49 files downloaded)
+
+[381] Arecibo-Observatory 20230504 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-04 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (1 excluded) + 2 box(es) in 75.3s (49 files downloaded)
+
+[382] Arecibo-Observatory 20230505 -- 13 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 30 window(s) (1 excluded) + 15 box(es) in 75.7s (49 files downloaded)
+
+[383] Arecibo-Observatory 20230506 -- 9 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-06 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 32 window(s) (1 excluded) + 11 box(es) in 75.7s (49 files downloaded)
+
+[384] Arecibo-Observatory 20230507 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 35 window(s) (0 excluded) + 8 box(es) in 76.7s (49 files downloaded)
+
+[385] Arecibo-Observatory 20230508 -- 11 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-08 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='18:49.18:50', skipping
+    [windows] could not parse time_range='18:49.18:50', skipping
+  -> 38 window(s) (0 excluded) + 10 box(es) in 75.7s (49 files downloaded)
+
+[386] Arecibo-Observatory 20230509 -- 12 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-09 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 38 window(s) (5 excluded) + 14 box(es) in 75.5s (49 files downloaded)
+
+[387] Arecibo-Observatory 20230510 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-10 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (0 excluded) + 9 box(es) in 62.7s (41 files downloaded)
+
+[388] Arecibo-Observatory 20230511 -- 12 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-11 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 38 window(s) (0 excluded) + 12 box(es) in 76.4s (49 files downloaded)
+
+[389] Arecibo-Observatory 20230512 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 75.3s (49 files downloaded)
+
+[390] Arecibo-Observatory 20230515 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-15 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 14 window(s) (0 excluded) + 3 box(es) in 76.3s (49 files downloaded)
+
+[391] Arecibo-Observatory 20230516 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-16 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 window(s) (0 excluded) + 3 box(es) in 76.2s (49 files downloaded)
+
+[392] Arecibo-Observatory 20230517 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 window(s) (0 excluded) + 4 box(es) in 76.1s (49 files downloaded)
+
+[393] Arecibo-Observatory 20230518 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 23 window(s) (0 excluded) + 6 box(es) in 75.6s (49 files downloaded)
+
+[394] Arecibo-Observatory 20230519 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 30 window(s) (3 excluded) + 8 box(es) in 77.3s (49 files downloaded)
+
+[395] Arecibo-Observatory 20230520 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-05-20 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 window(s) (0 excluded) + 2 box(es) in 75.5s (49 files downloaded)
+
+[396] Arecibo-Observatory 20230603 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (1 excluded) + 1 box(es) in 75.4s (49 files downloaded)
+
+[397] Arecibo-Observatory 20230604 -- 10 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-04 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 28 window(s) (1 excluded) + 11 box(es) in 95.5s (49 files downloaded)
+
+[398] Arecibo-Observatory 20230605 -- 12 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 37 window(s) (1 excluded) + 14 box(es) in 87.4s (49 files downloaded)
+
+[399] Arecibo-Observatory 20230607 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 11 window(s) (1 excluded) + 2 box(es) in 75.7s (49 files downloaded)
+
+[400] Arecibo-Observatory 20230609 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-09 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='17:25-18:14+', skipping
+  -> 26 window(s) (0 excluded) + 6 box(es) in 75.7s (49 files downloaded)
+
+[401] Arecibo-Observatory 20230612 -- 6 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 26 window(s) (1 excluded) + 6 box(es) in 75.6s (49 files downloaded)
+
+[402] Arecibo-Observatory 20230613 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-13 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 31 window(s) (1 excluded) + 10 box(es) in 75.2s (49 files downloaded)
+
+[403] Arecibo-Observatory 20230615 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-15 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 17 window(s) (0 excluded) + 4 box(es) in 75.2s (49 files downloaded)
+
+[404] Arecibo-Observatory 20230616 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-16 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 12 window(s) (2 excluded) + 3 box(es) in 75.1s (49 files downloaded)
+
+[405] Arecibo-Observatory 20230617 -- 11 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 39 window(s) (0 excluded) + 12 box(es) in 75.0s (49 files downloaded)
+
+[406] Arecibo-Observatory 20230618 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 12 window(s) (4 excluded) + 3 box(es) in 75.2s (49 files downloaded)
+
+[407] Arecibo-Observatory 20230619 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 7 box(es) in 75.5s (49 files downloaded)
+
+[408] Arecibo-Observatory 20230620 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-20 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='13:31-13.32', skipping
+    [windows] could not parse time_range='13:31-13.32', skipping
+  -> 11 window(s) (2 excluded) + 3 box(es) in 75.7s (49 files downloaded)
+
+[409] Arecibo-Observatory 20230621 -- 12 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-21 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 36 window(s) (0 excluded) + 14 box(es) in 77.9s (49 files downloaded)
+
+[410] Arecibo-Observatory 20230622 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-22 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 29 window(s) (0 excluded) + 8 box(es) in 76.6s (49 files downloaded)
+
+[411] Arecibo-Observatory 20230623 -- 17 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-23 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 41 window(s) (5 excluded) + 17 box(es) in 76.6s (49 files downloaded)
+
+[412] Arecibo-Observatory 20230624 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-06-24 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 19 window(s) (2 excluded) + 5 box(es) in 75.9s (49 files downloaded)
+
+[413] Arecibo-Observatory 20230702 -- 1 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-02 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 window(s) (0 excluded) + 1 box(es) in 77.9s (49 files downloaded)
+
+[414] Arecibo-Observatory 20230703 -- 8 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-03 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 26 window(s) (2 excluded) + 8 box(es) in 75.8s (49 files downloaded)
+
+[415] Arecibo-Observatory 20230705 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-05 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 19 window(s) (0 excluded) + 5 box(es) in 75.5s (49 files downloaded)
+
+[416] Arecibo-Observatory 20230706 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-06 has 27 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 4 box(es) in 42.8s (27 files downloaded)
+
+[417] Arecibo-Observatory 20230707 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-07 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 18 window(s) (0 excluded) + 5 box(es) in 76.0s (49 files downloaded)
+
+[418] Arecibo-Observatory 20230708 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-08 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 30 window(s) (0 excluded) + 7 box(es) in 77.6s (49 files downloaded)
+
+[419] Arecibo-Observatory 20230709 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-09 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 29 window(s) (9 excluded) + 7 box(es) in 76.1s (49 files downloaded)
+
+[420] Arecibo-Observatory 20230710 -- 10 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-10 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 29 window(s) (1 excluded) + 10 box(es) in 75.7s (49 files downloaded)
+
+[421] Arecibo-Observatory 20230711 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-11 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [windows] could not parse time_range='10:46-11:00+', skipping
+  -> 24 window(s) (1 excluded) + 7 box(es) in 76.2s (49 files downloaded)
+
+[422] Arecibo-Observatory 20230712 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-12 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 13 window(s) (0 excluded) + 3 box(es) in 76.3s (49 files downloaded)
+
+[423] Arecibo-Observatory 20230714 -- 3 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-14 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (6 excluded) + 4 box(es) in 111.5s (95 files downloaded)
+
+[424] Arecibo-Observatory 20230715 -- 14 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-15 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 37 window(s) (12 excluded) + 14 box(es) in 112.5s (91 files downloaded)
+
+[425] Arecibo-Observatory 20230717 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-17 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 18 window(s) (0 excluded) + 5 box(es) in 77.9s (49 files downloaded)
+
+[426] Arecibo-Observatory 20230718 -- 10 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-18 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 32 window(s) (2 excluded) + 12 box(es) in 77.6s (49 files downloaded)
+
+[427] Arecibo-Observatory 20230719 -- 2 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-19 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 window(s) (0 excluded) + 2 box(es) in 77.4s (49 files downloaded)
+
+[428] Arecibo-Observatory 20230720 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-20 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 28 window(s) (0 excluded) + 8 box(es) in 77.8s (49 files downloaded)
+
+[429] Arecibo-Observatory 20230721 -- 7 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-21 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 26 window(s) (0 excluded) + 7 box(es) in 77.6s (49 files downloaded)
+
+[430] Arecibo-Observatory 20230722 -- 5 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-22 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 21 window(s) (3 excluded) + 5 box(es) in 78.4s (49 files downloaded)
+
+[431] Arecibo-Observatory 20230723 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-23 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 14 window(s) (0 excluded) + 4 box(es) in 77.4s (49 files downloaded)
+
+[432] Arecibo-Observatory 20230724 -- 4 cataloged event(s)
+    [fetch] Arecibo-Observatory 2023-07-24 has 26 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 16 window(s) (0 excluded) + 5 box(es) in 43.3s (26 files downloaded)
+
+Timing: n=432, mean=74.4s, median=75.2s per station-day
+Saved 6609 windows / 1892 boxes this run
+
+Done. /home/ubuntu/Desktop/TransferLearning_CNN/data/ecallisto/windows/windows.csv / /home/ubuntu/Desktop/TransferLearning_CNN/data/ecallisto/windows/boxes.csv

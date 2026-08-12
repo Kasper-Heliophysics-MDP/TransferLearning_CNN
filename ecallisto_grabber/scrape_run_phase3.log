@@ -1,0 +1,1973 @@
+Fetching Monstein catalog 2021-01-01 .. 2024-03-31 ...
+  [burst_catalog] fetching 2021-01 ...
+  [burst_catalog] fetching 2021-02 ...
+  [burst_catalog] fetching 2021-03 ...
+  [burst_catalog] fetching 2021-04 ...
+  [burst_catalog] fetching 2021-05 ...
+  [burst_catalog] fetching 2021-06 ...
+  [burst_catalog] fetching 2021-07 ...
+  [burst_catalog] fetching 2021-08 ...
+  [burst_catalog] fetching 2021-09 ...
+  [burst_catalog] fetching 2021-10 ...
+  [burst_catalog] fetching 2021-11 ...
+  [burst_catalog] fetching 2021-12 ...
+  [burst_catalog] fetching 2022-01 ...
+  [burst_catalog] fetching 2022-02 ...
+  [burst_catalog] fetching 2022-03 ...
+  [burst_catalog] fetching 2022-04 ...
+  [burst_catalog] fetching 2022-05 ...
+  [burst_catalog] fetching 2022-06 ...
+  [burst_catalog] fetching 2022-07 ...
+  [burst_catalog] fetching 2022-08 ...
+  [burst_catalog] fetching 2022-09 ...
+  [burst_catalog] fetching 2022-10 ...
+  [burst_catalog] fetching 2022-11 ...
+  [burst_catalog] fetching 2022-12 ...
+  [burst_catalog] fetching 2023-01 ...
+  [burst_catalog] fetching 2023-02 ...
+  [burst_catalog] fetching 2023-03 ...
+  [burst_catalog] fetching 2023-04 ...
+  [burst_catalog] fetching 2023-05 ...
+  [burst_catalog] fetching 2023-06 ...
+  [burst_catalog] fetching 2023-07 ...
+  [burst_catalog] fetching 2023-08 ...
+  [burst_catalog] fetching 2023-09 ...
+  [burst_catalog] fetching 2023-10 ...
+  [burst_catalog] fetching 2023-11 ...
+  [burst_catalog] fetching 2023-12 ...
+  [burst_catalog] fetching 2024-01 ...
+  [burst_catalog] fetching 2024-02 ...
+  [burst_catalog] fetching 2024-03 ...
+1686 (station, event) rows after filtering (stations=['SWISS-Landschlacht'], types=['II', 'III', 'V'])
+duration pool for negatives: n=1684, median=60s
+577 distinct (station, date) pairs to fetch; 1000 already done
+
+[1] SWISS-Landschlacht 20210120 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-01-20 has 36 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 55.1s (36 files)
+
+[2] SWISS-Landschlacht 20210227 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-02-27 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 67.7s (44 files)
+
+[3] SWISS-Landschlacht 20210301 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-03-01 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 67.9s (44 files)
+
+[4] SWISS-Landschlacht 20210303 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-03-03 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 69.4s (45 files)
+
+[5] SWISS-Landschlacht 20210417 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-04-17 has 55 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 84.0s (55 files)
+
+[6] SWISS-Landschlacht 20210421 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-04-21 has 56 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 85.2s (56 files)
+
+[7] SWISS-Landschlacht 20210422 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-04-22 has 56 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 86.8s (56 files)
+
+[8] SWISS-Landschlacht 20210423 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-04-23 has 57 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 87.2s (57 files)
+
+[9] SWISS-Landschlacht 20210424 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-04-24 has 57 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 86.8s (57 files)
+
+[10] SWISS-Landschlacht 20210425 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-04-25 has 57 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 88.1s (57 files)
+
+[11] SWISS-Landschlacht 20210426 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-04-26 has 57 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 87.7s (57 files)
+
+[12] SWISS-Landschlacht 20210428 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-04-28 has 58 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 89.7s (58 files)
+
+[13] SWISS-Landschlacht 20210502 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-02 has 58 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 89.3s (58 files)
+
+[14] SWISS-Landschlacht 20210505 -- 1 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2021/05/05/SWISS-Landschlacht_20210505_141500_02.fit.gz: Compressed file ended before the end-of-stream marker was reached
+    [fetch] SWISS-Landschlacht 2021-05-05 has 58 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 93.0s (59 files)
+
+[15] SWISS-Landschlacht 20210506 -- 7 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-06 has 60 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 10:16-10:17 on 20210506 not fully covered by downloaded data for SWISS-Landschlacht (gap or out of range), skipping
+  -> 6 positive + 2 negative crop(s) in 92.6s (60 files)
+
+[16] SWISS-Landschlacht 20210508 -- 3 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-08 has 60 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 93.3s (60 files)
+
+[17] SWISS-Landschlacht 20210509 -- 3 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-09 has 60 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 92.0s (60 files)
+
+[18] SWISS-Landschlacht 20210510 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-10 has 60 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 92.3s (60 files)
+
+[19] SWISS-Landschlacht 20210511 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-11 has 60 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 91.8s (60 files)
+
+[20] SWISS-Landschlacht 20210512 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-12 has 60 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 93.5s (60 files)
+
+[21] SWISS-Landschlacht 20210515 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-15 has 61 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 93.6s (61 files)
+
+[22] SWISS-Landschlacht 20210516 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-16 has 61 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 94.8s (61 files)
+
+[23] SWISS-Landschlacht 20210518 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-18 has 62 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 94.7s (62 files)
+
+[24] SWISS-Landschlacht 20210519 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-19 has 62 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 95.1s (62 files)
+
+[25] SWISS-Landschlacht 20210520 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-20 has 62 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 94.5s (62 files)
+
+[26] SWISS-Landschlacht 20210521 -- 6 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-21 has 62 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 positive + 2 negative crop(s) in 94.6s (62 files)
+
+[27] SWISS-Landschlacht 20210522 -- 9 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-22 has 62 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 17:46-17:56 on 20210522 not fully covered by downloaded data for SWISS-Landschlacht (gap or out of range), skipping
+    [extract] event 11:13-11:14 on 20210522 not fully covered by downloaded data for SWISS-Landschlacht (gap or out of range), skipping
+  -> 7 positive + 2 negative crop(s) in 95.1s (62 files)
+
+[28] SWISS-Landschlacht 20210523 -- 20 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-23 has 62 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 17:01-17:05 on 20210523 not fully covered by downloaded data for SWISS-Landschlacht (gap or out of range), skipping
+  -> 19 positive + 2 negative crop(s) in 95.1s (62 files)
+
+[29] SWISS-Landschlacht 20210524 -- 5 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-24 has 62 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 10:46-10:47 on 20210524 not fully covered by downloaded data for SWISS-Landschlacht (gap or out of range), skipping
+  -> 4 positive + 2 negative crop(s) in 94.7s (62 files)
+
+[30] SWISS-Landschlacht 20210531 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-05-31 has 63 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 96.6s (63 files)
+
+[31] SWISS-Landschlacht 20210603 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-06-03 has 64 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 98.4s (64 files)
+
+[32] SWISS-Landschlacht 20210606 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-06-06 has 64 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 99.2s (64 files)
+
+[33] SWISS-Landschlacht 20210609 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-06-09 has 64 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 100.9s (64 files)
+
+[34] SWISS-Landschlacht 20210619 -- 4 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-06-19 has 65 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 09:46-09:47 on 20210619 not fully covered by downloaded data for SWISS-Landschlacht (gap or out of range), skipping
+  -> 3 positive + 2 negative crop(s) in 105.5s (65 files)
+
+[35] SWISS-Landschlacht 20210621 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-06-21 has 65 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.9s (65 files)
+
+[36] SWISS-Landschlacht 20210623 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-06-23 has 65 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.6s (65 files)
+
+[37] SWISS-Landschlacht 20210625 -- 3 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-06-25 has 65 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 99.6s (65 files)
+
+[38] SWISS-Landschlacht 20210628 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-06-28 has 65 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.4s (65 files)
+
+[39] SWISS-Landschlacht 20210630 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-06-30 has 65 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 99.1s (65 files)
+
+[40] SWISS-Landschlacht 20210701 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-07-01 has 65 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 99.7s (65 files)
+
+[41] SWISS-Landschlacht 20210702 -- 3 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-07-02 has 65 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 09:46-09:47 on 20210702 not fully covered by downloaded data for SWISS-Landschlacht (gap or out of range), skipping
+  -> 2 positive + 2 negative crop(s) in 99.5s (65 files)
+
+[42] SWISS-Landschlacht 20210703 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-07-03 has 65 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 99.9s (65 files)
+
+[43] SWISS-Landschlacht 20210704 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-07-04 has 64 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 98.0s (64 files)
+
+[44] SWISS-Landschlacht 20210709 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-07-09 has 63 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 96.9s (63 files)
+
+[45] SWISS-Landschlacht 20210716 -- 4 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-07-16 has 63 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 96.7s (63 files)
+
+[46] SWISS-Landschlacht 20210717 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-07-17 has 63 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 97.8s (63 files)
+
+[47] SWISS-Landschlacht 20210719 -- 3 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-07-19 has 63 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 96.6s (63 files)
+
+[48] SWISS-Landschlacht 20210721 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-07-21 has 62 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 96.4s (62 files)
+
+[49] SWISS-Landschlacht 20210722 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-07-22 has 63 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 97.3s (63 files)
+
+[50] SWISS-Landschlacht 20210723 -- 7 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-07-23 has 63 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 7 positive + 2 negative crop(s) in 97.8s (63 files)
+
+[51] SWISS-Landschlacht 20210820 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-08-20 has 60 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 94.7s (59 files)
+
+[52] SWISS-Landschlacht 20210822 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-08-22 has 59 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 91.7s (59 files)
+
+[53] SWISS-Landschlacht 20210823 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-08-23 has 51 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 82.7s (51 files)
+
+[54] SWISS-Landschlacht 20210824 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-08-24 has 50 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 78.3s (50 files)
+
+[55] SWISS-Landschlacht 20210901 -- 5 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-09-01 has 50 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 78.5s (50 files)
+
+[56] SWISS-Landschlacht 20210902 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-09-02 has 46 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 71.1s (46 files)
+
+[57] SWISS-Landschlacht 20210906 -- 5 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-09-06 has 50 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 13:00-13:04 on 20210906 not fully covered by downloaded data for SWISS-Landschlacht (gap or out of range), skipping
+  -> 4 positive + 2 negative crop(s) in 78.2s (50 files)
+
+[58] SWISS-Landschlacht 20210907 -- 5 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-09-07 has 50 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 78.1s (50 files)
+
+[59] SWISS-Landschlacht 20210909 -- 3 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-09-09 has 50 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 77.7s (50 files)
+
+[60] SWISS-Landschlacht 20210910 -- 3 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-09-10 has 50 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 80.0s (50 files)
+
+[61] SWISS-Landschlacht 20210913 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-09-13 has 50 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 77.5s (50 files)
+
+[62] SWISS-Landschlacht 20210914 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-09-14 has 50 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 76.6s (50 files)
+
+[63] SWISS-Landschlacht 20210918 -- 1 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-09-18 has 50 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 76.5s (50 files)
+
+[64] SWISS-Landschlacht 20210919 -- 4 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-09-19 has 50 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 76.6s (50 files)
+
+[65] SWISS-Landschlacht 20210920 -- 2 cataloged event(s)
+    [fetch] SWISS-Landschlacht 2021-09-20 has 50 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 76.3s (50 files)
+
+Reached --limit 65, stopping (resume later to continue).
+
+Timing: n=65, mean=89.6s, median=93.3s, min=55.1s, max=105.5s per station-day
+Extrapolated total for all -423 remaining station-days: ~-10.5 hours (mean-time based; real run will vary by file count per station-day)
+
+Done. Metadata: ../data/ecallisto/raw_events/metadata.csv
+/home/ubuntu/Desktop/TransferLearning_CNN/ecallisto_grabber/scrape.py:123: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  new_meta = pd.concat([pos_meta, neg_meta], ignore_index=True)
+Fetching Monstein catalog 2021-01-01 .. 2024-03-31 ...
+  [burst_catalog] fetching 2021-01 ...
+  [burst_catalog] fetching 2021-02 ...
+  [burst_catalog] fetching 2021-03 ...
+  [burst_catalog] fetching 2021-04 ...
+  [burst_catalog] fetching 2021-05 ...
+  [burst_catalog] fetching 2021-06 ...
+  [burst_catalog] fetching 2021-07 ...
+  [burst_catalog] fetching 2021-08 ...
+  [burst_catalog] fetching 2021-09 ...
+  [burst_catalog] fetching 2021-10 ...
+  [burst_catalog] fetching 2021-11 ...
+  [burst_catalog] fetching 2021-12 ...
+  [burst_catalog] fetching 2022-01 ...
+  [burst_catalog] fetching 2022-02 ...
+  [burst_catalog] fetching 2022-03 ...
+  [burst_catalog] fetching 2022-04 ...
+  [burst_catalog] fetching 2022-05 ...
+  [burst_catalog] fetching 2022-06 ...
+  [burst_catalog] fetching 2022-07 ...
+  [burst_catalog] fetching 2022-08 ...
+  [burst_catalog] fetching 2022-09 ...
+  [burst_catalog] fetching 2022-10 ...
+  [burst_catalog] fetching 2022-11 ...
+  [burst_catalog] fetching 2022-12 ...
+  [burst_catalog] fetching 2023-01 ...
+  [burst_catalog] fetching 2023-02 ...
+  [burst_catalog] fetching 2023-03 ...
+  [burst_catalog] fetching 2023-04 ...
+  [burst_catalog] fetching 2023-05 ...
+  [burst_catalog] fetching 2023-06 ...
+  [burst_catalog] fetching 2023-07 ...
+  [burst_catalog] fetching 2023-08 ...
+  [burst_catalog] fetching 2023-09 ...
+  [burst_catalog] fetching 2023-10 ...
+  [burst_catalog] fetching 2023-11 ...
+  [burst_catalog] fetching 2023-12 ...
+  [burst_catalog] fetching 2024-01 ...
+  [burst_catalog] fetching 2024-02 ...
+  [burst_catalog] fetching 2024-03 ...
+853 (station, event) rows after filtering (stations=['EGYPT-Alexandria'], types=['II', 'III', 'V'])
+duration pool for negatives: n=852, median=60s
+350 distinct (station, date) pairs to fetch; 1065 already done
+
+[1] EGYPT-Alexandria 20210820 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-08-20 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.1s (66 files)
+
+[2] EGYPT-Alexandria 20210827 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-08-27 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 10:45-10:46 on 20210827 not fully covered by downloaded data for EGYPT-Alexandria (gap or out of range), skipping
+    [extract] event 10:46-10:47 on 20210827 not fully covered by downloaded data for EGYPT-Alexandria (gap or out of range), skipping
+  -> 0 positive + 2 negative crop(s) in 101.2s (66 files)
+
+[3] EGYPT-Alexandria 20210828 -- 8 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-08-28 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 8 positive + 2 negative crop(s) in 100.9s (66 files)
+
+[4] EGYPT-Alexandria 20210829 -- 3 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-08-29 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 100.7s (66 files)
+
+[5] EGYPT-Alexandria 20210830 -- 5 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-08-30 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 105.4s (66 files)
+
+[6] EGYPT-Alexandria 20210901 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-09-01 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.4s (66 files)
+
+[7] EGYPT-Alexandria 20210906 -- 3 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-09-06 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 13:29-13:31 on 20210906 not fully covered by downloaded data for EGYPT-Alexandria (gap or out of range), skipping
+  -> 2 positive + 2 negative crop(s) in 103.7s (66 files)
+
+[8] EGYPT-Alexandria 20210907 -- 3 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-09-07 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 102.8s (66 files)
+
+[9] EGYPT-Alexandria 20210919 -- 3 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-09-19 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 64.6s (41 files)
+
+[10] EGYPT-Alexandria 20210920 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-09-20 has 51 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 80.0s (51 files)
+
+[11] EGYPT-Alexandria 20210921 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-09-21 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 104.2s (66 files)
+
+[12] EGYPT-Alexandria 20210922 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-09-22 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 103.4s (66 files)
+
+[13] EGYPT-Alexandria 20210923 -- 3 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-09-23 has 56 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 87.0s (56 files)
+
+[14] EGYPT-Alexandria 20210926 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-09-26 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 76.6s (49 files)
+
+[15] EGYPT-Alexandria 20211003 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-10-03 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 101.9s (66 files)
+
+[16] EGYPT-Alexandria 20211004 -- 3 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-10-04 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 102.3s (66 files)
+
+[17] EGYPT-Alexandria 20211005 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-10-05 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 106.8s (66 files)
+
+[18] EGYPT-Alexandria 20211009 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-10-09 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 106.1s (66 files)
+
+[19] EGYPT-Alexandria 20211010 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-10-10 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.9s (66 files)
+
+[20] EGYPT-Alexandria 20211012 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-10-12 has 57 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 88.5s (57 files)
+
+[21] EGYPT-Alexandria 20211025 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-10-25 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.0s (66 files)
+
+[22] EGYPT-Alexandria 20211026 -- 4 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-10-26 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 105.3s (66 files)
+
+[23] EGYPT-Alexandria 20211028 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-10-28 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 107.4s (66 files)
+
+[24] EGYPT-Alexandria 20211106 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-11-06 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 104.2s (66 files)
+
+[25] EGYPT-Alexandria 20211220 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-12-20 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 103.4s (66 files)
+
+[26] EGYPT-Alexandria 20211222 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-12-22 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 107.3s (66 files)
+
+[27] EGYPT-Alexandria 20211228 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-12-28 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 104.5s (66 files)
+
+[28] EGYPT-Alexandria 20211230 -- 3 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2021-12-30 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 102.2s (66 files)
+
+[29] EGYPT-Alexandria 20220107 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-01-07 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.4s (66 files)
+
+[30] EGYPT-Alexandria 20220111 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-01-11 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 103.1s (66 files)
+
+[31] EGYPT-Alexandria 20220112 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-01-12 has 52 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 81.2s (52 files)
+
+[32] EGYPT-Alexandria 20220113 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-01-13 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 101.8s (66 files)
+
+[33] EGYPT-Alexandria 20220115 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-01-15 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 101.5s (66 files)
+
+[34] EGYPT-Alexandria 20220117 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-01-17 has 52 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 81.0s (52 files)
+
+[35] EGYPT-Alexandria 20220131 -- 3 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-01-31 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 102.5s (66 files)
+
+[36] EGYPT-Alexandria 20220201 -- 3 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-02-01 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 102.2s (66 files)
+
+[37] EGYPT-Alexandria 20220202 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-02-02 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 102.0s (66 files)
+
+[38] EGYPT-Alexandria 20220203 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-02-03 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 101.3s (66 files)
+
+[39] EGYPT-Alexandria 20220204 -- 3 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-02-04 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 101.7s (66 files)
+
+[40] EGYPT-Alexandria 20220205 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-02-05 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 101.3s (66 files)
+
+[41] EGYPT-Alexandria 20220206 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-02-06 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 101.7s (66 files)
+
+[42] EGYPT-Alexandria 20220212 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-02-12 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 102.6s (66 files)
+
+[43] EGYPT-Alexandria 20220228 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-02-28 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 102.3s (66 files)
+
+[44] EGYPT-Alexandria 20220303 -- 3 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-03-03 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 101.3s (66 files)
+
+[45] EGYPT-Alexandria 20220306 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-03-06 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.0s (66 files)
+
+[46] EGYPT-Alexandria 20220309 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-03-09 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 102.8s (66 files)
+
+[47] EGYPT-Alexandria 20220311 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-03-11 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 105.7s (66 files)
+
+[48] EGYPT-Alexandria 20220312 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-03-12 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 103.0s (66 files)
+
+[49] EGYPT-Alexandria 20220313 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-03-13 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 106.3s (66 files)
+
+[50] EGYPT-Alexandria 20220329 -- 8 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-03-29 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 8 positive + 2 negative crop(s) in 105.6s (66 files)
+
+[51] EGYPT-Alexandria 20220402 -- 3 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-04-02 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 102.6s (66 files)
+
+[52] EGYPT-Alexandria 20220415 -- 4 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-04-15 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 102.8s (66 files)
+
+[53] EGYPT-Alexandria 20220419 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-04-19 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.5s (66 files)
+
+[54] EGYPT-Alexandria 20220420 -- 5 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-04-20 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 102.6s (66 files)
+
+[55] EGYPT-Alexandria 20220427 -- 7 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-04-27 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 7 positive + 2 negative crop(s) in 101.9s (66 files)
+
+[56] EGYPT-Alexandria 20220428 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-04-28 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.1s (66 files)
+
+[57] EGYPT-Alexandria 20220430 -- 11 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-04-30 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+/home/ubuntu/Desktop/TransferLearning_CNN/ecallisto_grabber/scrape.py:123: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  new_meta = pd.concat([pos_meta, neg_meta], ignore_index=True)
+    [extract] event 09:57-10:16 on 20220430 not fully covered by downloaded data for EGYPT-Alexandria (gap or out of range), skipping
+  -> 10 positive + 2 negative crop(s) in 101.9s (66 files)
+
+[58] EGYPT-Alexandria 20220501 -- 3 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-05-01 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 101.9s (66 files)
+
+[59] EGYPT-Alexandria 20220502 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-05-02 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.7s (66 files)
+
+[60] EGYPT-Alexandria 20220503 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-05-03 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 102.5s (66 files)
+
+[61] EGYPT-Alexandria 20220507 -- 3 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/05/07/EGYPT-Alexandria_20220507_120000_02.fit.gz: Compressed file ended before the end-of-stream marker was reached
+    [fetch] EGYPT-Alexandria 2022-05-07 has 65 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 104.6s (66 files)
+
+[62] EGYPT-Alexandria 20220508 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-05-08 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.2s (66 files)
+
+[63] EGYPT-Alexandria 20220509 -- 2 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-05-09 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 103.1s (66 files)
+
+[64] EGYPT-Alexandria 20220510 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-05-10 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 13:58-14:22 on 20220510 not fully covered by downloaded data for EGYPT-Alexandria (gap or out of range), skipping
+  -> 0 positive + 2 negative crop(s) in 103.2s (66 files)
+
+[65] EGYPT-Alexandria 20220511 -- 1 cataloged event(s)
+    [fetch] EGYPT-Alexandria 2022-05-11 has 15 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 25.4s (16 files)
+
+Reached --limit 65, stopping (resume later to continue).
+
+Timing: n=65, mean=99.3s, median=102.4s, min=25.4s, max=107.4s per station-day
+Extrapolated total for all -715 remaining station-days: ~-19.7 hours (mean-time based; real run will vary by file count per station-day)
+
+Done. Metadata: ../data/ecallisto/raw_events/metadata.csv
+Fetching Monstein catalog 2021-01-01 .. 2024-03-31 ...
+  [burst_catalog] fetching 2021-01 ...
+  [burst_catalog] fetching 2021-02 ...
+  [burst_catalog] fetching 2021-03 ...
+  [burst_catalog] fetching 2021-04 ...
+  [burst_catalog] fetching 2021-05 ...
+  [burst_catalog] fetching 2021-06 ...
+  [burst_catalog] fetching 2021-07 ...
+  [burst_catalog] fetching 2021-08 ...
+  [burst_catalog] fetching 2021-09 ...
+  [burst_catalog] fetching 2021-10 ...
+  [burst_catalog] fetching 2021-11 ...
+  [burst_catalog] fetching 2021-12 ...
+  [burst_catalog] fetching 2022-01 ...
+  [burst_catalog] fetching 2022-02 ...
+  [burst_catalog] fetching 2022-03 ...
+  [burst_catalog] fetching 2022-04 ...
+  [burst_catalog] fetching 2022-05 ...
+  [burst_catalog] fetching 2022-06 ...
+  [burst_catalog] fetching 2022-07 ...
+  [burst_catalog] fetching 2022-08 ...
+  [burst_catalog] fetching 2022-09 ...
+  [burst_catalog] fetching 2022-10 ...
+  [burst_catalog] fetching 2022-11 ...
+  [burst_catalog] fetching 2022-12 ...
+  [burst_catalog] fetching 2023-01 ...
+  [burst_catalog] fetching 2023-02 ...
+  [burst_catalog] fetching 2023-03 ...
+  [burst_catalog] fetching 2023-04 ...
+  [burst_catalog] fetching 2023-05 ...
+  [burst_catalog] fetching 2023-06 ...
+  [burst_catalog] fetching 2023-07 ...
+  [burst_catalog] fetching 2023-08 ...
+  [burst_catalog] fetching 2023-09 ...
+  [burst_catalog] fetching 2023-10 ...
+  [burst_catalog] fetching 2023-11 ...
+  [burst_catalog] fetching 2023-12 ...
+  [burst_catalog] fetching 2024-01 ...
+  [burst_catalog] fetching 2024-02 ...
+  [burst_catalog] fetching 2024-03 ...
+780 (station, event) rows after filtering (stations=['SWISS-MUHEN'], types=['II', 'III', 'V'])
+duration pool for negatives: n=779, median=60s
+345 distinct (station, date) pairs to fetch; 1130 already done
+
+[1] SWISS-MUHEN 20210303 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-03-03 has 43 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 66.7s (43 files)
+
+[2] SWISS-MUHEN 20210422 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-04-22 has 54 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 84.5s (54 files)
+
+[3] SWISS-MUHEN 20210424 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-04-24 has 55 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 85.5s (55 files)
+
+[4] SWISS-MUHEN 20210508 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-05-08 has 57 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 87.9s (57 files)
+
+[5] SWISS-MUHEN 20210516 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-05-16 has 59 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 91.0s (59 files)
+
+[6] SWISS-MUHEN 20210521 -- 2 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-05-21 has 59 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 91.2s (59 files)
+
+[7] SWISS-MUHEN 20210522 -- 5 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-05-22 has 89 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 11:13-11:14 on 20210522 not fully covered by downloaded data for SWISS-MUHEN (gap or out of range), skipping
+  -> 4 positive + 2 negative crop(s) in 114.4s (59 files)
+
+[8] SWISS-MUHEN 20210523 -- 15 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-05-23 has 118 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 15 positive + 2 negative crop(s) in 135.5s (59 files)
+
+[9] SWISS-MUHEN 20210524 -- 3 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-05-24 has 118 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 136.9s (59 files)
+
+[10] SWISS-MUHEN 20210609 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-06-09 has 61 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 96.2s (61 files)
+
+[11] SWISS-MUHEN 20210619 -- 2 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-06-19 has 62 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 102.8s (62 files)
+
+[12] SWISS-MUHEN 20210628 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-06-28 has 62 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 99.4s (62 files)
+
+[13] SWISS-MUHEN 20210701 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-07-01 has 62 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 99.8s (62 files)
+
+[14] SWISS-MUHEN 20210703 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-07-03 has 62 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 99.0s (62 files)
+
+[15] SWISS-MUHEN 20210709 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-07-09 has 61 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 97.4s (61 files)
+
+[16] SWISS-MUHEN 20210716 -- 2 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-07-16 has 60 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 94.7s (60 files)
+
+[17] SWISS-MUHEN 20210723 -- 4 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-07-23 has 60 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 95.1s (60 files)
+
+[18] SWISS-MUHEN 20210820 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-08-20 has 54 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 85.2s (54 files)
+
+[19] SWISS-MUHEN 20210827 -- 2 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-08-27 has 53 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 84.0s (53 files)
+
+[20] SWISS-MUHEN 20210828 -- 7 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-08-28 has 53 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 11:13-11:14 on 20210828 not fully covered by downloaded data for SWISS-MUHEN (gap or out of range), skipping
+  -> 6 positive + 2 negative crop(s) in 84.1s (53 files)
+
+[21] SWISS-MUHEN 20210830 -- 3 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-08-30 has 52 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 82.3s (52 files)
+
+[22] SWISS-MUHEN 20210901 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-09-01 has 51 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 80.5s (51 files)
+
+[23] SWISS-MUHEN 20210906 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-09-06 has 51 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 80.4s (51 files)
+
+[24] SWISS-MUHEN 20210907 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-09-07 has 51 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 80.3s (51 files)
+
+[25] SWISS-MUHEN 20210918 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-09-18 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 76.2s (48 files)
+
+[26] SWISS-MUHEN 20210919 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-09-19 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 76.1s (48 files)
+
+[27] SWISS-MUHEN 20210921 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-09-21 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 76.1s (48 files)
+
+[28] SWISS-MUHEN 20210923 -- 2 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-09-23 has 46 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 73.1s (46 files)
+
+[29] SWISS-MUHEN 20210925 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-09-25 has 46 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 72.3s (46 files)
+
+[30] SWISS-MUHEN 20211003 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-10-03 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 70.2s (44 files)
+
+[31] SWISS-MUHEN 20211004 -- 3 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-10-04 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 69.5s (44 files)
+
+[32] SWISS-MUHEN 20211009 -- 2 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-10-09 has 55 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 86.0s (56 files)
+
+[33] SWISS-MUHEN 20211010 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-10-10 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.0s (66 files)
+
+[34] SWISS-MUHEN 20211012 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-10-12 has 43 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 69.5s (43 files)
+
+[35] SWISS-MUHEN 20211026 -- 5 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-10-26 has 39 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 62.6s (39 files)
+
+[36] SWISS-MUHEN 20211027 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-10-27 has 39 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 62.8s (39 files)
+
+[37] SWISS-MUHEN 20211028 -- 1 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2021/10/28/SWISS-MUHEN_20211028_134500_63.fit.gz: Compressed file ended before the end-of-stream marker was reached
+    [fetch] SWISS-MUHEN 2021-10-28 has 38 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 61.7s (39 files)
+
+[38] SWISS-MUHEN 20211031 -- 2 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-10-31 has 78 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 92.1s (39 files)
+
+[39] SWISS-MUHEN 20211101 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-11-01 has 39 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 62.9s (39 files)
+
+[40] SWISS-MUHEN 20211117 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-11-17 has 35 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 56.4s (35 files)
+
+[41] SWISS-MUHEN 20211204 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-12-04 has 33 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 52.4s (33 files)
+
+[42] SWISS-MUHEN 20211215 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-12-15 has 32 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 50.7s (32 files)
+
+[43] SWISS-MUHEN 20211216 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-12-16 has 32 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 50.4s (32 files)
+
+[44] SWISS-MUHEN 20211220 -- 1 cataloged event(s)
+  -> 1 positive + 2 negative crop(s) in 27.3s (34 files)
+
+[45] SWISS-MUHEN 20211228 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-12-28 has 32 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 50.5s (32 files)
+
+[46] SWISS-MUHEN 20211230 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-12-30 has 32 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 51.3s (32 files)
+
+[47] SWISS-MUHEN 20211231 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2021-12-31 has 32 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 50.1s (32 files)
+
+[48] SWISS-MUHEN 20220101 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-01-01 has 33 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 51.4s (33 files)
+
+[49] SWISS-MUHEN 20220107 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-01-07 has 32 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 50.3s (32 files)
+
+[50] SWISS-MUHEN 20220111 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-01-11 has 33 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 52.0s (33 files)
+
+[51] SWISS-MUHEN 20220112 -- 2 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-01-12 has 33 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 51.3s (33 files)
+
+[52] SWISS-MUHEN 20220113 -- 2 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-01-13 has 33 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 52.3s (33 files)
+
+[53] SWISS-MUHEN 20220117 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-01-17 has 34 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 53.2s (34 files)
+
+[54] SWISS-MUHEN 20220131 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-01-31 has 37 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 58.9s (37 files)
+
+[55] SWISS-MUHEN 20220212 -- 2 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-02-12 has 39 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 60.6s (39 files)
+
+[56] SWISS-MUHEN 20220228 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-02-28 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 64.5s (41 files)
+
+[57] SWISS-MUHEN 20220303 -- 2 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-03-03 has 43 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 67.6s (43 files)
+
+[58] SWISS-MUHEN 20220306 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-03-06 has 43 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 67.5s (43 files)
+
+[59] SWISS-MUHEN 20220307 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-03-07 has 43 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 67.2s (43 files)
+
+[60] SWISS-MUHEN 20220309 -- 3 cataloged event(s)
+/home/ubuntu/Desktop/TransferLearning_CNN/ecallisto_grabber/scrape.py:123: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  new_meta = pd.concat([pos_meta, neg_meta], ignore_index=True)
+    [fetch] SWISS-MUHEN 2022-03-09 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 68.4s (44 files)
+
+[61] SWISS-MUHEN 20220312 -- 2 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-03-12 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 69.8s (45 files)
+
+[62] SWISS-MUHEN 20220313 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-03-13 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 70.5s (45 files)
+
+[63] SWISS-MUHEN 20220319 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-03-19 has 46 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 72.0s (46 files)
+
+[64] SWISS-MUHEN 20220328 -- 1 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-03-28 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 11:23-11:38 on 20220328 not fully covered by downloaded data for SWISS-MUHEN (gap or out of range), skipping
+  -> 0 positive + 2 negative crop(s) in 74.8s (48 files)
+
+[65] SWISS-MUHEN 20220329 -- 8 cataloged event(s)
+    [fetch] SWISS-MUHEN 2022-03-29 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 02:10-02:13 on 20220329 not fully covered by downloaded data for SWISS-MUHEN (gap or out of range), skipping
+  -> 7 positive + 2 negative crop(s) in 77.7s (48 files)
+
+Reached --limit 65, stopping (resume later to continue).
+
+Timing: n=65, mean=75.2s, median=72.3s, min=27.3s, max=136.9s per station-day
+Extrapolated total for all -785 remaining station-days: ~-16.4 hours (mean-time based; real run will vary by file count per station-day)
+
+Done. Metadata: ../data/ecallisto/raw_events/metadata.csv
+Fetching Monstein catalog 2021-01-01 .. 2024-03-31 ...
+  [burst_catalog] fetching 2021-01 ...
+  [burst_catalog] fetching 2021-02 ...
+  [burst_catalog] fetching 2021-03 ...
+  [burst_catalog] fetching 2021-04 ...
+  [burst_catalog] fetching 2021-05 ...
+  [burst_catalog] fetching 2021-06 ...
+  [burst_catalog] fetching 2021-07 ...
+  [burst_catalog] fetching 2021-08 ...
+  [burst_catalog] fetching 2021-09 ...
+  [burst_catalog] fetching 2021-10 ...
+  [burst_catalog] fetching 2021-11 ...
+  [burst_catalog] fetching 2021-12 ...
+  [burst_catalog] fetching 2022-01 ...
+  [burst_catalog] fetching 2022-02 ...
+  [burst_catalog] fetching 2022-03 ...
+  [burst_catalog] fetching 2022-04 ...
+  [burst_catalog] fetching 2022-05 ...
+  [burst_catalog] fetching 2022-06 ...
+  [burst_catalog] fetching 2022-07 ...
+  [burst_catalog] fetching 2022-08 ...
+  [burst_catalog] fetching 2022-09 ...
+  [burst_catalog] fetching 2022-10 ...
+  [burst_catalog] fetching 2022-11 ...
+  [burst_catalog] fetching 2022-12 ...
+  [burst_catalog] fetching 2023-01 ...
+  [burst_catalog] fetching 2023-02 ...
+  [burst_catalog] fetching 2023-03 ...
+  [burst_catalog] fetching 2023-04 ...
+  [burst_catalog] fetching 2023-05 ...
+  [burst_catalog] fetching 2023-06 ...
+  [burst_catalog] fetching 2023-07 ...
+  [burst_catalog] fetching 2023-08 ...
+  [burst_catalog] fetching 2023-09 ...
+  [burst_catalog] fetching 2023-10 ...
+  [burst_catalog] fetching 2023-11 ...
+  [burst_catalog] fetching 2023-12 ...
+  [burst_catalog] fetching 2024-01 ...
+  [burst_catalog] fetching 2024-02 ...
+  [burst_catalog] fetching 2024-03 ...
+456 (station, event) rows after filtering (stations=['ROSWELL-NM'], types=['II', 'III', 'V'])
+duration pool for negatives: n=453, median=120s
+215 distinct (station, date) pairs to fetch; 1195 already done
+
+[1] ROSWELL-NM 20210218 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-02-18 has 94 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 107.6s (47 files)
+
+[2] ROSWELL-NM 20210227 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-02-27 has 94 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 108.0s (47 files)
+
+[3] ROSWELL-NM 20210418 -- 2 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-04-18 has 94 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] burst-ROSWELL-NM-04-18-2021-194400-194400-typeIII.npy already exists (duplicate catalog row?), skipping
+  -> 1 positive + 2 negative crop(s) in 112.7s (47 files)
+
+[4] ROSWELL-NM 20210421 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-04-21 has 94 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 107.8s (47 files)
+
+[5] ROSWELL-NM 20210423 -- 2 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-04-23 has 94 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 107.1s (47 files)
+
+[6] ROSWELL-NM 20210426 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-04-26 has 94 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 107.2s (47 files)
+
+[7] ROSWELL-NM 20210501 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-05-01 has 93 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 109.5s (51 files)
+
+[8] ROSWELL-NM 20210509 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-05-09 has 94 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 107.5s (47 files)
+
+[9] ROSWELL-NM 20210521 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-05-21 has 151 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 186.8s (97 files)
+
+[10] ROSWELL-NM 20210522 -- 4 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-05-22 has 151 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 187.8s (97 files)
+
+[11] ROSWELL-NM 20210523 -- 2 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-05-23 has 94 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 142.5s (97 files)
+
+[12] ROSWELL-NM 20210703 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-07-03 has 112 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 128.6s (56 files)
+
+[13] ROSWELL-NM 20210708 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-07-08 has 108 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 125.0s (55 files)
+
+[14] ROSWELL-NM 20210926 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-09-26 has 56 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 86.1s (56 files)
+
+[15] ROSWELL-NM 20211028 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-10-28 has 40 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 65.1s (40 files)
+
+[16] ROSWELL-NM 20211228 -- 3 cataloged event(s)
+    [fetch] ROSWELL-NM 2021-12-28 has 82 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 93.6s (41 files)
+
+[17] ROSWELL-NM 20220108 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-01-08 has 82 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 92.7s (41 files)
+
+[18] ROSWELL-NM 20220110 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-01-10 has 82 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 92.8s (41 files)
+
+[19] ROSWELL-NM 20220111 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-01-11 has 82 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 92.8s (41 files)
+
+[20] ROSWELL-NM 20220113 -- 1 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/01/13/ROSWELL-NM_20220113_173000_58.fit.gz: HTTPSConnectionPool(host='soleil.i4ds.ch', port=443): Max retries exceeded with url: /solarradio/data/2002-20yy_Callisto/2022/01/13/ROSWELL-NM_20220113_173000_58.fit.gz (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x70d27402d630>: Failed to establish a new connection: [Errno 111] Connection refused'))
+    [fetch] ROSWELL-NM 2022-01-13 has 79 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 109.9s (41 files)
+
+[21] ROSWELL-NM 20220129 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-01-29 has 81 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 94.4s (44 files)
+
+[22] ROSWELL-NM 20220130 -- 3 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-01-30 has 81 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 94.3s (44 files)
+
+[23] ROSWELL-NM 20220131 -- 5 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-01-31 has 81 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 94.3s (44 files)
+
+[24] ROSWELL-NM 20220201 -- 2 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-02-01 has 74 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 87.1s (40 files)
+
+[25] ROSWELL-NM 20220203 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-02-03 has 81 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 94.8s (44 files)
+
+[26] ROSWELL-NM 20220205 -- 4 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-02-05 has 81 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 94.6s (44 files)
+
+[27] ROSWELL-NM 20220206 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-02-06 has 81 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 94.1s (44 files)
+
+[28] ROSWELL-NM 20220303 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-03-03 has 82 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 96.6s (45 files)
+
+[29] ROSWELL-NM 20220307 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-03-07 has 82 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 96.1s (45 files)
+
+[30] ROSWELL-NM 20220309 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-03-09 has 84 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 97.0s (45 files)
+
+[31] ROSWELL-NM 20220314 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-03-14 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 99.8s (46 files)
+
+[32] ROSWELL-NM 20220326 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-03-26 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 100.1s (46 files)
+
+[33] ROSWELL-NM 20220328 -- 2 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-03-28 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 99.8s (46 files)
+
+[34] ROSWELL-NM 20220330 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-03-30 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 101.3s (46 files)
+
+[35] ROSWELL-NM 20220331 -- 4 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-03-31 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 100.6s (46 files)
+
+[36] ROSWELL-NM 20220401 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-04-01 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 100.0s (46 files)
+
+[37] ROSWELL-NM 20220407 -- 2 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-04-07 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 100.0s (46 files)
+
+[38] ROSWELL-NM 20220408 -- 2 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-04-08 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 100.2s (46 files)
+
+[39] ROSWELL-NM 20220409 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-04-09 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 99.7s (46 files)
+
+[40] ROSWELL-NM 20220414 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-04-14 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 99.9s (46 files)
+
+[41] ROSWELL-NM 20220415 -- 2 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-04-15 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] could not parse time_range='21.56-21:56', skipping
+  -> 1 positive + 2 negative crop(s) in 99.3s (46 files)
+
+[42] ROSWELL-NM 20220418 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-04-18 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 100.2s (46 files)
+
+[43] ROSWELL-NM 20220419 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-04-19 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 100.2s (46 files)
+
+[44] ROSWELL-NM 20220420 -- 9 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-04-20 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 9 positive + 2 negative crop(s) in 100.1s (46 files)
+
+[45] ROSWELL-NM 20220421 -- 2 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-04-21 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] could not parse time_range='24:32-14:33', skipping
+  -> 1 positive + 2 negative crop(s) in 99.9s (46 files)
+
+[46] ROSWELL-NM 20220422 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-04-22 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 100.4s (46 files)
+
+[47] ROSWELL-NM 20220429 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-04-29 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 99.7s (46 files)
+
+[48] ROSWELL-NM 20220430 -- 8 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-04-30 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] burst-ROSWELL-NM-04-30-2022-180000-180000-typeIII.npy already exists (duplicate catalog row?), skipping
+  -> 7 positive + 2 negative crop(s) in 99.9s (46 files)
+
+[49] ROSWELL-NM 20220501 -- 2 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-05-01 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 99.9s (46 files)
+
+[50] ROSWELL-NM 20220502 -- 3 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-05-02 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 100.1s (46 files)
+
+[51] ROSWELL-NM 20220503 -- 4 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-05-03 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 100.4s (46 files)
+
+[52] ROSWELL-NM 20220509 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-05-09 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.7s (47 files)
+
+[53] ROSWELL-NM 20220520 -- 1 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/05/20/ROSWELL-NM_20220520_211500_58.fit.gz: Compressed file ended before the end-of-stream marker was reached
+    [fetch] ROSWELL-NM 2022-05-20 has 85 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 101.7s (46 files)
+
+[54] ROSWELL-NM 20220521 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-05-21 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 102.5s (46 files)
+
+[55] ROSWELL-NM 20220525 -- 2 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-05-25 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 102.3s (46 files)
+
+[56] ROSWELL-NM 20220527 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-05-27 has 86 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 101.0s (46 files)
+
+[57] ROSWELL-NM 20220616 -- 2 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-06-16 has 114 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 129.7s (57 files)
+
+[58] ROSWELL-NM 20220626 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-06-26 has 112 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 129.3s (56 files)
+
+[59] ROSWELL-NM 20220627 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-06-27 has 106 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 121.0s (53 files)
+
+[60] ROSWELL-NM 20220702 -- 4 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-07-02 has 112 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 131.3s (56 files)
+
+[61] ROSWELL-NM 20220703 -- 3 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-07-03 has 112 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 128.3s (56 files)
+
+[62] ROSWELL-NM 20220705 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-07-05 has 112 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 128.2s (56 files)
+
+[63] ROSWELL-NM 20220715 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-07-15 has 58 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 66.8s (29 files)
+
+[64] ROSWELL-NM 20220721 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-07-21 has 112 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 127.9s (56 files)
+
+[65] ROSWELL-NM 20220722 -- 1 cataloged event(s)
+    [fetch] ROSWELL-NM 2022-07-22 has 112 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 127.9s (56 files)
+
+Reached --limit 65, stopping (resume later to continue).
+
+Timing: n=65, mean=106.4s, median=100.2s, min=65.1s, max=187.8s per station-day
+Extrapolated total for all -980 remaining station-days: ~-29.0 hours (mean-time based; real run will vary by file count per station-day)
+
+Done. Metadata: ../data/ecallisto/raw_events/metadata.csv
+Fetching Monstein catalog 2021-01-01 .. 2024-03-31 ...
+  [burst_catalog] fetching 2021-01 ...
+  [burst_catalog] fetching 2021-02 ...
+  [burst_catalog] fetching 2021-03 ...
+  [burst_catalog] fetching 2021-04 ...
+  [burst_catalog] fetching 2021-05 ...
+  [burst_catalog] fetching 2021-06 ...
+  [burst_catalog] fetching 2021-07 ...
+  [burst_catalog] fetching 2021-08 ...
+  [burst_catalog] fetching 2021-09 ...
+  [burst_catalog] fetching 2021-10 ...
+  [burst_catalog] fetching 2021-11 ...
+  [burst_catalog] fetching 2021-12 ...
+  [burst_catalog] fetching 2022-01 ...
+  [burst_catalog] fetching 2022-02 ...
+  [burst_catalog] fetching 2022-03 ...
+  [burst_catalog] fetching 2022-04 ...
+  [burst_catalog] fetching 2022-05 ...
+  [burst_catalog] fetching 2022-06 ...
+  [burst_catalog] fetching 2022-07 ...
+  [burst_catalog] fetching 2022-08 ...
+  [burst_catalog] fetching 2022-09 ...
+  [burst_catalog] fetching 2022-10 ...
+  [burst_catalog] fetching 2022-11 ...
+  [burst_catalog] fetching 2022-12 ...
+  [burst_catalog] fetching 2023-01 ...
+  [burst_catalog] fetching 2023-02 ...
+  [burst_catalog] fetching 2023-03 ...
+  [burst_catalog] fetching 2023-04 ...
+  [burst_catalog] fetching 2023-05 ...
+  [burst_catalog] fetching 2023-06 ...
+  [burst_catalog] fetching 2023-07 ...
+  [burst_catalog] fetching 2023-08 ...
+  [burst_catalog] fetching 2023-09 ...
+  [burst_catalog] fetching 2023-10 ...
+  [burst_catalog] fetching 2023-11 ...
+  [burst_catalog] fetching 2023-12 ...
+  [burst_catalog] fetching 2024-01 ...
+  [burst_catalog] fetching 2024-02 ...
+  [burst_catalog] fetching 2024-03 ...
+371 (station, event) rows after filtering (stations=['SPAIN-PERALEJOS'], types=['II', 'III', 'V'])
+duration pool for negatives: n=371, median=120s
+216 distinct (station, date) pairs to fetch; 1260 already done
+
+[1] SPAIN-PERALEJOS 20210303 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-03-03 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 63.1s (41 files)
+
+[2] SPAIN-PERALEJOS 20210424 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-04-24 has 49 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 75.0s (49 files)
+
+[3] SPAIN-PERALEJOS 20210426 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-04-26 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.2s (49 files)
+
+[4] SPAIN-PERALEJOS 20210506 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-05-06 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.5s (49 files)
+
+[5] SPAIN-PERALEJOS 20210509 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-05-09 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.3s (49 files)
+
+[6] SPAIN-PERALEJOS 20210516 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-05-16 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.2s (49 files)
+
+[7] SPAIN-PERALEJOS 20210609 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-06-09 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.3s (49 files)
+
+[8] SPAIN-PERALEJOS 20210628 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-06-28 has 35 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 64.4s (49 files)
+
+[9] SPAIN-PERALEJOS 20210703 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-07-03 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.6s (49 files)
+
+[10] SPAIN-PERALEJOS 20210716 -- 2 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-07-16 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 74.4s (49 files)
+
+[11] SPAIN-PERALEJOS 20210723 -- 3 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-07-23 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 74.1s (49 files)
+
+[12] SPAIN-PERALEJOS 20210820 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-08-20 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.3s (49 files)
+
+[13] SPAIN-PERALEJOS 20210918 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-09-18 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.2s (49 files)
+
+[14] SPAIN-PERALEJOS 20210919 -- 4 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-09-19 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 74.8s (49 files)
+
+[15] SPAIN-PERALEJOS 20210921 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-09-21 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.7s (49 files)
+
+[16] SPAIN-PERALEJOS 20210922 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-09-22 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.4s (49 files)
+
+[17] SPAIN-PERALEJOS 20210923 -- 2 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-09-23 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 74.1s (49 files)
+
+[18] SPAIN-PERALEJOS 20211003 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-10-03 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.2s (49 files)
+
+[19] SPAIN-PERALEJOS 20211004 -- 3 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-10-04 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 74.3s (49 files)
+
+[20] SPAIN-PERALEJOS 20211010 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-10-10 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.2s (49 files)
+
+[21] SPAIN-PERALEJOS 20211012 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-10-12 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 75.7s (49 files)
+
+[22] SPAIN-PERALEJOS 20211026 -- 2 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-10-26 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 74.5s (49 files)
+
+[23] SPAIN-PERALEJOS 20211027 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-10-27 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.5s (49 files)
+
+[24] SPAIN-PERALEJOS 20211028 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-10-28 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.9s (49 files)
+
+[25] SPAIN-PERALEJOS 20211031 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-10-31 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.5s (49 files)
+
+[26] SPAIN-PERALEJOS 20211101 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-11-01 has 48 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 74.1s (49 files)
+
+[27] SPAIN-PERALEJOS 20211214 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-12-14 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 63.5s (41 files)
+
+[28] SPAIN-PERALEJOS 20211215 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-12-15 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 63.4s (41 files)
+
+[29] SPAIN-PERALEJOS 20211216 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-12-16 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 63.7s (41 files)
+
+[30] SPAIN-PERALEJOS 20211230 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-12-30 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 65.6s (41 files)
+
+[31] SPAIN-PERALEJOS 20211231 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2021-12-31 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 63.3s (41 files)
+
+[32] SPAIN-PERALEJOS 20220101 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-01-01 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 63.1s (41 files)
+
+[33] SPAIN-PERALEJOS 20220117 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-01-17 has 32 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 49.5s (32 files)
+
+[34] SPAIN-PERALEJOS 20220130 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-01-30 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 63.9s (41 files)
+
+[35] SPAIN-PERALEJOS 20220206 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-02-06 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 63.4s (41 files)
+
+[36] SPAIN-PERALEJOS 20220212 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-02-12 has 15 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 24.5s (15 files)
+
+[37] SPAIN-PERALEJOS 20220215 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-02-15 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 63.4s (41 files)
+
+[38] SPAIN-PERALEJOS 20220228 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-02-28 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 64.5s (41 files)
+
+[39] SPAIN-PERALEJOS 20220303 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-03-03 has 41 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 71.2s (45 files)
+
+[40] SPAIN-PERALEJOS 20220307 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-03-07 has 44 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 71.3s (50 files)
+
+[41] SPAIN-PERALEJOS 20220309 -- 4 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-03-09 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 69.1s (45 files)
+
+[42] SPAIN-PERALEJOS 20220328 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-03-28 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 70.0s (45 files)
+
+[43] SPAIN-PERALEJOS 20220329 -- 5 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-03-29 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 69.7s (45 files)
+
+[44] SPAIN-PERALEJOS 20220330 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-03-30 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 69.7s (45 files)
+
+[45] SPAIN-PERALEJOS 20220402 -- 3 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-04-02 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 69.5s (45 files)
+
+[46] SPAIN-PERALEJOS 20220408 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-04-08 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 69.8s (45 files)
+
+[47] SPAIN-PERALEJOS 20220409 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-04-09 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 69.1s (45 files)
+
+[48] SPAIN-PERALEJOS 20220415 -- 2 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-04-15 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 69.8s (45 files)
+
+[49] SPAIN-PERALEJOS 20220419 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-04-19 has 10 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 17.5s (10 files)
+
+[50] SPAIN-PERALEJOS 20220427 -- 5 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-04-27 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 69.5s (45 files)
+
+[51] SPAIN-PERALEJOS 20220429 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-04-29 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 69.1s (45 files)
+
+[52] SPAIN-PERALEJOS 20220430 -- 10 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-04-30 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 10 positive + 2 negative crop(s) in 69.5s (45 files)
+
+[53] SPAIN-PERALEJOS 20220501 -- 3 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-05-01 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 69.2s (45 files)
+
+[54] SPAIN-PERALEJOS 20220503 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-05-03 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 69.2s (45 files)
+
+[55] SPAIN-PERALEJOS 20220508 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-05-08 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 69.1s (45 files)
+
+[56] SPAIN-PERALEJOS 20220509 -- 2 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-05-09 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 69.4s (45 files)
+
+[57] SPAIN-PERALEJOS 20220510 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-05-10 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 69.6s (45 files)
+
+[58] SPAIN-PERALEJOS 20220511 -- 2 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-05-11 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 69.2s (45 files)
+
+[59] SPAIN-PERALEJOS 20220512 -- 2 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-05-12 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 69.0s (45 files)
+
+[60] SPAIN-PERALEJOS 20220513 -- 3 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-05-13 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 68.8s (45 files)
+
+[61] SPAIN-PERALEJOS 20220514 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-05-14 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 69.0s (45 files)
+
+[62] SPAIN-PERALEJOS 20220517 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-05-17 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 71.2s (45 files)
+
+[63] SPAIN-PERALEJOS 20220518 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-05-18 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 69.3s (45 files)
+
+[64] SPAIN-PERALEJOS 20220519 -- 1 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-05-19 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 69.4s (45 files)
+
+[65] SPAIN-PERALEJOS 20220521 -- 2 cataloged event(s)
+    [fetch] SPAIN-PERALEJOS 2022-05-21 has 45 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 69.3s (45 files)
+
+Reached --limit 65, stopping (resume later to continue).
+
+Timing: n=65, mean=68.5s, median=69.6s, min=17.5s, max=75.7s per station-day
+Extrapolated total for all -1044 remaining station-days: ~-19.9 hours (mean-time based; real run will vary by file count per station-day)
+
+Done. Metadata: ../data/ecallisto/raw_events/metadata.csv
+/home/ubuntu/Desktop/TransferLearning_CNN/ecallisto_grabber/scrape.py:123: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  new_meta = pd.concat([pos_meta, neg_meta], ignore_index=True)
+/home/ubuntu/Desktop/TransferLearning_CNN/ecallisto_grabber/scrape.py:123: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  new_meta = pd.concat([pos_meta, neg_meta], ignore_index=True)
+WARNING: File may have been truncated: actual file length (532480) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (542720) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (286720) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (296960) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (624640) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (614400) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (747520) is smaller than the expected size (760320) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (737280) is smaller than the expected size (760320) [astropy.io.fits.file]
+Fetching Monstein catalog 2021-01-01 .. 2024-03-31 ...
+  [burst_catalog] fetching 2021-01 ...
+  [burst_catalog] fetching 2021-02 ...
+  [burst_catalog] fetching 2021-03 ...
+  [burst_catalog] fetching 2021-04 ...
+  [burst_catalog] fetching 2021-05 ...
+  [burst_catalog] fetching 2021-06 ...
+  [burst_catalog] fetching 2021-07 ...
+  [burst_catalog] fetching 2021-08 ...
+  [burst_catalog] fetching 2021-09 ...
+  [burst_catalog] fetching 2021-10 ...
+  [burst_catalog] fetching 2021-11 ...
+  [burst_catalog] fetching 2021-12 ...
+  [burst_catalog] fetching 2022-01 ...
+  [burst_catalog] fetching 2022-02 ...
+  [burst_catalog] fetching 2022-03 ...
+  [burst_catalog] fetching 2022-04 ...
+  [burst_catalog] fetching 2022-05 ...
+  [burst_catalog] fetching 2022-06 ...
+  [burst_catalog] fetching 2022-07 ...
+  [burst_catalog] fetching 2022-08 ...
+  [burst_catalog] fetching 2022-09 ...
+  [burst_catalog] fetching 2022-10 ...
+  [burst_catalog] fetching 2022-11 ...
+  [burst_catalog] fetching 2022-12 ...
+  [burst_catalog] fetching 2023-01 ...
+  [burst_catalog] fetching 2023-02 ...
+  [burst_catalog] fetching 2023-03 ...
+  [burst_catalog] fetching 2023-04 ...
+  [burst_catalog] fetching 2023-05 ...
+  [burst_catalog] fetching 2023-06 ...
+  [burst_catalog] fetching 2023-07 ...
+  [burst_catalog] fetching 2023-08 ...
+  [burst_catalog] fetching 2023-09 ...
+  [burst_catalog] fetching 2023-10 ...
+  [burst_catalog] fetching 2023-11 ...
+  [burst_catalog] fetching 2023-12 ...
+  [burst_catalog] fetching 2024-01 ...
+  [burst_catalog] fetching 2024-02 ...
+  [burst_catalog] fetching 2024-03 ...
+471 (station, event) rows after filtering (stations=['GREENLAND'], types=['II', 'III', 'V'])
+duration pool for negatives: n=469, median=60s
+160 distinct (station, date) pairs to fetch; 1325 already done
+
+[1] GREENLAND 20210218 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2021-02-18 has 96 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 146.1s (96 files)
+
+[2] GREENLAND 20210227 -- 4 cataloged event(s)
+    [fetch] GREENLAND 2021-02-27 has 96 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 145.9s (96 files)
+
+[3] GREENLAND 20210228 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2021-02-28 has 96 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 146.7s (96 files)
+
+[4] GREENLAND 20210301 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2021-03-01 has 96 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 147.2s (96 files)
+
+[5] GREENLAND 20210421 -- 3 cataloged event(s)
+    [fetch] GREENLAND 2021-04-21 has 65 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 99.5s (65 files)
+
+[6] GREENLAND 20210422 -- 5 cataloged event(s)
+    [fetch] GREENLAND 2021-04-22 has 65 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 99.9s (65 files)
+
+[7] GREENLAND 20210423 -- 3 cataloged event(s)
+    [fetch] GREENLAND 2021-04-23 has 66 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 101.6s (66 files)
+
+[8] GREENLAND 20210424 -- 3 cataloged event(s)
+    [fetch] GREENLAND 2021-04-24 has 67 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 103.1s (67 files)
+
+[9] GREENLAND 20210425 -- 6 cataloged event(s)
+    [fetch] GREENLAND 2021-04-25 has 67 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 positive + 2 negative crop(s) in 103.8s (67 files)
+
+[10] GREENLAND 20210426 -- 7 cataloged event(s)
+    [fetch] GREENLAND 2021-04-26 has 68 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 7 positive + 2 negative crop(s) in 105.7s (68 files)
+
+[11] GREENLAND 20210428 -- 1 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2021/04/28/GREENLAND_20210428_230000_63.fit.gz: Compressed file ended before the end-of-stream marker was reached
+    [fetch] GREENLAND 2021-04-28 has 67 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 107.3s (68 files)
+
+[12] GREENLAND 20220129 -- 5 cataloged event(s)
+    [fetch] GREENLAND 2022-01-29 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 15:30-15:30 on 20220129 not fully covered by downloaded data for GREENLAND (gap or out of range), skipping
+  -> 4 positive + 2 negative crop(s) in 34.6s (21 files)
+
+[13] GREENLAND 20220130 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2022-01-30 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 0 negative crop(s) in 34.3s (21 files)
+
+[14] GREENLAND 20220131 -- 6 cataloged event(s)
+    [fetch] GREENLAND 2022-01-31 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 6 positive + 0 negative crop(s) in 32.1s (20 files)
+
+[15] GREENLAND 20220201 -- 4 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/01/GREENLAND_20220201_130000_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/01/GREENLAND_20220201_130000_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-02-01 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 34.2s (20 files)
+
+[16] GREENLAND 20220202 -- 1 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/02/GREENLAND_20220202_163000_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/02/GREENLAND_20220202_163000_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-02-02 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 33.5s (20 files)
+
+[17] GREENLAND 20220205 -- 3 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/05/GREENLAND_20220205_171500_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/05/GREENLAND_20220205_171500_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-02-05 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 33.9s (20 files)
+
+[18] GREENLAND 20220206 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2022-02-06 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 34.2s (21 files)
+
+[19] GREENLAND 20220208 -- 2 cataloged event(s)
+    [fetch] GREENLAND 2022-02-08 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 33.6s (21 files)
+
+[20] GREENLAND 20220209 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2022-02-09 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 33.8s (21 files)
+
+[21] GREENLAND 20220211 -- 1 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/11/GREENLAND_20220211_140000_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/11/GREENLAND_20220211_140000_63.fit.gz: buffer is too small for requested array
+WARNING: File may have been truncated: actual file length (187240) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (194560) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (245760) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (327680) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (317440) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (471040) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (399360) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (539780) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (153600) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (143360) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (235520) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (634880) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (276480) is smaller than the expected size (725760) [astropy.io.fits.file]
+    [fetch] GREENLAND 2022-02-11 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 34.2s (20 files)
+
+[22] GREENLAND 20220212 -- 3 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/12/GREENLAND_20220212_130000_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/12/GREENLAND_20220212_130000_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-02-12 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 32.8s (20 files)
+
+[23] GREENLAND 20220213 -- 4 cataloged event(s)
+    [fetch] GREENLAND 2022-02-13 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 32.2s (20 files)
+
+[24] GREENLAND 20220215 -- 2 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/15/GREENLAND_20220215_180000_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/15/GREENLAND_20220215_180000_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-02-15 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 33.9s (20 files)
+
+[25] GREENLAND 20220216 -- 1 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/16/GREENLAND_20220216_133000_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/16/GREENLAND_20220216_133000_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-02-16 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 33.5s (20 files)
+
+[26] GREENLAND 20220228 -- 1 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/28/GREENLAND_20220228_154500_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/02/28/GREENLAND_20220228_154500_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-02-28 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 33.6s (20 files)
+
+[27] GREENLAND 20220302 -- 2 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/02/GREENLAND_20220302_143000_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/02/GREENLAND_20220302_143000_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-03-02 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 39.1s (20 files)
+
+[28] GREENLAND 20220304 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2022-03-04 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 33.5s (21 files)
+
+[29] GREENLAND 20220305 -- 5 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/05/GREENLAND_20220305_174500_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/05/GREENLAND_20220305_174500_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-03-05 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 33.5s (20 files)
+
+[30] GREENLAND 20220306 -- 5 cataloged event(s)
+    [fetch] GREENLAND 2022-03-06 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 34.2s (21 files)
+
+[31] GREENLAND 20220307 -- 5 cataloged event(s)
+    [fetch] GREENLAND 2022-03-07 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 32.5s (20 files)
+
+[32] GREENLAND 20220308 -- 2 cataloged event(s)
+    [fetch] GREENLAND 2022-03-08 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 34.1s (21 files)
+
+[33] GREENLAND 20220309 -- 7 cataloged event(s)
+    [fetch] GREENLAND 2022-03-09 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 7 positive + 2 negative crop(s) in 33.7s (21 files)
+
+[34] GREENLAND 20220312 -- 5 cataloged event(s)
+    [fetch] GREENLAND 2022-03-12 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 34.3s (21 files)
+
+[35] GREENLAND 20220313 -- 2 cataloged event(s)
+    [fetch] GREENLAND 2022-03-13 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 34.1s (21 files)
+
+[36] GREENLAND 20220314 -- 1 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/14/GREENLAND_20220314_154500_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/14/GREENLAND_20220314_154500_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-03-14 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 34.3s (20 files)
+
+[37] GREENLAND 20220316 -- 2 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/16/GREENLAND_20220316_134500_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/16/GREENLAND_20220316_134500_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-03-16 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 34.0s (20 files)
+
+[38] GREENLAND 20220317 -- 2 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/17/GREENLAND_20220317_153000_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/17/GREENLAND_20220317_153000_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-03-17 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 33.7s (20 files)
+
+[39] GREENLAND 20220318 -- 1 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/18/GREENLAND_20220318_130000_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/18/GREENLAND_20220318_130000_63.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/18/GREENLAND_20220318_134500_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/18/GREENLAND_20220318_134500_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-03-18 has 19 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 34.4s (19 files)
+
+[40] GREENLAND 20220319 -- 3 cataloged event(s)
+WARNING: File may have been truncated: actual file length (307200) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (348160) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (368640) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (604160) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (112640) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (81920) is smaller than the expected size (725760) [astropy.io.fits.file]
+    [fetch] GREENLAND 2022-03-19 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 34.2s (21 files)
+
+[41] GREENLAND 20220325 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2022-03-25 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 34.5s (21 files)
+
+[42] GREENLAND 20220326 -- 2 cataloged event(s)
+    [fetch] GREENLAND 2022-03-26 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 34.2s (21 files)
+
+[43] GREENLAND 20220329 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2022-03-29 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 34.8s (21 files)
+
+[44] GREENLAND 20220330 -- 4 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/30/GREENLAND_20220330_163000_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/03/30/GREENLAND_20220330_163000_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-03-30 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 33.9s (20 files)
+
+[45] GREENLAND 20220331 -- 3 cataloged event(s)
+    [fetch] GREENLAND 2022-03-31 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 34.8s (21 files)
+
+[46] GREENLAND 20220401 -- 4 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/04/01/GREENLAND_20220401_161500_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/04/01/GREENLAND_20220401_161500_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-04-01 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 4 positive + 2 negative crop(s) in 34.3s (20 files)
+
+[47] GREENLAND 20220402 -- 2 cataloged event(s)
+    [fetch] GREENLAND 2022-04-02 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 34.8s (21 files)
+
+[48] GREENLAND 20220403 -- 3 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/04/03/GREENLAND_20220403_170000_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/04/03/GREENLAND_20220403_170000_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-04-03 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 3 positive + 2 negative crop(s) in 34.3s (20 files)
+
+[49] GREENLAND 20220404 -- 2 cataloged event(s)
+    [fetch] GREENLAND 2022-04-04 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 34.2s (21 files)
+
+[50] GREENLAND 20220408 -- 5 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/04/08/GREENLAND_20220408_180000_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/04/08/GREENLAND_20220408_180000_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-04-08 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 15:26-15:29 on 20220408 not fully covered by downloaded data for GREENLAND (gap or out of range), skipping
+  -> 4 positive + 2 negative crop(s) in 33.9s (20 files)
+
+[51] GREENLAND 20220409 -- 2 cataloged event(s)
+    [fetch] GREENLAND 2022-04-09 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 34.4s (21 files)
+
+[52] GREENLAND 20220412 -- 2 cataloged event(s)
+    [fetch] GREENLAND 2022-04-12 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 34.4s (21 files)
+
+[53] GREENLAND 20220413 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2022-04-13 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 32.1s (20 files)
+
+[54] GREENLAND 20220414 -- 2 cataloged event(s)
+    [fetch] GREENLAND 2022-04-14 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 34.0s (21 files)
+
+[55] GREENLAND 20220415 -- 5 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/04/15/GREENLAND_20220415_171500_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/04/15/GREENLAND_20220415_171500_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-04-15 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 5 positive + 2 negative crop(s) in 33.8s (20 files)
+
+[56] GREENLAND 20220416 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2022-04-16 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 34.2s (21 files)
+
+[57] GREENLAND 20220417 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2022-04-17 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 34.0s (21 files)
+
+[58] GREENLAND 20220418 -- 2 cataloged event(s)
+    [fetch] GREENLAND 2022-04-18 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 32.9s (20 files)
+
+[59] GREENLAND 20220419 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2022-04-19 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 34.3s (21 files)
+
+[60] GREENLAND 20220420 -- 8 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/04/20/GREENLAND_20220420_150000_62.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/04/20/GREENLAND_20220420_150000_63.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-04-20 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 8 positive + 2 negative crop(s) in 34.3s (20 files)
+
+[61] GREENLAND 20220421 -- 3 cataloged event(s)
+    [fetch] GREENLAND 2022-04-21 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] could not parse time_range='24:32-14:33', skipping
+  -> 2 positive + 2 negative crop(s) in 34.9s (21 files)
+
+[62] GREENLAND 20220422 -- 3 cataloged event(s)
+    [fetch] GREENLAND 2022-04-22 has 20 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+    [extract] event 13:28-13:33 on 20220422 not fully covered by downloaded data for GREENLAND (gap or out of range), skipping
+  -> 2 positive + 2 negative crop(s) in 33.3s (20 files)
+
+[63] GREENLAND 20220424 -- 2 cataloged event(s)
+    [fetch] GREENLAND 2022-04-24 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 2 positive + 2 negative crop(s) in 34.8s (21 files)
+
+[64] GREENLAND 20220425 -- 1 cataloged event(s)
+    [fetch] GREENLAND 2022-04-25 has 21 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 34.8s (21 files)
+WARNING: File may have been truncated: actual file length (159440) is smaller than the expected size (725760) [astropy.io.fits.file]
+WARNING: File may have been truncated: actual file length (163840) is smaller than the expected size (725760) [astropy.io.fits.file]
+
+[65] GREENLAND 20220630 -- 1 cataloged event(s)
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/06/30/GREENLAND_20220630_221501_63.fit.gz: buffer is too small for requested array
+    [fetch] skipping https://soleil.i4ds.ch/solarradio/data/2002-20yy_Callisto/2022/06/30/GREENLAND_20220630_221502_62.fit.gz: buffer is too small for requested array
+    [fetch] GREENLAND 2022-06-30 has 28 file(s) from a simultaneous second receiver (overlapping timestamps); keeping one series
+  -> 1 positive + 2 negative crop(s) in 46.4s (28 files)
+
+Reached --limit 65, stopping (resume later to continue).
+
+Timing: n=65, mean=48.6s, median=34.2s, min=32.1s, max=147.2s per station-day
+Extrapolated total for all -1165 remaining station-days: ~-15.7 hours (mean-time based; real run will vary by file count per station-day)
+
+Done. Metadata: ../data/ecallisto/raw_events/metadata.csv
