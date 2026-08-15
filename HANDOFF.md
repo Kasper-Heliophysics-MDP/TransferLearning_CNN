@@ -103,7 +103,8 @@ own-station 和 eCallisto 现在都完成了"去噪 + 粗裁剪"这一步。
 
 ## 下一步
 
-### 当前真正在做的事:见 `PHASE1_RESULTS.md`(结果+瓶颈+明天计划)和 `TRAINING_PLAN.md`(方案背景)
+### 当前真正在做的事:见 `OVERNIGHT_PLAN.md`(下一步跑什么,含未启动的通宵脚本)、
+`PHASE1_RESULTS.md`(结果+瓶颈)、`TRAINING_PLAN.md`(方案背景)
 
 **Phase 1 四组已跑完**:Type III 检出率 95%、时间中位偏差 10.7s,但 AP50 只有 0.235 ——
 因为标注本身的天花板就是 0.485。瓶颈在标注精度和验证集规模,不在模型。四组之间的差异落在噪声内,

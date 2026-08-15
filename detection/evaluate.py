@@ -63,6 +63,60 @@ def iou_1d(a0, a1, b0, b1) -> float:
     return inter / union if union > 0 else 0.0
 
 
+def maxconf_collapse(rows: list[tuple], min_overlap: float = 0.1) -> list[tuple]:
+    """Collapse each cluster of mutually-overlapping predictions to its single
+    highest-confidence member.
+
+    The detector's precision problem is not spurious bursts, it is ONE burst cut
+    into several boxes at different offsets: 84% of predictions land on a real
+    burst, each truth is touched by 3.2 predictions on average, and NMS will not
+    merge them because the fragments overlap the truth from different sides
+    rather than overlapping each other past its threshold. A confidence/NMS grid
+    sweep only moved AP50 0.361 -> 0.390, which is what ruled out the duplicate
+    hypothesis.
+
+    Measured on v5_single (see the post-processing table earlier in
+    PHASE1_RESULTS.md), against the alternatives on the same clusters:
+
+        raw     818 boxes  recall 72%  precision 20%  F1 0.311
+        union   232 boxes  recall 44%  precision 42%  F1 0.430
+        wbf     232 boxes  recall 46%  precision 45%  F1 0.456
+        maxconf 232 boxes  recall 53%  precision 51%  F1 0.522   <-- this
+
+    The ordering carries the reason: union and weighted averaging both fold the
+    badly-placed fragments INTO the answer, while maxconf discards them. One box
+    per cluster is usually well placed; the rest are noise and should not get a
+    vote.
+
+    Note the raw 72% recall is "a cluster of three counted as a hit if any one
+    matched". maxconf's 53% is the honest single-answer number, so switching
+    this on makes recall look worse while making the system better.
+
+    Clustering is single-linkage on IoU >= `min_overlap`: A and C join the same
+    cluster through B even if they do not touch each other.
+    """
+    if not rows:
+        return rows
+    order = sorted(range(len(rows)), key=lambda i: -rows[i][1])   # conf desc
+    kept: list[tuple] = []
+    claimed: list[list[int]] = []            # index groups already represented
+    assigned: dict[int, int] = {}
+    for i in order:
+        _, _, p0, p1 = rows[i]
+        target = None
+        for ci, members in enumerate(claimed):
+            if any(iou_1d(p0, p1, rows[m][2], rows[m][3]) >= min_overlap for m in members):
+                target = ci
+                break
+        if target is None:
+            claimed.append([i])
+            assigned[i] = len(claimed) - 1
+            kept.append(rows[i])             # first seen in a cluster = highest conf
+        else:
+            claimed[target].append(i)
+    return kept
+
+
 def average_precision(matched: list[int], confs: list[float], n_gt: int) -> float:
     """All-point-interpolated AP (the COCO/VOC2010 convention ultralytics uses)."""
     if n_gt == 0 or not confs:
@@ -96,6 +150,12 @@ def main():
                          "only 53 II and 27 V, so classification is data-limited in a way "
                          "detection is not, and mixing the two hides how well the detector "
                          "actually finds bursts. Per-class numbers are still reported separately.")
+    ap.add_argument("--maxconf", action="store_true",
+                    help="collapse each overlapping cluster of predictions to its highest-"
+                         "confidence box before scoring (see maxconf_collapse). This is the "
+                         "deployable read: F1 0.311 -> 0.522 on v5_single. OFF by default so "
+                         "every number recorded before 2026-08-14 stays comparable -- when "
+                         "quoting a maxconf figure, say so, the two are far apart.")
     ap.add_argument("--window-s", type=float, default=900.0,
                     help="physical duration of one window, for converting normalized "
                          "offsets to seconds and counting false alarms per hour")
@@ -122,6 +182,14 @@ def main():
                 rows.append((0 if args.class_agnostic else int(b.cls), float(b.conf), x1, x2))
             preds[os.path.basename(path)[:-4]] = rows
 
+    n_raw = sum(len(v) for v in preds.values())
+    if args.maxconf:
+        preds = {k: maxconf_collapse(v, args.min_overlap) for k, v in preds.items()}
+        n_kept = sum(len(v) for v in preds.values())
+        print(f"maxconf ON: {n_raw} raw predictions -> {n_kept} after collapsing clusters")
+    else:
+        print(f"maxconf off: {n_raw} raw predictions (pass --maxconf for the deployable read)")
+
     # ---- standard AP at several thresholds -------------------------------
     print(f"\n{'class':6s} {'n_gt':>5s} | {'AP@0.30':>8s} {'AP@0.50':>8s} {'AP@0.75':>8s}")
     for ci, cname in enumerate(classes):
@@ -146,6 +214,33 @@ def main():
                     matched.append(int(hit)); confs.append(cf)
             line += f" {average_precision(matched, confs, n_gt):8.3f}"
         print(line)
+
+    # ---- precision / recall / F1 at IoU>=0.5 -----------------------------
+    # AP integrates over the confidence sweep and so hides what maxconf does:
+    # it trades recall for precision at a FIXED operating point. Without this
+    # block the whole point of --maxconf is invisible in the output.
+    print(f"\nsingle operating point (conf>={args.conf}, greedy match at IoU>=0.50):")
+    print(f"{'class':6s} {'n_gt':>5s} {'n_pred':>7s} {'recall':>7s} {'prec':>7s} {'F1':>7s}")
+    for ci, cname in enumerate(classes):
+        n_gt = tp = n_pred = 0
+        for stem, g_rows in gt.items():
+            g = [(x0, x1) for c, x0, x1 in g_rows if c == ci]
+            p = sorted([r for r in preds.get(stem, []) if r[0] == ci], key=lambda r: -r[1])
+            n_gt += len(g); n_pred += len(p)
+            used = set()
+            for _, _, p0, p1 in p:
+                best, bi = 0.0, -1
+                for k, (x0, x1) in enumerate(g):
+                    if k in used:
+                        continue
+                    v = iou_1d(p0, p1, x0, x1)
+                    if v > best:
+                        best, bi = v, k
+                if best >= 0.50:
+                    used.add(bi); tp += 1
+        rec = tp / max(n_gt, 1); prec = tp / max(n_pred, 1)
+        f1 = 2 * rec * prec / max(rec + prec, 1e-12)
+        print(f"{cname:6s} {n_gt:5d} {n_pred:7d} {rec*100:6.0f}% {prec*100:6.0f}% {f1:7.3f}")
 
     # ---- operational metrics --------------------------------------------
     print(f"\noperational view (conf>={args.conf}, 'detected' = IoU >= {args.min_overlap}):")

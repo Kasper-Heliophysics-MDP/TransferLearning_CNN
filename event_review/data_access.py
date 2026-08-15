@@ -131,7 +131,14 @@ GENTLE_PARAMS_BY_TYPE = {
 # So "II/V never benefit from denoising" is too strong -- 1 in 8 does. Hence a
 # default, not a removal: SHOW_FULL_CLEAN_KEY lets the reviewer switch back
 # per-event for that minority.
-MINIMAL_VIEW_TYPES = {"II", "V"}
+# "gap" = a burst the catalog never recorded, found by mine_catalog_gaps.py and
+# confirmed by eye; its class is genuinely unknown. It belongs here because the
+# reviewer's job on these is to DRAW the time range, and clean() would build its
+# protection window from the model's guessed time -- the same stale-time failure
+# that made cleaned_events unusable for hand-corrected events, except here it
+# would hit while the correction is being made. Per-row median subtraction also
+# matches the render these candidates were judged on in the review sheets.
+MINIMAL_VIEW_TYPES = {"II", "V", "gap"}
 
 
 def uses_minimal_view(burst_type: str) -> bool:

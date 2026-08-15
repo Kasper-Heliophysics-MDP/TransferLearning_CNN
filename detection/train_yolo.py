@@ -41,10 +41,15 @@ def main():
     ap.add_argument("--imgsz", type=int, default=640)
     ap.add_argument("--batch", type=int, default=16)
     ap.add_argument("--device", default="0")
+    ap.add_argument("--workers", type=int, default=8,
+                    help="dataloader workers. This box has 4 cores, so ultralytics' default of 8 "
+                         "is already oversubscribed; drop it to 2-3 when something else needs CPU "
+                         "(the ASSA scrape decodes FITS between downloads). The GPU is the "
+                         "bottleneck here anyway -- fewer workers costs little.")
     ap.add_argument("--seed", type=int, default=0,
                     help="training seed. Needed to measure run-to-run variance: with only "
                          "169 val boxes, an eval flag that should be neutral already moved "
-                         "AP50 by 15%, which is the same size as the gaps between the four "
+                         "AP50 by 15%%, which is the same size as the gaps between the four "
                          "Phase 1 arms -- so the noise floor has to be measured before any "
                          "further comparison means anything.")
     ap.add_argument("--rect", action="store_true",
@@ -52,6 +57,21 @@ def main():
                          "letterboxing to a square. Needed for the 640x1280 wide dataset, "
                          "otherwise ultralytics pads it back to 1280x1280 and burns 2x the "
                          "compute for identical content resolution.")
+    ap.add_argument("--optimizer", default="auto",
+                    help="ultralytics optimizer. LEAVE THIS AT 'auto' AND --lr0-* DOES NOTHING: "
+                         "auto picks the optimizer AND overrides lr0 from the iteration count, so "
+                         "the 2026-08-14 batch silently ran every arm at AdamW(lr=0.002) and the "
+                         "two LR arms came back bit-identical to the control. Set an explicit "
+                         "optimizer (AdamW/SGD) for any run whose learning rate is supposed to "
+                         "mean something. The effective LR is printed at startup either way.")
+    ap.add_argument("--lr0-stage1", type=float, default=1e-3,
+                    help="initial LR while the backbone is frozen. Higher than stage 2 on "
+                         "purpose: only the neck+head move, and they start from random-ish "
+                         "detection weights on a 1-class problem COCO never saw.")
+    ap.add_argument("--lr0-stage2", type=float, default=1e-4,
+                    help="initial LR for the full fine-tune. Both LRs were hard-coded at these "
+                         "values through every experiment so far, i.e. the search space has "
+                         "never been entered -- they are a starting guess, not a tuned result.")
     ap.add_argument("--patience", type=int, default=100,
                     help="early-stop after this many epochs without val improvement. "
                          "The first Phase 1 run peaked ~3 epochs into stage 2 and then only "
@@ -68,17 +88,23 @@ def main():
     # drift direction (the single most important Type II/III cue), horizontal
     # flip reverses time, and mosaic splices unrelated windows together along
     # the time axis. All off, deliberately.
+    if args.optimizer == "auto" and (args.lr0_stage1 != 1e-3 or args.lr0_stage2 != 1e-4):
+        print("!! WARNING: --lr0-* was set but --optimizer is 'auto', which overrides lr0.\n"
+              "!! This run will IGNORE the learning rate you asked for. Pass --optimizer AdamW\n"
+              "!! (or SGD) to make it take effect. See the --optimizer help text.")
+
     common = dict(data=args.data, imgsz=args.imgsz, batch=args.batch,
                   device=args.device, project=args.project, exist_ok=True,
                   patience=args.patience, rect=args.rect, seed=args.seed,
+                  optimizer=args.optimizer, workers=args.workers,
                   fliplr=0.0, flipud=0.0, mosaic=0.0, degrees=0.0,
                   shear=0.0, perspective=0.0, scale=0.0, translate=0.0)
 
     if args.freeze_epochs > 0:
         print(f"=== stage 1: backbone frozen, {args.freeze_epochs} epochs ===")
         model = YOLO(args.model)
-        model.train(epochs=args.freeze_epochs, freeze=BACKBONE_LAYERS, lr0=1e-3,
-                    name=f"{args.name}_frozen", **common)
+        model.train(epochs=args.freeze_epochs, freeze=BACKBONE_LAYERS,
+                    lr0=args.lr0_stage1, name=f"{args.name}_frozen", **common)
         # Ask the trainer where it actually wrote, never reconstruct the path:
         # ultralytics prepends its own settings `runs_dir`/detect to a RELATIVE
         # `project`, so project="detection/runs" really lands in
@@ -91,9 +117,10 @@ def main():
     else:
         weights = args.model
 
-    print(f"=== stage 2: full fine-tune from {weights}, {args.epochs} epochs ===")
+    print(f"=== stage 2: full fine-tune from {weights}, {args.epochs} epochs, "
+          f"lr0={args.lr0_stage2} ===")
     model = YOLO(weights)
-    results = model.train(epochs=args.epochs, lr0=1e-4, name=args.name, **common)
+    results = model.train(epochs=args.epochs, lr0=args.lr0_stage2, name=args.name, **common)
     print(results)
 
 

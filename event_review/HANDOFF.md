@@ -236,3 +236,48 @@ own-station 需要先重建 raw 再 reprocess(复用 `data_access._load_own_stat
   "代码结构"),如果审核规模变得很大、现场重算成本上升,可以重新评估。
 - `review_store.py` 没有审核历史/审核人记录,多人协作会互相覆盖。
 - 键盘快捷键的 JS hack 没有做过完整测试,依赖按钮文案匹配,文案一改就失效。
+
+## 目录漏记事件的人工标注子集(`data/ecallisto/gap_annotate/`,2026-08-14)
+
+`event_review/make_gap_subset.py` 把 `detection/gap_review/to_annotate.csv`(126 条经人工确认、
+目录漏记的 burst)做成一个可直接拖框的子集目录,跟 `fix_start/` 同一套路(软链 + 自己的
+metadata.csv + 自己的 review_status.csv)。
+
+启动:`streamlit run event_review/app.py` → 侧边栏 eCallisto → 目录填 `data/ecallisto/gap_annotate`
+
+### 三个和 `fix_start/` 不一样的地方,都是被数据逼出来的
+
+1. **数据单元是 15 分钟窗口,不是单事件 crop**。`load_event` 的 eCallisto 分支按
+   `start_time`/`event_start_time` 的差值算 burst 在数组里的位置,所以只要
+   `start_time` = 窗口起点、`event_start_time` = 窗口起点 + 模型预测的秒数,整套机制原样可用,
+   不需要改 `event_review` 的加载逻辑。实测 `clean()` 在 200×3600 上只要 **0.3 秒**,不是瓶颈。
+
+2. **一个候选一个条目,不是一个窗口一个条目**。`manual_burst_range_json` 只存**一个**
+   `{start_s, end_s}`,而 117 个窗口里有 **8 个含 2-3 个漏记 burst**。按窗口建条目会把第二个
+   burst 悄悄丢掉。所以文件名是 `gap<id>-<窗口名>.npy`,多个候选软链到同一个数组,
+   同一个窗口会出现多次、每次预填不同的区间 —— 这是对的,它们是各自独立的标注。
+
+3. **`type` 写成 `"gap"`,并加进了 `MINIMAL_VIEW_TYPES`**。这些 burst 目录里没有,类型**真的未知**,
+   写成 "III"(最常见)是在编数据。`"gap"` 在 `event_review` 里只影响两处分支:
+   `gentle_params_for()` 返回 None(用生产默认值),以及现在会走最小处理模式。
+   **最小处理模式是刻意的**:`clean()` 的保护窗口会拿**模型猜的时间**去建 ——
+   正是当初让 `cleaned_events/` 对已修正事件失效的那个失败模式,而这里它会在修正**正在进行时**发生。
+   逐行中位数扣除既不可能抹掉 burst,也正是审核图上判断用的那个渲染。
+
+### 一个已修的坑:预填时间不要丢小数
+
+`shift()` 最初用 `%H:%M:%S` 格式化,**把 0.1 秒精度截断成整秒**,实测 **126 条里 112 条**的预填框
+偏早 2-4 列(0.25s/列,最多 1 秒)。这个量级远低于人自身的重复性(σ≈7.8s)、任何指标都测不出来,
+但**恰恰因为如此才必须修**:预填值是"看着像个正常数字"就被直接接受的那个数(已实测 38% 的修正
+从没动过起点),它里面的任何系统性偏移都会原样进标注。`event_burst_indices` 本来就按有没有 `.`
+自动选解析格式,保留小数零成本。修完 126 条**全部零偏差**。
+
+### ⚠️ 写回路径还没有,标注完不会自动进训练集
+
+`merge_subset_reviews.py` 是按 `file_name` 合并回父目录 `review_status.csv` 的,而这些
+`gap<id>-...` 的 file_name **在 `raw_events/review_status.csv` 里根本不存在**(它们不是事件 crop),
+按其设计会被"报告并跳过"。`refresh_boxes.py` 也只认目录事件,不知道漏记框的存在。
+
+**所以"标注 → boxes.csv"这一段是还没写的新代码。** 标完之后需要一个脚本把
+`gap_annotate/review_status.csv` 里的 `manual_burst_range_json` 转成 `boxes.csv` 的新增行
+(需要决定 `type` 怎么填 —— 类型未知是个真问题,单类检测不受影响,多分类需要)。

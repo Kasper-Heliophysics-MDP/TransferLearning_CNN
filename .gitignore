@@ -34,6 +34,22 @@ data/ecallisto/raw_events/*
 data/ecallisto/windows/*
 !data/ecallisto/windows/windows.csv
 !data/ecallisto/windows/boxes.csv
+# gap_boxes.csv is the ONE box file that is not regenerable: refresh_boxes.py
+# rebuilds boxes.csv from the Monstein catalog, and these are the bursts that
+# catalog never recorded. Losing this file loses the hand annotation behind it.
+# contaminated_negatives.csv is likewise a human product (which "negatives"
+# were confirmed to hide a burst).
+!data/ecallisto/windows/gap_boxes.csv
+!data/ecallisto/windows/contaminated_negatives.csv
+
+# The gap-annotation subset: symlinks and metadata.csv are rebuilt in seconds by
+# event_review/make_gap_subset.py (and the symlinks are absolute paths, useless
+# on another machine), but review_status.csv holds the 126 hand-drawn burst
+# ranges and exists nowhere else.
+!data/ecallisto/gap_annotate/
+data/ecallisto/gap_annotate/*
+!data/ecallisto/gap_annotate/review_status.csv
+!data/ecallisto/gap_annotate/metadata.csv
 
 data/burst_data/*
 !data/burst_data/rough_events/
@@ -47,6 +63,13 @@ burst_data.zip
 # scripts + the tracked CSVs above.
 detection/runs/
 *.log
+
+# Review sheets: hundreds of MB of PNG, all regenerable from the verdict CSVs
+# next to them (mine_catalog_gaps.py --from-csv). The CSVs are the hand
+# judgements and are tracked.
+detection/gap_review/*.png
+detection/fp_review/*.png
+detection/neg_review/*.png
 
 # Redundant now that the CSVs themselves are versioned -- git history is the
 # backup. Kept on disk, just not committed.
