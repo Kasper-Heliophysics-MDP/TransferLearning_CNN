@@ -1,71 +1,80 @@
-# 太阳射电暴自动检测(SunRISE Ground Radio Lab)
+# Solar Radio Burst Detection (SunRISE Ground Radio Lab)
 
-在 e-Callisto 全网频谱数据上训练一个太阳射电暴(Type II / III / V)**检测器**,
-再迁移到本站接收机。COCO 预训练 YOLOv8 + 15 分钟固定窗口目标检测。
+Train a solar radio burst (Type II / III / V) **detector** on e-Callisto network
+spectrograms, then transfer it to the local receiver. COCO-pretrained YOLOv8 with
+object detection over fixed 15-minute windows.
 
-**结果与结论看 [`RESULTS.md`](RESULTS.md)。** 这份只讲仓库怎么组织、代码怎么跑。
+**For results and conclusions, see [`RESULTS.md`](RESULTS.md).** This file covers
+how the repository is organised and how to run the code.
 
 | | |
 |---|---|
-| 数据 | 15,358 个 15 分钟窗口 ≈ 3,840 小时,3 个台站 |
-| Type III | 检出率 **92%**,时间中位误差 **5.0 s**,F1 **0.57** |
-| Type V(引入第二台站后)| 检出率 **4% → 55%** |
-| 跨仪器零样本迁移 | **77%** 检出,无微调 |
-| 目录漏记事件 | 模型发现 + 人工确认 **126** 个 |
+| Data | 15,358 15-minute windows ≈ 3,840 hours, 3 observatories |
+| Type III | **92%** detection, **5.0 s** median timing error, F1 **0.57** |
+| Type V (after adding a second station) | detection **4% → 55%** |
+| Zero-shot cross-instrument transfer | **77%** detection, no fine-tuning |
+| Events missing from the reference catalog | **126** found by the model and confirmed by review |
 
 ---
 
-## 文档地图
+## Documentation map
 
-文档分四类。**新来的人按这个顺序读:`RESULTS.md` → `TRAINING_PLAN.md` → 具体模块的 HANDOFF。**
+Four categories. **New readers: start with `RESULTS.md`, then `TRAINING_PLAN.md`,
+then the HANDOFF of whichever module you are touching.**
 
-### 结果与方案(根目录)
+> Note: `README.md` and `RESULTS.md` are in English. The working documents below
+> are in Chinese — they are lab notebooks kept in the language they were written
+> in, and `RESULTS.md` distils everything load-bearing out of them.
 
-| 文件 | 内容 |
+### Results and design (repository root)
+
+| File | Contents |
 |---|---|
-| **[`RESULTS.md`](RESULTS.md)** | **结果汇总。所有数字、被推翻的结论、方法上的坑。先读这个** |
-| [`TRAINING_PLAN.md`](TRAINING_PLAN.md) | 方案设计:为什么是检测不是分类、bounding box 怎么定义、分阶段计划、文献依据 |
-| [`PHASE1_RESULTS.md`](PHASE1_RESULTS.md) | Phase 1 到 Phase 3 的**完整实验流水账**,含每一轮的原始数字和当时的判断。`RESULTS.md` 是它的提炼版 |
-| [`HANDOFF.md`](HANDOFF.md) | 早期数据处理交接:own-station / e-Callisto 的去噪与抓取历史 |
-| [`OVERNIGHT_PLAN.md`](OVERNIGHT_PLAN.md) | 通宵批次的设计与实际执行记录 |
+| **[`RESULTS.md`](RESULTS.md)** | **Consolidated results: every number, the falsified claims, the methodological traps. Read this first** |
+| [`TRAINING_PLAN.md`](TRAINING_PLAN.md) | Design rationale: why detection rather than classification, how bounding boxes are defined, phase plan, literature basis |
+| [`PHASE1_RESULTS.md`](PHASE1_RESULTS.md) | The **full experimental log** from Phase 1 through Phase 3, with raw numbers and the judgement made at each point. `RESULTS.md` is its distillation |
+| [`HANDOFF.md`](HANDOFF.md) | Early data-processing handoff: denoising and scraping history for own-station and e-Callisto |
+| [`OVERNIGHT_PLAN.md`](OVERNIGHT_PLAN.md) | Design and execution records for the unattended overnight batches |
 
-### 子模块说明
+### Module documentation
 
-| 文件 | 内容 |
+| File | Contents |
 |---|---|
-| [`event_review/HANDOFF.md`](event_review/HANDOFF.md) | 人工审核工具的设计、代码结构、两个审核子集的构造方式 |
-| [`event_review/README.md`](event_review/README.md) | 审核工具快速上手 |
-| [`ecallisto_grabber/README.md`](ecallisto_grabber/README.md) | 抓取模块用法 |
-| [`ecallisto_grabber/开发日志.md`](ecallisto_grabber/开发日志.md) | 抓取/去噪的踩坑记录(真实数据上发现的 bug) |
+| [`event_review/HANDOFF.md`](event_review/HANDOFF.md) | Review tool design, code structure, and how the two review subsets are constructed |
+| [`event_review/README.md`](event_review/README.md) | Review tool quick start |
+| [`ecallisto_grabber/README.md`](ecallisto_grabber/README.md) | Scraper usage |
+| [`ecallisto_grabber/开发日志.md`](ecallisto_grabber/开发日志.md) | Scraping and denoising development log (bugs found on real data) |
 
-### 历史路线(已不在主线)
+### Superseded
 
-改用目标检测架构之前的分类 + GAN 增强方案。保留备查,未并入当前流程。
+The classification + GAN-augmentation approach that predates the switch to
+object detection. Kept for reference; not part of the current pipeline.
 
-- `dcgan/` —— DCGAN / SpecGAN 数据增强
-- `radburst_tl/` —— 早期迁移学习训练脚本
+- `dcgan/` — DCGAN / SpecGAN data augmentation
+- `radburst_tl/` — early transfer-learning training scripts
 
 ---
 
-## 目录结构
+## Layout
 
 ```
-detection/          检测主线:数据集构造、训练、评测、漏记挖掘
-transfer/           本站迁移实验(Phase 3)
-event_review/       人工审核工具(Streamlit)+ 审核子集生成
-ecallisto_grabber/  e-Callisto 抓取 + sumthreshold 去噪
-data/               频谱数组与标注(大部分不入 git,见 .gitignore)
+detection/          main pipeline: dataset construction, training, evaluation, gap mining
+transfer/           own-station transfer experiments (Phase 3)
+event_review/       human review tool (Streamlit) + review-subset generation
+ecallisto_grabber/  e-Callisto scraping + sumthreshold denoising
+data/               spectrogram arrays and annotations (mostly untracked, see .gitignore)
 ```
 
-`data/` 里只有**手工产生、不可再生**的 CSV 进版本控制(审核记录、漏记框、
-污染负样本名单)。几 GB 的 `.npy` 和可再生的 YOLO 数据集目录都不入库,
-理由写在 [`.gitignore`](.gitignore) 顶部。
+Only **hand-made, irreproducible** CSVs under `data/` are version-controlled
+(review records, catalog-gap boxes, the contaminated-negative list). Multi-GB
+`.npy` files and regenerable YOLO dataset directories are not; the reasoning is
+written at the top of [`.gitignore`](.gitignore).
 
 ---
 
-## 主要流程
+## Pipeline
 
-### 1. 抓取
+### 1. Scrape
 
 ```bash
 python ecallisto_grabber/scrape_windows.py \
@@ -73,26 +82,30 @@ python ecallisto_grabber/scrape_windows.py \
     --types II III V --out-dir data/ecallisto/windows
 ```
 
-整天下载、按 FITS 边界切 15 分钟窗口存 `.npy`,可断点续传。
-**注意 `--limit` 是全局额度不是按站分配**,多站点必须每站单独跑。
+Downloads whole station-days, cuts 15-minute windows on FITS boundaries, saves
+`.npy`, and is resumable. **Note that `--limit` is a global budget, not a
+per-station allocation** — multi-station runs must be issued one station at a
+time.
 
-### 2. 人工审核
+### 2. Human review
 
 ```bash
 streamlit run event_review/app.py
 ```
 
-侧边栏选数据源和目录。核心功能是**在频谱图上横向拖一段直接设定 burst 起止**——
-目录标注的时间系统性偏早(实测中位 +40 秒),这是主要的修正对象。
+Pick the source and directory in the sidebar. The core feature is **dragging
+horizontally across the spectrogram to set burst start and end directly** —
+catalog times are systematically early (measured median +40 s), and correcting
+that is the main job.
 
-针对性重审子集:
+Targeted re-review subsets:
 
 ```bash
 python event_review/make_box_subset.py data/ecallisto/windows_assa \
     --types II V --out-dir data/ecallisto/assa_iiv --apply
 ```
 
-### 3. 构造数据集 + 训练
+### 3. Build a dataset and train
 
 ```bash
 python detection/build_yolo_dataset.py data/ecallisto/windows data/ecallisto/yolo8_single \
@@ -103,62 +116,74 @@ python detection/train_yolo.py data/ecallisto/yolo8_single/data.yaml \
     --name run1 --model yolov8s.pt --freeze-epochs 5 --epochs 30 --patience 10
 ```
 
-三个不是默认值的决定(改之前先读脚本 docstring):
-**按 station-day 划分而非按窗口**、**验证集只收人工审核过的干净窗口**、**几何增广全部关闭**
-(频谱图翻转会破坏频率漂移方向这个核心判据)。
+Three deliberate non-default decisions (read the script docstrings before
+changing them): **split by station-day, never by window**; **validation accepts
+only human-reviewed clean windows**; **all geometric augmentation is off**
+(flipping a spectrogram destroys frequency drift direction, the primary Type
+II/III cue).
 
-⚠️ **跑 ≥3 个种子**。噪声底 σ 在 0.018–0.056 之间,单次结果不可解读。
+⚠️ **Run ≥3 seeds.** The noise floor σ is somewhere between 0.018 and 0.056, and
+a single run is uninterpretable.
 
-⚠️ `--optimizer` 保持默认 `auto` 时 **ultralytics 会覆盖 `--lr0-*`**,学习率不生效
-(有启动警告)。要真正搜学习率必须显式指定优化器。
+⚠️ With `--optimizer` left at its default `auto`, **ultralytics overrides
+`--lr0-*`** and the learning rate silently has no effect (a startup warning now
+fires). Searching learning rates requires naming an optimiser explicitly.
 
-### 4. 评测
+### 4. Evaluate
 
 ```bash
 python detection/evaluate.py detection/runs/run1/weights/best.pt \
     data/ecallisto/yolo8_single/data.yaml --imgsz 640 --conf 0.05 --maxconf
 ```
 
-双口径输出:标准 AP@0.30/0.50/0.75,加上**运营指标**(检出率、时间偏差、虚警率)——
-AP 会把"完全漏掉"和"找到了但偏 21 秒"压成同一个零,而这两件事对使用者完全不同。
+Reports two views: standard AP@0.30/0.50/0.75, plus **operational metrics**
+(detection rate, timing error, false alarms per hour). AP collapses "missed it
+entirely" and "found it, 21 s off" into the same zero, and those are very
+different outcomes for a user.
 
-**所有对比必须锁死口径**:`--rect` 和 `--maxconf` 都能大幅改变数字。
+**Pin the protocol across every comparison** — both `--rect` and `--maxconf`
+move the numbers substantially.
 
-### 5. 用模型找目录漏记的事件
+### 5. Use the model to find events the catalog missed
 
 ```bash
 python detection/mine_catalog_gaps.py detection/runs/run1/weights/best.pt \
     data/ecallisto/windows detection/gap_review --min-conf 0.10
-# 人工填 gap_candidates.csv 的 verdict 列后:
+# after a human fills the verdict column in gap_candidates.csv:
 python detection/apply_gap_verdicts.py detection/gap_review/gap_candidates.csv --apply
-python event_review/make_gap_subset.py --apply          # 在审核工具里画框
+python event_review/make_gap_subset.py --apply          # draw the boxes in the review tool
 python detection/apply_gap_annotations.py --type-override gap0067=II --apply
 ```
 
-参考目录漏记约 36%,这条链路是补充干净标注最快的路径。
-**模型画的框不会直接进训练集**——它只是预填值,时间范围由人工重画。
+The reference catalog omits roughly 36% of events, and this loop is the fastest
+route to more clean labels. **Model-drawn boxes never enter training directly** —
+they serve only as the prefill, and the time range is redrawn by hand.
 
-### 6. 本站迁移
+### 6. Own-station transfer
 
 ```bash
-python transfer/make_own_windows.py --apply        # 连续 CSV -> 真实 15 分钟窗口
+python transfer/make_own_windows.py --apply        # continuous CSV -> real 15-minute windows
 python transfer/zero_shot_transfer.py detection/runs/run1/weights/best.pt
 ```
 
-对比两种渲染:物理正确的频段定位 vs 朴素拉伸。**实测朴素拉伸远好于物理对齐**
-(77% vs 14%),细节见 `RESULTS.md`。
+Compares two renderings: physically correct band placement versus a naive
+stretch. **Measured: the naive stretch wins by a wide margin** (77% vs 14%) — see
+`RESULTS.md`.
 
 ---
 
-## 环境
+## Environment
 
-- Tesla T4(15 GB),PyTorch 2.12 + CUDA,ultralytics 8.4.80
-- 机器只有 **4 个 CPU 核、15 GB 内存、无 swap**。训练默认 8 个 dataloader worker 会
-  超额占用;与其他任务并行时用 `--workers 2`。审核工具占约 4 GB,训练期间不要开
-  (曾被 OOM 杀掉两次)。
+- Tesla T4 (15 GB), PyTorch 2.12 + CUDA, ultralytics 8.4.80
+- The machine has only **4 CPU cores, 15 GB RAM, and no swap**. Training defaults
+  to 8 dataloader workers, which oversubscribes it; use `--workers 2` when
+  sharing the machine. The review tool holds about 4 GB — do not leave it running
+  during training (it has been OOM-killed twice).
 
-## 一个反复踩到的坑
+## One trap worth repeating
 
-`pgrep -f <脚本名>` / `pkill -f <脚本名>` **会匹配到调用它的 shell 自己的命令行**。
-本项目因此损失过 4 小时(等待脚本自锁)和两次误杀。写等待/清理逻辑时用端口
-(`ss -lptn 'sport = :8501'`)或更具体的匹配模式,不要用脚本名。
+`pgrep -f <script name>` and `pkill -f <script name>` **match the command line of
+the shell that invoked them**. This cost 4 hours once (a waiter script that
+deadlocked against itself) and killed the wrong process twice more. Use a port
+(`ss -lptn 'sport = :8501'`) or a more specific pattern for any wait or cleanup
+logic — never the script name alone.

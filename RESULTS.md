@@ -1,258 +1,319 @@
-# 太阳射电暴自动检测:结果汇总
+# Solar Radio Burst Detection — Results
 
-把散在 `PHASE1_RESULTS.md` / `TRAINING_PLAN.md` / `OVERNIGHT_PLAN.md` / `HANDOFF.md` 里的结论
-收拢成一份。**只讲做出了什么、数字是多少、哪些结论被推翻过**;过程细节和踩坑记录仍在原文档里,
-指针见 `README.md`。
+Consolidated from `PHASE1_RESULTS.md`, `TRAINING_PLAN.md`, `OVERNIGHT_PLAN.md` and
+`HANDOFF.md`. This file covers **what was built, what the numbers are, and which
+conclusions were overturned along the way**. Process detail and debugging history
+stay in the original documents — see `README.md` for the map.
 
-数据截至 2026-08-16。
-
----
-
-## 一句话
-
-用 COCO 预训练的 YOLOv8 在 15 分钟频谱窗口上做太阳射电暴的**检测**(不是分类),
-在 3 个台站、3,840 小时数据上做到 **Type III 检出率 92%、时间中位误差 5.0 秒**,
-并且**零样本迁移到一台完全不同的接收机上仍有 77% 检出**。
-
-过程中最有价值的两个副产物:证明了精度瓶颈在**标注质量而非模型容量**;
-用训练好的检测器**反向找出 126 个参考目录从未记录的真实事件**。
+Data as of 2026-08-16.
 
 ---
 
-## 规模
+## In one sentence
+
+A COCO-pretrained YOLOv8 detector (not a classifier) over 15-minute spectrogram
+windows reaches **92% Type III detection at 5.0s median timing error** across
+3 observatories and 3,840 hours of data, and **transfers zero-shot to a
+completely different receiver at 77% detection**.
+
+Two by-products turned out to matter as much as the detector: the accuracy
+ceiling was shown to be **label quality rather than model capacity**, and the
+trained detector was used in reverse to **recover 126 real events the reference
+catalog never recorded**.
+
+---
+
+## Scale
 
 | | |
 |---|---|
-| 频谱窗口 | **15,358** 个 15 分钟窗口 ≈ **3,840 小时** |
-| 台站 | Arecibo-Observatory、Australia-ASSA、本站(Michigan 三个观测点) |
-| 目录框 | 4,336(eCallisto)+ 65(本站) |
-| 模型发现并经人工确认的框 | **126**(目录中不存在) |
-| 人工判断总量 | **≈ 1,650 条** |
+| Spectrogram windows | **15,358** 15-minute windows ≈ **3,840 hours** |
+| Observatories | Arecibo-Observatory, Australia-ASSA, own station (3 Michigan sites) |
+| Catalog boxes | 4,336 (e-Callisto) + 65 (own station) |
+| Boxes found by the model and confirmed by review | **126** (absent from the catalog) |
+| Total human judgements | **≈ 1,650** |
 
 ---
 
-## 主要结果
+## Main results
 
-### 1. 检测性能(Type III,单类检测器)
+### 1. Detection performance (Type III, single-class detector)
 
-Arecibo,val 243 框,4 个随机种子。
+Arecibo, 243 validation boxes, 4 random seeds.
 
-| 指标 | 最佳种子 | 4 种子均值 |
+| Metric | Best seed | 4-seed mean |
 |---|---|---|
-| AP@0.50 | 0.417 | 0.402(σ 0.018)|
-| **检出率** | 93% | **92%** |
-| **时间中位误差** | **5.0 s** | 5.0–5.9 s |
-| **F1**(maxconf 口径) | **0.566** | — |
+| AP@0.50 | 0.417 | 0.402 (σ 0.018) |
+| **Detection rate** | 93% | **92%** |
+| **Median timing error** | **5.0 s** | 5.0–5.9 s |
+| **F1** (maxconf operating point) | **0.566** | — |
 
-**AP 和实用指标讲的是不同的故事,必须一起看**:AP@0.50 = 0.40 看着远低于文献的 ~0.80,
-但同一个模型找到了 92% 的 burst、定位误差只有 5 秒。原因见下一节。
+**AP and the operational metrics tell different stories and have to be read
+together.** AP@0.50 = 0.40 looks far below the ~0.80 reported in the literature,
+yet the same model finds 92% of the bursts with a 5-second median localisation
+error. The reason is the next section.
 
-`maxconf` 是可部署口径(每簇预测只保留置信度最高的一个),把 F1 从 0.335 提到 **0.566**,
-虚警从 1.43/h 降到 0.51/h。代价是定位略差(|Δt| 5.0 → 8.5 s)——它保留的是最自信的框,
-不是位置最准的框。
+`maxconf` is the deployable read (keep only the highest-confidence box per
+cluster). It raises F1 from 0.335 to **0.566** and drops false alarms from
+1.43/h to 0.51/h. The cost is slightly worse localisation (|Δt| 5.0 → 8.5 s):
+it keeps the most *confident* box in a cluster, not the best-placed one.
 
-### 2. 精度瓶颈是标注,不是模型 —— 本项目最重要的方法结论
+### 2. The ceiling is the labels, not the model — the key methodological result
 
-框是满频率高度,所以 IoU 完全由时间轴决定:两个等宽区间偏移 `d` 时 `IoU=(w−d)/(w+d)`,
-于是 **IoU≥0.5 要求 `d ≤ w/3`**——对中位宽 69 秒的框只容错 23 秒,对 30 秒的框只容错 10 秒。
+Boxes span the full frequency height, so IoU is determined entirely by the time
+axis: two equal-width intervals offset by `d` have `IoU=(w−d)/(w+d)`, and
+therefore **IoU≥0.5 requires `d ≤ w/3`** — only 23 seconds for a median 69s box,
+and 10 seconds for a 30s one.
 
-而参考目录(Monstein catalog)标注时间的实测中位偏差是 **+40 秒**。由此:
+The measured median timing error of the reference catalog (Monstein) is
+**+40 seconds**. That gives:
 
-| | 上限 |
+| | Upper bound |
 |---|---|
-| IoU≥0.50 命中率(= AP50 天花板) | **48.5%** |
+| IoU≥0.50 hit rate (= the AP50 ceiling) | **48.5%** |
 | IoU≥0.75 | 12.4% |
 | **IoU≥0.95** | **0.0%** |
 
-**这解释了为什么 AP50-95 在四轮实验里纹丝不动(0.034–0.058)**:那个指标从一开始就被标注锁死,
-和模型无关。
+**This is why AP50-95 never moved across four rounds of experiments
+(0.034–0.058)** — that metric was pinned by the labels from the start,
+independent of the model.
 
-**可证伪的验证**:事先写下预测再验证——**205 个人工精修框(AP50 0.269)打赢 1500 个混合框(0.184)**,
-训练数据少 7.3 倍。往训练集混未审核数据在当前量级是**负收益**,不是无益。
+**Verified with a falsifiable prediction written down in advance:**
+**205 hand-corrected boxes (AP50 0.269) beat 1,500 mixed boxes (0.184)** with
+7.3× less training data. At this scale, adding unreviewed labels to the training
+set is a *negative* contribution, not merely a neutral one.
 
-人工标注自身的重复性实测 **88%**(盲测重标 25 条,中位 IoU 1.000),
-所以天花板从 0.485 抬到 ~0.88 是可达的——扩大人工标注是确定有效的投入。
+Human annotation repeatability was measured at **88%** (25 events blind
+re-annotated, median IoU 1.000), so the ceiling can be lifted from 0.485 to
+~0.88. That makes expanding manual annotation a known-good investment rather
+than a gamble.
 
-### 3. 参考目录漏记约 36% 的真实事件
+### 3. The reference catalog omits ~36% of real events
 
-抽 34 个"虚警"人工逐个核查:**32 个(94%)其实是真 burst**;置信度 ≥0.1 的 24 个**无一例外**全是真的。
+34 "false positives" were checked by eye one by one: **32 (94%) were real
+bursts**, and all 24 with confidence ≥0.1 were real without exception.
 
-由此三个数字要改:虚警率 0.90/h → **约 0.05/h**;precision 被严重低估;
-目录完整性从"假定 100%"变成**漏记约 36%**。
+Three reported numbers had to change: false-alarm rate 0.90/h → **~0.05/h**;
+precision severely underestimated; catalog completeness from "assumed 100%" to
+**~36% omitted**.
 
-**更严重的后果是训练集受到主动的错误监督**:含真实 burst 却被当作负样本(空标注)的窗口,
-在教模型"这里没有 burst"。**这比标注噪声更糟,是反向信号。**
+**The worse consequence is that training received active wrong supervision.**
+Windows holding a real burst but used as negatives (empty labels) were teaching
+the model "no burst here". That is a reversed signal, not just label noise.
 
-**由此做的事**:写了 `mine_catalog_gaps.py` 让模型扫全部窗口、列出"高置信度但目录没有"的检出,
-人工只做确认。160 个候选、133 条已审、**126 个确认为真**。确认率随置信度单调上升
-(89% / 94% / 100% / 100%),与三周前独立抽样 34 条的结果落在同一条曲线上。
+**What was built from this:** `mine_catalog_gaps.py` runs the detector over every
+window and lists high-confidence detections with no catalog entry, so a human
+only has to confirm them. 160 candidates, 133 reviewed, **126 confirmed real**.
+The confirmation rate rises monotonically with confidence (89% / 94% / 100% /
+100%), landing on the same curve as the independent 34-sample check made three
+weeks earlier.
 
-副产物:90 个"含隐藏 burst 的负样本窗口"里有 **63 个**因此获得真实标注,
-从被整窗丢弃变成正常正样本——从"扔掉 90 个"变成"扔掉 27 个、回收 63 个"。
+Side effect: of the 90 windows previously discarded as "negatives known to hide a
+burst", **63 now carry real labels** and rejoin training as ordinary positives —
+turning "throw away 90 windows" into "throw away 27, recover 63".
 
-### 4. 跨站点:Type V 从失败变可用
+### 4. A second station rescues Type V
 
-Type V 是 Phase 1 唯一彻底失败的类别:Arecibo 全部历史只有 27 个干净样本,
-训练和评估无法同时满足(val 拿 20 个,train 只剩 7 个)。为此抓取 Australia-ASSA 并人工审核其 155 个 II/V 框
-(149 usable / 6 discard,136 条时间修正)。
+Type V was the one outright failure of Phase 1: Arecibo has only 27 clean samples
+in total, which cannot feed training and evaluation at once (a 20-box validation
+set leaves 7 to train on). Australia-ASSA was scraped for this reason, and its
+155 II/V boxes were reviewed by hand (149 usable, 6 discarded, 136 with corrected
+times).
 
-两个臂**单变量对照**:val 逐字节相同(1096 图 / 287 框),**III 训练框两边都是 582 个不变**,
-只有 II(50→105)和 V(14→34)改变。每臂 3 个种子。
+The two arms are **single-variable**: validation is byte-identical (1,096 images /
+287 boxes), **Type III training boxes are held at 582 in both arms**, and only II
+(50→105) and V (14→34) change. 3 seeds per arm.
 
 | | Arecibo only | +ASSA | |
 |---|---|---|---|
-| **Type V 检出率** | **4%**(0–12%)| **55%**(48–70%)| |
-| Type V AP@0.50 | 0.006 | **0.208** | 区间完全不重叠 |
-| Type II 检出率 | 44% | **78%** | |
+| **Type V detection** | **4%** (0–12%) | **55%** (48–70%) | |
+| Type V AP@0.50 | 0.006 | **0.208** | ranges do not overlap |
+| Type II detection | 44% | **78%** | |
 | Type II AP@0.50 | 0.173 | 0.300 | |
 | Type III AP@0.50 | 0.292 | 0.339 | |
 
-三个种子里有**两个的 Arecibo 臂完全没检出任何 Type V**。加 ASSA 后三个种子全部在 0.147–0.250。
-这不需要靠 σ 论证——两组区间完全不重叠。
+Two of the three Arecibo-only seeds detected **no Type V at all**. With ASSA, all
+three seeds land in 0.147–0.250. This needs no appeal to σ — the ranges are
+disjoint.
 
-**一个没预料到的效应,可能比 AP 更重要:训练稳定性**
+**An unplanned effect that may matter more than the AP numbers: training
+stability.**
 
-| 种子间极差 | Arecibo only | +ASSA |
+| Seed-to-seed spread | Arecibo only | +ASSA |
 |---|---|---|
-| Type II 检出率 | **68 pt**(0–68%)| 9 pt |
-| Type III 检出率 | **44 pt**(49–93%)| **1 pt**(91–92%)|
+| Type II detection | **68 pt** (0–68%) | 9 pt |
+| Type III detection | **44 pt** (49–93%) | **1 pt** (91–92%) |
 
-Arecibo 臂里有一个种子整轮训练崩掉(II/V 全零,III 掉到 49%)。加 ASSA 后崩溃不再发生,
-**而 III 的训练框两边完全相同**——III 变好完全是因为另外两个检测头有了足够样本,
-不再拖垮共享骨干。
+One Arecibo-only seed collapsed entirely (II and V at zero, III down to 49%).
+With ASSA the collapse stops happening — **and Type III's own training boxes were
+identical between arms**, so III improved purely because the other two detection
+heads stopped starving the shared backbone.
 
-**这说明小样本多分类下真正的风险不是"分数抖动",是"整轮训练崩掉"**,单次实验完全读不出来。
+**At this data scale the real failure mode is not score jitter, it is a training
+run dying outright**, which a single-seed experiment cannot detect.
 
-### 5. 跨仪器零样本迁移成立
+### 5. Zero-shot cross-instrument transfer works
 
-本站接收机与训练数据差异极大:
+The own-station receiver differs sharply from the training data:
 
-| | 本站 | 训练数据 | 比值 |
+| | Own station | Training data | Ratio |
 |---|---|---|---|
-| 频段 | 15.996–24.004 MHz | 15–86.6 MHz | 8.9× |
-| 通道间隔 | 0.0195 MHz | 0.358 MHz | **18.4×** |
-| 时间步长 | 0.1 s | 0.25 s | 2.5× |
+| Band | 15.996–24.004 MHz | 15–86.6 MHz | 8.9× |
+| Channel spacing | 0.0195 MHz | 0.358 MHz | **18.4×** |
+| Sample interval | 0.1 s | 0.25 s | 2.5× |
 
-从 49 个连续原始 CSV 切出 **62 个真实 15 分钟窗口**(按绝对时间边界切,不是围绕事件裁剪——
-框心位置 std = **0.294**,而事件居中裁剪时是 0.0000,那正是当初让 Phase 1 作废的标签泄漏)。
+**62 real 15-minute windows** were cut from 49 continuous raw CSVs on absolute
+time boundaries — not cropped around events. Box-centre position has
+std = **0.294**, versus 0.0000 for event-centred crops, which is exactly the
+label leak that invalidated the first Phase 1 attempt.
 
-**不做任何微调**,直接用 eCallisto 训练的模型:
+With **no fine-tuning at all**, using the e-Callisto-trained model:
 
-| | 检出率 | \|Δt\| 中位 |
+| | Detection rate | Median \|Δt\| |
 |---|---|---|
-| **零样本迁移** | **77%**(50/65)| **7.5 s** |
-| 置换检验(200 次) | 均值 25%,95% 上界 32% | — |
+| **Zero-shot transfer** | **77%** (50/65) | **7.5 s** |
+| Permutation null (200 shuffles) | mean 25%, 95th pct 32% | — |
 
-**真实值超出置换分布 12.2 个标准差**,排除了"在满屏竖条纹 RFI 上乱撒框蒙中"的解释。
+The real pairing sits **12.2 standard deviations** above the permutation
+distribution, ruling out the explanation that the model simply sprays boxes over
+RFI-saturated images and hits by chance.
 
-核查 35 个未匹配检出:**20 个是真 burst**。因此:
+Reviewing the 35 unmatched detections: **20 are real bursts**. Therefore:
 
-- 真实虚警率 **0.97/h**(原报 2.4/h 只是上限)
-- **本站目录漏记约 24%**(eCallisto 同法测得 36%)
-- 对"全部真实 burst"的召回约 **82%**
+- True false-alarm rate **0.97/h** (the reported 2.4/h was only an upper bound)
+- The **own-station catalog omits ~24%** of events (36% measured on e-Callisto)
+- Recall against *all* real bursts is roughly **82%**
 
-### 6. 频段对齐这个"最大未决问题"实测不需要解
+### 6. Frequency alignment — the "biggest open problem" — turned out not to need solving
 
-`TRAINING_PLAN.md` 长期把"跨站点频段对齐"列为最大障碍,计划用"插值到公共频率网格"解决。
-实测把两种渲染直接对比:
+`TRAINING_PLAN.md` treated cross-station frequency alignment as the main blocker
+and planned to resolve it by interpolating onto a common frequency grid. Testing
+both renderings directly settled it:
 
-| 渲染方式 | 检出率 | 最高置信度 |
+| Rendering | Detection rate | Max confidence |
 |---|---|---|
-| **物理正确**(8 MHz 放在 640 px 画布中真实的 72 px 位置)| **14%** | 0.351 |
-| **物理错误**(8 MHz 拉满整个高度)| **77%** | 0.962 |
+| **Physically correct** (8 MHz placed at its true 72 of 640 rows) | **14%** | 0.351 |
+| **Physically wrong** (8 MHz stretched to full height) | **77%** | 0.962 |
 
-**物理正确的那个几乎完全失败。** 说明模型学到的是 burst 的**外观形态**,
-不是绝对的物理漂移斜率。把 8 MHz 拉满高度虽让斜率错了 8.9 倍,却让画面像训练数据;
-压成 72 px 细条放在空白画布里,物理刻度正确但模型从没见过。
+**The physically correct one nearly fails completely.** The model keys on the
+*appearance* of a burst, not on absolute physical drift slope. Stretching 8 MHz
+to full height makes the slope wrong by 8.9× but makes the image look like the
+training data; compressing it into a 72-pixel strip on a blank canvas is
+physically exact but unlike anything the model has seen.
 
-**结论:Phase 3 不需要频段对齐。** 这也解释了为什么查到的几篇多站点混合训练论文
-根本没提频段处理——可能确实不需要。
+**Conclusion: Phase 3 does not require frequency alignment.** This also explains
+why the multi-station papers surveyed never mention handling it — they may
+genuinely not need to.
 
 ---
 
-## 被证伪 / 被推翻的结论
+## Claims that were falsified or overturned
 
-保留这些是因为它们省下了后续的重复劳动。
+Kept on the record because they save the next person from repeating the work.
 
-| 曾经的判断 | 实测结果 |
+| Earlier belief | Measured outcome |
 |---|---|
-| 给框加频率范围能放宽 IoU | **收益恒为零**。频率项在二维 IoU 的分子分母里直接约掉 |
-| 一维区间 IoU 比二维框更严苛 | **反了**。满高度口径其实比二维框更宽松 |
-| 自动时间修正能替代人工 | **10 种设定全部大幅落后于什么都不做**(IoU≥0.5:9–32% vs 56%)|
-| 提高时间分辨率(640×1280)会改善定位 | **有害而非无益**。两次实验(batch 8 / 16)分别是 0.130 / 0.071,后者第 1 个 epoch 后再没提升 |
-| 跨站点频段对齐是必须解决的障碍 | **不需要**,见上 |
-| 本站去噪能改善迁移 | **不能**,见下 |
-| 单类比三分类好 4 倍 | **夸大**。公平对比(同为 570 框)是 +19%,而且 multi 的检出率和定位反而更好 |
-| "四组差异全落在噪声内" | **说过头了**。种子噪声小于四组极差,只是 A/D 读不出意义 |
+| Adding a frequency range to boxes would relax IoU | **Gain is identically zero.** The frequency term cancels in the 2-D IoU numerator and denominator |
+| 1-D interval IoU is stricter than 2-D boxes | **Backwards.** The full-height convention is in fact *more* permissive |
+| Automatic time correction could replace manual work | **All 10 settings lost badly to doing nothing** (IoU≥0.5: 9–32% vs 56%) |
+| Higher time resolution (640×1280) would improve localisation | **Harmful, not merely unhelpful.** Two runs (batch 8 / 16) gave 0.130 / 0.071; the second peaked at epoch 1 and never improved |
+| Cross-station frequency alignment is a prerequisite | **Not needed** — see above |
+| Denoising own-station data would improve transfer | **It does not** — see below |
+| Single-class beats 3-class by 4× | **Overstated.** A fair comparison (both at 570 boxes) is +19%, and the multi-class model had better detection rate and localisation |
+| "All four arms differ only by noise" | **Also overstated.** Seed noise was smaller than the four-arm spread; only A/D were unreadable |
 
-### 本站去噪的否定结果(值得单独记)
+### The negative result on own-station denoising
 
-本站有完整的 sumthreshold 去噪流程,但**生产参数会把迁移检出率从 77% 砍到 40%**,
-时间误差从 7.5 秒恶化到 60 秒。
+The station has a full sumthreshold denoising pipeline, but **the production
+parameters cut transfer detection from 77% to 40%** and degrade timing error from
+7.5s to 60s.
 
-| 输入 | 检出率 | \|Δt\| 中位 |
+| Input | Detection rate | Median \|Δt\| |
 |---|---|---|
-| **raw(不去噪)** | **77%** | **7.5 s** |
-| 盲去噪 `vrfi_cov=0.95` | 77% | 15.0 s |
-| 盲去噪 `vrfi_cov=0.60` | 66% | 23.2 s |
-| 盲去噪 `vrfi_cov=0.10`(生产默认)| **40%** | 59.6 s |
+| **raw (no denoising)** | **77%** | **7.5 s** |
+| blind, `vrfi_cov=0.95` | 77% | 15.0 s |
+| blind, `vrfi_cov=0.60` | 66% | 23.2 s |
+| blind, `vrfi_cov=0.10` (production default) | **40%** | 59.6 s |
 
-**根因是结构性的,不是参数没调好**:在只有 8 MHz 的频段里,Type III 本身就是一道
-贯穿全频段的竖条纹,而 `vertical_rfi_weight` 的判据正是"整列大部分通道同时点亮"——
-两者不可区分。参数扫描印证:`base_threshold_sigma` 从 12 调到 40 几乎无影响(保留率 0.08→0.09),
-而 `vrfi_coverage_threshold` 从 0.10 到 0.95 让 burst 保留率从 **0.08 跳到 0.73**。
+**The cause is structural, not a tuning failure.** Within an 8 MHz band a Type
+III burst *is* a full-height vertical stripe — which is precisely
+`vertical_rfi_weight`'s criterion for RFI. The two are not separable there.
 
-肉眼验证完全吻合:12 个最差样本里,raw 每个红框内都有饱和亮带,去噪后全部变成空白。
+The parameter sweep confirms it: `base_threshold_sigma` from 12 to 40 barely
+moves burst retention (0.08 → 0.09), while `vrfi_coverage_threshold` from 0.10 to
+0.95 moves it from **0.08 to 0.73**.
 
-**这解释了一件旧事**:审核时常见的"burst 偏淡/被抹除",此前归因于 `cleaned_events/` 用错时间建保护窗;
-现在看对本站还有第二个独立原因——**即使时间完全正确,频段一窄,竖向 RFI 抑制就会误伤 burst**。
+Verified by eye as required: across the 12 worst cases, every burst is a
+saturated band in the raw panel and blank in the denoised one.
 
-**要走通这条路需要新算法**(例如用时间方向的持续性区分:RFI 常在多个窗口同一频率反复出现,burst 不会),
-不是调参能解决的。
+**This also explains an older observation.** "Burst looks faint / was erased"
+came up repeatedly during review and was attributed to `cleaned_events/` having
+been generated with stale timing. For own-station data there is a second,
+independent cause: **even with perfectly correct timing, a narrow band makes
+vertical-RFI suppression damage the burst**. It is also why `known_burst_weight`
+is a requirement rather than an optimisation here.
+
+Making this path work needs a different algorithm — for example using persistence
+along the time axis (RFI tends to recur at the same frequency across many
+windows; bursts do not) — not parameter tuning.
 
 ---
 
-## 方法上必须知道的三件事
+## Three things to know about the method
 
-### 噪声底比想象的大,而且很难测准
+### The noise floor is larger than expected and hard to pin down
 
-同配置只换种子的 AP50 标准差:
+Standard deviation of AP50 across seeds at a fixed configuration:
 
-| 测量 | σ | 95% 区间(n=4)|
+| Measurement | σ | 95% interval (n=4) |
 |---|---|---|
-| 2026-08-14(570 训练框)| 0.056 | [0.032, 0.209] |
-| 2026-08-15(648 训练框)| 0.018 | [0.010, 0.066] |
+| 2026-08-14 (570 training boxes) | 0.056 | [0.032, 0.209] |
+| 2026-08-15 (648 training boxes) | 0.018 | [0.010, 0.066] |
 
-**两个区间重叠,所以不能宣称噪声底真的下降了。** n=4 估 σ 本来就极不准。
-实践含义:**任何配置都要跑 ≥3 个种子,单次结果不可解读**;小于约 2σ 的差异一律当作没有差异。
+**The two intervals overlap, so no reduction in the noise floor can be claimed.**
+Estimating σ from n=4 is simply very imprecise. In practice: **run ≥3 seeds for
+any configuration; a single run is uninterpretable**, and treat any difference
+below roughly 2σ as no difference.
 
-历史教训:曾因为没先算 σ,把评测开关 `rect` 造成的抖动当成真实差异,得出"C 方案赢了"的错误结论,后来收回。
+Historical lesson: skipping this once led to reading jitter from the `rect`
+evaluation flag as a real effect and declaring a winner, later retracted.
 
-### 评测口径必须锁死
+### The evaluation protocol has to be pinned
 
-`rect` 是 ultralytics `val()` 的开关,能让**同一份权重**的 AP50 从 0.176 变到 0.203。
-所有对比必须显式传同一个值。同理 `--maxconf`:它把 F1 从 0.335 提到 0.566,
-两个口径差距极大,引用时必须说明是哪个。
+`rect` is an ultralytics `val()` flag that moves AP50 for the **same weights**
+from 0.176 to 0.203. Every comparison must pass the same value. The same applies
+to `--maxconf`, which lifts F1 from 0.335 to 0.566 — the two readings are far
+apart, so any quoted figure must say which one it is.
 
-### 数据集构造本身会制造标签泄漏,而且不报错
+### Dataset construction can create label leakage silently
 
-"事件 ± 固定 buffer"裁出来的 crop,框心必然 100% 在正中央(实测 std=0.0000,n=1694)。
-在这种数据上跑出来的 mAP 无法解读——分不清模型学会的是"识别 burst"还是"框画中间"。
-**做检测/定位任务前一定要先统计标签在图里的位置分布**,这是一行代码的检查。
-本站窗口构造时同样做了这个检查(std=0.294)。
+Crops cut as "event ± fixed buffer" put the box centre at exactly the middle of
+the image every time (measured std = 0.0000, n = 1694). Any mAP computed on such
+data is uninterpretable — it cannot distinguish "learned to find bursts" from
+"learned to draw a box in the middle". **Check the distribution of label
+positions before any detection or localisation work**; it is a one-line test. The
+same check was applied when building the own-station windows (std = 0.294).
 
 ---
 
-## 没有做的事
+## What has not been done
 
-诚实列出,避免高估当前结论的适用范围。
+Listed explicitly so the results are not read as covering more than they do.
 
-- **没有独立测试集**。`best.pt` 按 val 早停选出,选模型和报分数用了同一份数据,数字略微乐观。
-- **本站迁移只做到零样本**,没有微调。62 个窗口里拿一部分微调应该还能涨,没试。
-- **Type III 的 AP 仍在 0.33–0.42**,标注天花板这个瓶颈没有被突破,只是被定位清楚了。
-- **ASSA 的 2,092 个 Type III 框未经审核**,因此没有进入训练(混未审核数据是负收益)。
-- **ASSA 没有做漏记挖掘**,其负样本窗口可能含未标注 burst,因此在 Phase 2 中被整体排除。
-- **本站 Type II/V 样本太少**(9 个 / 2 个),迁移结论基本只覆盖 Type III。
-- **本站去噪未解决**,当前迁移使用原始数据。
-- 早期的 DCGAN / SpecGAN 数据增强分支(`dcgan/`、`radburst_tl/`)是改用检测架构之前的路线,
-  未并入当前流程。
+- **No held-out test set.** `best.pt` is selected by early stopping on the
+  validation set, so model selection and reporting share data; the numbers are
+  mildly optimistic.
+- **Own-station transfer is zero-shot only** — no fine-tuning was attempted.
+  Fine-tuning on part of the 62 windows would likely improve it.
+- **Type III AP remains 0.33–0.42.** The labelling ceiling was located and
+  explained, not removed.
+- **ASSA's 2,092 Type III boxes are unreviewed** and therefore excluded from
+  training (mixing unreviewed labels is a measured negative).
+- **No gap mining has been run on ASSA**, so its negative windows may contain
+  unlabelled bursts; they were excluded from Phase 2 entirely.
+- **Own-station Type II/V samples are too few** (9 and 2), so the transfer result
+  effectively covers Type III only.
+- **Own-station denoising is unsolved**; transfer currently runs on raw data.
+- The earlier DCGAN / SpecGAN augmentation branch (`dcgan/`, `radburst_tl/`)
+  predates the switch to a detection architecture and is not part of the current
+  pipeline.
