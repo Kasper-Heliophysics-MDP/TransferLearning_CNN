@@ -23,6 +23,8 @@ data/*
 data/ecallisto/*
 !data/ecallisto/raw_events/
 !data/ecallisto/windows/
+!data/ecallisto/windows_assa/
+!data/ecallisto/assa_iiv/
 
 data/ecallisto/raw_events/*
 !data/ecallisto/raw_events/review_status.csv
@@ -51,11 +53,33 @@ data/ecallisto/gap_annotate/*
 !data/ecallisto/gap_annotate/review_status.csv
 !data/ecallisto/gap_annotate/metadata.csv
 
+# Australia-ASSA: same rule as the Arecibo scrape. boxes.csv additionally
+# carries 136 hand-corrected burst times that only exist here and in
+# assa_iiv/review_status.csv -- re-deriving them any other way needs the 23-hour
+# scrape repeated.
+data/ecallisto/windows_assa/*
+!data/ecallisto/windows_assa/windows.csv
+!data/ecallisto/windows_assa/boxes.csv
+
+# The ASSA Type II/V review subset: 155 hand verdicts, 136 with corrected times.
+# Symlinks and metadata.csv rebuild in seconds from make_box_subset.py.
+data/ecallisto/assa_iiv/*
+!data/ecallisto/assa_iiv/review_status.csv
+!data/ecallisto/assa_iiv/metadata.csv
+
 data/burst_data/*
 !data/burst_data/rough_events/
+!data/burst_data/own_windows/
 data/burst_data/rough_events/*
 !data/burst_data/rough_events/review_status.csv
 !data/burst_data/rough_events/metadata.csv
+
+# Own-station 15-minute windows cut from the continuous CSVs for the transfer
+# test. The .npy arrays are regenerable (transfer/make_own_windows.py); the two
+# CSVs pin exactly which windows and boxes the transfer numbers came from.
+data/burst_data/own_windows/*
+!data/burst_data/own_windows/windows.csv
+!data/burst_data/own_windows/boxes.csv
 
 burst_data.zip
 
@@ -70,6 +94,9 @@ detection/runs/
 detection/gap_review/*.png
 detection/fp_review/*.png
 detection/neg_review/*.png
+transfer/fp_review/*.png
+transfer/denoise_check/*.png
+transfer/out/
 
 # Redundant now that the CSVs themselves are versioned -- git history is the
 # backup. Kept on disk, just not committed.
